@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    width: 20vw;
+}
+
+#brevan-div, #chase-div, #ckay-div, #james-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5vw;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+#top, #bottom {
+    display: flex;
+}
