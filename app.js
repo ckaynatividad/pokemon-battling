@@ -9,5 +9,7 @@ submit.addEventListener('click', ()=>{
     if (selected.length > 3 || selected.length < 3) {
         alert('Please only choose three.');
         window.location.reload();
+    } else {
+    window.location = './battle';
     }
 });
