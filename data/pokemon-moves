@@ -8,7 +8,7 @@ export const moves: {
 
 growth: {
 		num: 74,
-		accuracy: true,
+		accuracy: 100,
 		basePower: 0,
 		category: "Status",
 		name: "Growth",
@@ -80,7 +80,7 @@ crunch: {
 
 nastyplot: {
 	num: 417,
-	accuracy: true,
+	accuracy: 100,
 	basePower: 0,
 	category: "Status",
 	name: "Nasty Plot",
@@ -137,7 +137,7 @@ flamethrower: {
 
 roost: {
 	num: 355,
-	accuracy: true,
+	accuracy: 100,
 	basePower: 0,
 	category: "Status",
 	name: "Roost",
@@ -173,7 +173,7 @@ bravebird: {
 
 healbell: {
 	num: 215,
-	accuracy: true,
+	accuracy: 100,
 	basePower: 0,
 	category: "Status",
 	name: "Heal Bell",
@@ -192,7 +192,7 @@ toxic: {
 
 shellsmash: {
 	num: 504,
-	accuracy: true,
+	accuracy: 100,
 	basePower: 0,
 	category: "Status",
 	name: "Shell Smash",
@@ -228,7 +228,7 @@ icebeam: {
 
 substitute: {
 	num: 164,
-	accuracy: true,
+	accuracy: 100,
 	basePower: 0,
 	category: "Status",
 	name: "Substitute",
@@ -237,7 +237,7 @@ substitute: {
 
 quiverdance: {
 	num: 483,
-	accuracy: true,
+	accuracy: 100,
 	basePower: 0,
 	category: "Status",
 	name: "Quiver Dance",
@@ -270,7 +270,7 @@ seismictoss: {
 
 softboiled: {
 	num: 135,
-	accuracy: true,
+	accuracy: 100,
 	basePower: 0,
 	category: "Status",
 	name: "Soft-Boiled",
@@ -279,7 +279,7 @@ softboiled: {
 
 stealthrock: {
 	num: 446,
-	accuracy: true,
+	accuracy: 100,
 	basePower: 0,
 	category: "Status",
 	name: "Stealth Rock",
@@ -306,7 +306,7 @@ focusblast: {
 
 defog: {
 	num: 432,
-	accuracy: true,
+	accuracy: 100,
 	basePower: 0,
 	category: "Status",
 	name: "Defog",
@@ -378,7 +378,7 @@ memento: {
 
 transform: {
 	num: 144,
-	accuracy: true,
+	accuracy: 100,
 	basePower: 0,
 	category: "Status",
 	name: "Transform",
@@ -435,7 +435,7 @@ sleeppowder: {
 
 wish: {
 	num: 273,
-	accuracy: true,
+	accuracy: 100,
 	basePower: 0,
 	category: "Status",
 	name: "Wish",
@@ -466,7 +466,7 @@ wish: {
 
 protect: {
 	num: 182,
-	accuracy: true,
+	accuracy: 100,
 	basePower: 0,
 	category: "Status",
 	name: "Protect",
@@ -547,7 +547,7 @@ voltswitch: {
 
 yawn: {
 	num: 281,
-	accuracy: true,
+	accuracy: 100,
 	basePower: 0,
 	category: "Status",
 	name: "Yawn",
@@ -602,7 +602,7 @@ flipturn: {
 
 dragondance: {
 	num: 349,
-	accuracy: true,
+	accuracy: 100,
 	basePower: 0,
 	category: "Status",
 	name: "Dragon Dance",
@@ -693,7 +693,7 @@ machpunch: {
 
 bulkup: {
 	num: 339,
-	accuracy: true,
+	accuracy: 100,
 	basePower: 0,
 	category: "Status",
 	name: "Bulk Up",
@@ -761,7 +761,7 @@ lovelykiss: {
 
 swordsdance: {
 	num: 14,
-	accuracy: true,
+	accuracy: 100,
 	basePower: 0,
 	category: "Status",
 	name: "Swords Dance",
@@ -945,7 +945,7 @@ sludgebomb: {
 
 recover: {
 	num: 105,
-	accuracy: true,
+	accuracy: 100,
 	basePower: 0,
 	category: "Status",
 	name: "Recover",
@@ -1017,7 +1017,7 @@ bodyslam: {
 
 curse: {
 	num: 174,
-	accuracy: true,
+	accuracy: 100,
 	basePower: 0,
 	category: "Status",
 	name: "Curse",
@@ -1061,7 +1061,7 @@ curse: {
 
 slackoff: {
 	num: 303,
-	accuracy: true,
+	accuracy: 100,
 	basePower: 0,
 	category: "Status",
 	name: "Slack Off",
@@ -1128,7 +1128,7 @@ highhorsepower: {
 
 agility: {
 	num: 97,
-	accuracy: true,
+	accuracy: 100,
 	basePower: 0,
 	category: "Status",
 	name: "Agility",
@@ -1355,7 +1355,7 @@ agility: {
 
 	healingwish: {
 		num: 361,
-		accuracy: true,
+		accuracy: 100,
 		basePower: 0,
 		category: "Status",
 		name: "Healing Wish",
