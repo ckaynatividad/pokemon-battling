@@ -1,6 +1,6 @@
 /* eslint-disable */
 export const pokeDex = [
-    
+   
     {
         num: 1,
         name: 'Venusaur',
