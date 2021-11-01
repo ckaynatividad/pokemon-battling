@@ -1,4 +1,4 @@
-import pokeDex from '../data/pokemon-data';
+import pokeDex from '../data/pokemon-data.js';
 
 // NEEDS 'pokeDex' ARRAY IMPORT OR REPLACE 'pokeDex' W/ ARRAY NAME
 export function generatePokemon(){
