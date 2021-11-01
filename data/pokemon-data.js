@@ -1,7 +1,7 @@
 export const pokeDex: {
     
 venusaur: {
-        num: 3,
+        num: 1,
 		name: "Venusaur",
 		types: ["Grass", "Poison"],
 		baseStats: {hp: 80, atk: 82, def: 83, spa: 100, spd: 100, spe: 80},
@@ -9,7 +9,7 @@ venusaur: {
 },
 
 charizard: {
-    num: 6,
+    num: 2,
     name: "Charizard",
     types: ["Fire", "Flying"],
     baseStats: {hp: 78, atk: 84, def: 78, spa: 109, spd: 85, spe: 100},
@@ -17,7 +17,7 @@ charizard: {
 },
 
 blastoise: {
-    num: 9,
+    num: 3,
     name: "Blastoise",
     types: ["Water"],
     baseStats: {hp: 79, atk: 83, def: 100, spa: 85, spd: 105, spe: 78},
@@ -25,7 +25,7 @@ blastoise: {
 },
 
 butterfree: {
-    num: 12,
+    num: 4,
     name: "Butterfree",
     types: ["Bug", "Flying"],
     baseStats: {hp: 60, atk: 45, def: 50, spa: 90, spd: 80, spe: 70},
@@ -33,7 +33,7 @@ butterfree: {
 },
 
 beedrill: {
-    num: 15,
+    num: 5,
     name: "Beedrill",
     types: ["Bug", "Poison"],
     baseStats: {hp: 65, atk: 90, def: 40, spa: 45, spd: 80, spe: 75},
@@ -41,7 +41,7 @@ beedrill: {
 },
 
 pidgeot: {
-    num: 18,
+    num: 6,
     name: "Pidgeot",
     types: ["Normal", "Flying"],
     baseStats: {hp: 83, atk: 80, def: 75, spa: 70, spd: 70, spe: 101},
@@ -49,7 +49,7 @@ pidgeot: {
 },
 
 raticate: {
-    num: 20,
+    num: 7,
     name: "Raticate",
     types: ["Normal"],
     baseStats: {hp: 55, atk: 81, def: 60, spa: 50, spd: 70, spe: 97},
@@ -57,7 +57,7 @@ raticate: {
 },
 
 fearow: {
-    num: 22,
+    num: 8,
     name: "Fearow",
     types: ["Normal", "Flying"],
     baseStats: {hp: 65, atk: 90, def: 65, spa: 61, spd: 61, spe: 100},
@@ -65,7 +65,7 @@ fearow: {
 },
 
 arbok: {
-    num: 24,
+    num: 9,
     name: "Arbok",
     types: ["Poison"],
     baseStats: {hp: 60, atk: 95, def: 69, spa: 65, spd: 79, spe: 80},
@@ -73,7 +73,7 @@ arbok: {
 },
 
 pikachu: {
-    num: 25,
+    num: 10,
     name: "Pikachu",
     types: ["Electric"],
     baseStats: {hp: 35, atk: 55, def: 40, spa: 50, spd: 50, spe: 90},
@@ -81,7 +81,7 @@ pikachu: {
 },
 
 raichu: {
-    num: 26,
+    num: 11,
     name: "Raichu",
     types: ["Electric"],
     baseStats: {hp: 60, atk: 90, def: 55, spa: 90, spd: 80, spe: 110},
@@ -89,7 +89,7 @@ raichu: {
 },
 
 sandslash: {
-    num: 28,
+    num: 12,
     name: "Sandslash",
     types: ["Ground"],
     baseStats: {hp: 75, atk: 100, def: 110, spa: 45, spd: 55, spe: 65},
@@ -97,7 +97,7 @@ sandslash: {
 },
 
 nidoqueen: {
-    num: 31,
+    num: 13,
     name: "Nidoqueen",
     types: ["Poison", "Ground"],
     baseStats: {hp: 90, atk: 92, def: 87, spa: 75, spd: 85, spe: 76},
@@ -105,7 +105,7 @@ nidoqueen: {
 },
 
 nidoking: {
-    num: 34,
+    num: 14,
     name: "Nidoking",
     types: ["Poison", "Ground"],
     baseStats: {hp: 81, atk: 102, def: 77, spa: 85, spd: 75, spe: 85},
@@ -113,7 +113,7 @@ nidoking: {
 },
 
 clefable: {
-    num: 36,
+    num: 15,
     name: "Clefable",
     types: ["Fairy"],
     baseStats: {hp: 95, atk: 70, def: 73, spa: 95, spd: 90, spe: 60},
@@ -121,7 +121,7 @@ clefable: {
 },
 
 ninetales: {
-    num: 38,
+    num: 16,
     name: "Ninetales",
     types: ["Fire"],
     baseStats: {hp: 73, atk: 76, def: 75, spa: 81, spd: 100, spe: 100},
@@ -129,7 +129,7 @@ ninetales: {
 },
 
 wigglytuff: {
-    num: 40,
+    num: 17,
     name: "Wigglytuff",
     types: ["Normal", "Fairy"],
     baseStats: {hp: 140, atk: 70, def: 45, spa: 85, spd: 50, spe: 45},
@@ -137,7 +137,7 @@ wigglytuff: {
 },
 
 golbat: {
-    num: 42,
+    num: 18,
     name: "Golbat",
     types: ["Poison", "Flying"],
     baseStats: {hp: 75, atk: 80, def: 70, spa: 65, spd: 75, spe: 90},
@@ -145,7 +145,7 @@ golbat: {
 },
 
 vileplume: {
-    num: 45,
+    num: 19,
     name: "Vileplume",
     types: ["Grass", "Poison"],
     baseStats: {hp: 75, atk: 80, def: 85, spa: 110, spd: 90, spe: 50},
@@ -153,7 +153,7 @@ vileplume: {
 },
 
 parasect: {
-    num: 47,
+    num: 20,
     name: "Parasect",
     types: ["Bug", "Grass"],
     baseStats: {hp: 60, atk: 95, def: 80, spa: 60, spd: 80, spe: 30},
@@ -161,7 +161,7 @@ parasect: {
 },
 
 venomoth: {
-    num: 49,
+    num: 21,
     name: "Venomoth",
     types: ["Bug", "Poison"],
     baseStats: {hp: 70, atk: 65, def: 60, spa: 90, spd: 75, spe: 90},
@@ -169,7 +169,7 @@ venomoth: {
 },
 
 dugtrio: {
-    num: 51,
+    num: 22,
     name: "Dugtrio",
     types: ["Ground"],
     baseStats: {hp: 35, atk: 100, def: 50, spa: 50, spd: 70, spe: 120},
@@ -177,7 +177,7 @@ dugtrio: {
 },
 
 persian: {
-    num: 53,
+    num: 23,
     name: "Persian",
     types: ["Normal"],
     baseStats: {hp: 65, atk: 70, def: 60, spa: 65, spd: 65, spe: 115},
@@ -185,7 +185,7 @@ persian: {
 },
 
 golduck: {
-    num: 55,
+    num: 24,
     name: "Golduck",
     types: ["Water"],
     baseStats: {hp: 80, atk: 82, def: 78, spa: 95, spd: 80, spe: 85},
@@ -193,7 +193,7 @@ golduck: {
 },
 
 primeape: {
-    num: 57,
+    num: 25,
     name: "Primeape",
     types: ["Fighting"],
     baseStats: {hp: 65, atk: 105, def: 60, spa: 60, spd: 70, spe: 95},
@@ -201,7 +201,7 @@ primeape: {
 },
 
 arcanine: {
-    num: 59,
+    num: 26,
     name: "Arcanine",
     types: ["Fire"],
     baseStats: {hp: 90, atk: 110, def: 80, spa: 100, spd: 80, spe: 95},
@@ -209,7 +209,7 @@ arcanine: {
 },
 
 poliwrath: {
-    num: 62,
+    num: 27,
     name: "Poliwrath",
     types: ["Water", "Fighting"],
     baseStats: {hp: 90, atk: 95, def: 95, spa: 70, spd: 90, spe: 70},
@@ -217,7 +217,7 @@ poliwrath: {
 },
 
 alakazam: {
-    num: 65,
+    num: 28,
     name: "Alakazam",
     types: ["Psychic"],
     baseStats: {hp: 55, atk: 50, def: 45, spa: 135, spd: 95, spe: 120},
@@ -225,7 +225,7 @@ alakazam: {
 },
 
 machamp: {
-    num: 68,
+    num: 29,
     name: "Machamp",
     types: ["Fighting"],
     baseStats: {hp: 90, atk: 130, def: 80, spa: 65, spd: 85, spe: 55},
@@ -233,7 +233,7 @@ machamp: {
 },
 
 victreebel: {
-    num: 71,
+    num: 30,
     name: "Victreebel",
     types: ["Grass", "Poison"],
     baseStats: {hp: 80, atk: 105, def: 65, spa: 100, spd: 70, spe: 70},
@@ -241,7 +241,7 @@ victreebel: {
 },
 
 tentacruel: {
-    num: 73,
+    num: 31,
     name: "Tentacruel",
     types: ["Water", "Poison"],
     baseStats: {hp: 80, atk: 70, def: 65, spa: 80, spd: 120, spe: 100},
@@ -249,7 +249,7 @@ tentacruel: {
 },
 
 golem: {
-    num: 76,
+    num: 32,
     name: "Golem",
     types: ["Rock", "Ground"],
     baseStats: {hp: 80, atk: 120, def: 130, spa: 55, spd: 65, spe: 45},
@@ -257,7 +257,7 @@ golem: {
 },
 
 rapidash: {
-    num: 78,
+    num: 33,
     name: "Rapidash",
     types: ["Fire"],
     baseStats: {hp: 65, atk: 100, def: 70, spa: 80, spd: 80, spe: 105},
@@ -265,7 +265,7 @@ rapidash: {
 },
 
 slowbro: {
-    num: 80,
+    num: 34,
     name: "Slowbro",
     types: ["Water", "Psychic"],
     baseStats: {hp: 95, atk: 75, def: 110, spa: 100, spd: 80, spe: 30},
@@ -273,7 +273,7 @@ slowbro: {
 },
 
 magneton: {
-    num: 82,
+    num: 35,
     name: "Magneton",
     types: ["Electric", "Steel"],
     baseStats: {hp: 50, atk: 60, def: 95, spa: 120, spd: 70, spe: 70},
@@ -281,7 +281,7 @@ magneton: {
 },
 
 farfetchd: {
-    num: 83,
+    num: 36,
     name: "Farfetch\u2019d",
     types: ["Normal", "Flying"],
     baseStats: {hp: 52, atk: 90, def: 55, spa: 58, spd: 62, spe: 60},
@@ -289,7 +289,7 @@ farfetchd: {
 },
 
 dodrio: {
-    num: 85,
+    num: 37,
     name: "Dodrio",
     types: ["Normal", "Flying"],
     baseStats: {hp: 60, atk: 110, def: 70, spa: 60, spd: 60, spe: 110},
@@ -297,7 +297,7 @@ dodrio: {
 },
 
 dewgong: {
-    num: 87,
+    num: 38,
     name: "Dewgong",
     types: ["Water", "Ice"],
     baseStats: {hp: 90, atk: 70, def: 80, spa: 70, spd: 95, spe: 70},
@@ -305,7 +305,7 @@ dewgong: {
 },
 
 muk: {
-    num: 89,
+    num: 39,
     name: "Muk",
     types: ["Poison"],
     baseStats: {hp: 105, atk: 105, def: 75, spa: 65, spd: 100, spe: 50},
@@ -313,7 +313,7 @@ muk: {
 },
 
 cloyster: {
-    num: 91,
+    num: 40,
     name: "Cloyster",
     types: ["Water", "Ice"],
     baseStats: {hp: 50, atk: 95, def: 180, spa: 85, spd: 45, spe: 70},
@@ -321,7 +321,7 @@ cloyster: {
 },
 
 gengar: {
-    num: 94,
+    num: 41,
     name: "Gengar",
     types: ["Ghost", "Poison"],
     baseStats: {hp: 60, atk: 65, def: 60, spa: 130, spd: 75, spe: 110},
@@ -329,7 +329,7 @@ gengar: {
 },
 
 onix: {
-    num: 95,
+    num: 42,
     name: "Onix",
     types: ["Rock", "Ground"],
     baseStats: {hp: 35, atk: 45, def: 160, spa: 30, spd: 45, spe: 70},
@@ -337,7 +337,7 @@ onix: {
 },
 
 hypno: {
-    num: 97,
+    num: 43,
     name: "Hypno",
     types: ["Psychic"],
     baseStats: {hp: 85, atk: 73, def: 70, spa: 73, spd: 115, spe: 67},
@@ -345,7 +345,7 @@ hypno: {
 },
 
 kingler: {
-    num: 99,
+    num: 44,
     name: "Kingler",
     types: ["Water"],
     baseStats: {hp: 55, atk: 130, def: 115, spa: 50, spd: 50, spe: 75},
@@ -353,7 +353,7 @@ kingler: {
 },
 
 electrode: {
-    num: 101,
+    num: 45,
     name: "Electrode",
     types: ["Electric"],
     baseStats: {hp: 60, atk: 50, def: 70, spa: 80, spd: 80, spe: 150},
@@ -361,7 +361,7 @@ electrode: {
 },
 
 exeggutor: {
-    num: 103,
+    num: 46,
     name: "Exeggutor",
     types: ["Grass", "Psychic"],
     baseStats: {hp: 95, atk: 95, def: 85, spa: 125, spd: 75, spe: 55},
@@ -369,7 +369,7 @@ exeggutor: {
 },
 
 marowak: {
-    num: 105,
+    num: 47,
     name: "Marowak",
     types: ["Ground"],
     baseStats: {hp: 60, atk: 80, def: 110, spa: 50, spd: 80, spe: 45},
@@ -377,7 +377,7 @@ marowak: {
 },
 
 hitmonlee: {
-    num: 106,
+    num: 48,
     name: "Hitmonlee",
     types: ["Fighting"],
     baseStats: {hp: 50, atk: 120, def: 53, spa: 35, spd: 110, spe: 87},
@@ -385,7 +385,7 @@ hitmonlee: {
 },
 
 hitmonchan: {
-    num: 107,
+    num: 49,
     name: "Hitmonchan",
     types: ["Fighting"],
     baseStats: {hp: 50, atk: 105, def: 79, spa: 35, spd: 110, spe: 76},
@@ -393,7 +393,7 @@ hitmonchan: {
 },
 
 lickitung: {
-    num: 108,
+    num: 50,
     name: "Lickitung",
     types: ["Normal"],
     baseStats: {hp: 90, atk: 55, def: 75, spa: 60, spd: 75, spe: 30},
@@ -401,7 +401,7 @@ lickitung: {
 },
 
 weezing: {
-    num: 110,
+    num: 51,
     name: "Weezing",
     types: ["Poison"],
     baseStats: {hp: 65, atk: 90, def: 120, spa: 85, spd: 70, spe: 60},
@@ -409,7 +409,7 @@ weezing: {
 },
 
 rhydon: {
-    num: 112,
+    num: 52,
     name: "Rhydon",
     types: ["Ground", "Rock"],
     baseStats: {hp: 105, atk: 130, def: 120, spa: 45, spd: 45, spe: 40},
@@ -417,7 +417,7 @@ rhydon: {
 },
 
 chansey: {
-    num: 113,
+    num: 53,
     name: "Chansey",
     types: ["Normal"],
     baseStats: {hp: 250, atk: 5, def: 5, spa: 35, spd: 105, spe: 50},
@@ -425,7 +425,7 @@ chansey: {
 },
 
 tangela: {
-    num: 114,
+    num: 54,
     name: "Tangela",
     types: ["Grass"],
     baseStats: {hp: 65, atk: 55, def: 115, spa: 100, spd: 40, spe: 60},
@@ -433,7 +433,7 @@ tangela: {
 },
 
 kangaskhan: {
-    num: 115,
+    num: 55,
     name: "Kangaskhan",
     types: ["Normal"],
     baseStats: {hp: 105, atk: 95, def: 80, spa: 40, spd: 80, spe: 90},
@@ -441,7 +441,7 @@ kangaskhan: {
 },
 
 seadra: {
-    num: 117,
+    num: 56,
     name: "Seadra",
     types: ["Water"],
     baseStats: {hp: 55, atk: 65, def: 95, spa: 95, spd: 45, spe: 85},
@@ -449,7 +449,7 @@ seadra: {
 },
 
 seaking: {
-    num: 119,
+    num: 57,
     name: "Seaking",
     types: ["Water"],
     baseStats: {hp: 80, atk: 92, def: 65, spa: 65, spd: 80, spe: 68},
@@ -457,7 +457,7 @@ seaking: {
 },
 
 starmie: {
-    num: 121,
+    num: 58,
     name: "Starmie",
     types: ["Water", "Psychic"],
     baseStats: {hp: 60, atk: 75, def: 85, spa: 100, spd: 85, spe: 115},
@@ -465,7 +465,7 @@ starmie: {
 },
 
 mrmime: {
-    num: 122,
+    num: 59,
     name: "Mr. Mime",
     types: ["Psychic", "Fairy"],
     baseStats: {hp: 40, atk: 45, def: 65, spa: 100, spd: 120, spe: 90},
@@ -473,7 +473,7 @@ mrmime: {
 },
 
 scyther: {
-    num: 123,
+    num: 60,
     name: "Scyther",
     types: ["Bug", "Flying"],
     baseStats: {hp: 70, atk: 110, def: 80, spa: 55, spd: 80, spe: 105},
@@ -481,7 +481,7 @@ scyther: {
 },
 
 jynx: {
-    num: 124,
+    num: 61,
     name: "Jynx",
     types: ["Ice", "Psychic"],
     baseStats: {hp: 65, atk: 50, def: 35, spa: 115, spd: 95, spe: 95},
@@ -489,7 +489,7 @@ jynx: {
 },
 
 electabuzz: {
-    num: 125,
+    num: 62,
     name: "Electabuzz",
     types: ["Electric"],
     baseStats: {hp: 65, atk: 83, def: 57, spa: 95, spd: 85, spe: 105},
@@ -497,7 +497,7 @@ electabuzz: {
 },
 
 magmar: {
-    num: 126,
+    num: 63,
     name: "Magmar",
     types: ["Fire"],
     baseStats: {hp: 65, atk: 95, def: 57, spa: 100, spd: 85, spe: 93},
@@ -505,7 +505,7 @@ magmar: {
 },
 
 pinsir: {
-    num: 127,
+    num: 64,
     name: "Pinsir",
     types: ["Bug"],
     baseStats: {hp: 65, atk: 125, def: 100, spa: 55, spd: 70, spe: 85},
@@ -513,7 +513,7 @@ pinsir: {
 },
 
 tauros: {
-    num: 128,
+    num: 65,
     name: "Tauros",
     types: ["Normal"],
     baseStats: {hp: 75, atk: 100, def: 95, spa: 40, spd: 70, spe: 110},
@@ -521,7 +521,7 @@ tauros: {
 },
 
 gyarados: {
-    num: 130,
+    num: 66,
     name: "Gyarados",
     types: ["Water", "Flying"],
     baseStats: {hp: 95, atk: 125, def: 79, spa: 60, spd: 100, spe: 81},
@@ -529,7 +529,7 @@ gyarados: {
 },
 
 lapras: {
-    num: 131,
+    num: 67,
     name: "Lapras",
     types: ["Water", "Ice"],
     baseStats: {hp: 130, atk: 85, def: 80, spa: 85, spd: 95, spe: 60},
@@ -537,7 +537,7 @@ lapras: {
 },
 
 ditto: {
-    num: 132,
+    num: 68,
     name: "Ditto",
     types: ["Normal"],
     baseStats: {hp: 48, atk: 48, def: 48, spa: 48, spd: 48, spe: 48},
@@ -545,7 +545,7 @@ ditto: {
 },
 
 eevee: {
-    num: 133,
+    num: 69,
     name: "Eevee",
     types: ["Normal"],
     baseStats: {hp: 55, atk: 55, def: 50, spa: 45, spd: 65, spe: 55},
@@ -553,7 +553,7 @@ eevee: {
 },
 
 vaporeon: {
-    num: 134,
+    num: 70,
     name: "Vaporeon",
     types: ["Water"],
     baseStats: {hp: 130, atk: 65, def: 60, spa: 110, spd: 95, spe: 65},
@@ -561,7 +561,7 @@ vaporeon: {
 },
 
 jolteon: {
-    num: 135,
+    num: 71,
     name: "Jolteon",
     types: ["Electric"],
     baseStats: {hp: 65, atk: 65, def: 60, spa: 110, spd: 95, spe: 130},
@@ -569,7 +569,7 @@ jolteon: {
 },
 
 flareon: {
-    num: 136,
+    num: 72,
     name: "Flareon",
     types: ["Fire"],
     baseStats: {hp: 65, atk: 130, def: 60, spa: 95, spd: 110, spe: 65},
@@ -577,7 +577,7 @@ flareon: {
 },
 
 porygon: {
-    num: 137,
+    num: 73,
     name: "Porygon",
     types: ["Normal"],
     baseStats: {hp: 65, atk: 60, def: 70, spa: 85, spd: 75, spe: 40},
@@ -585,7 +585,7 @@ porygon: {
 },
 
 omastar: {
-    num: 139,
+    num: 74,
     name: "Omastar",
     types: ["Rock", "Water"],
     baseStats: {hp: 70, atk: 60, def: 125, spa: 115, spd: 70, spe: 55},
@@ -593,7 +593,7 @@ omastar: {
 },
 
 kabutops: {
-    num: 141,
+    num: 75,
     name: "Kabutops",
     types: ["Rock", "Water"],
     baseStats: {hp: 60, atk: 115, def: 105, spa: 65, spd: 70, spe: 80},
@@ -601,7 +601,7 @@ kabutops: {
 },
 
 aerodactyl: {
-    num: 142,
+    num: 76,
     name: "Aerodactyl",
     types: ["Rock", "Flying"],
     baseStats: {hp: 80, atk: 105, def: 65, spa: 60, spd: 75, spe: 130},
@@ -609,7 +609,7 @@ aerodactyl: {
 },
 
 snorlax: {
-    num: 143,
+    num: 77,
     name: "Snorlax",
     types: ["Normal"],
     baseStats: {hp: 160, atk: 110, def: 65, spa: 65, spd: 110, spe: 30},
@@ -617,7 +617,7 @@ snorlax: {
 },
 
 articuno: {
-    num: 144,
+    num: 78,
     name: "Articuno",
     types: ["Ice", "Flying"],
     baseStats: {hp: 90, atk: 85, def: 100, spa: 95, spd: 125, spe: 85},
@@ -625,7 +625,7 @@ articuno: {
 },
 
 zapdos: {
-    num: 145,
+    num: 79,
     name: "Zapdos",
     types: ["Electric", "Flying"],
     baseStats: {hp: 90, atk: 90, def: 85, spa: 125, spd: 90, spe: 100},
@@ -633,7 +633,7 @@ zapdos: {
 },
 
 moltres: {
-    num: 146,
+    num: 80,
     name: "Moltres",
     types: ["Fire", "Flying"],
     baseStats: {hp: 90, atk: 100, def: 90, spa: 125, spd: 85, spe: 90},
@@ -641,7 +641,7 @@ moltres: {
 },
 
 dragonite: {
-    num: 149,
+    num: 81,
     name: "Dragonite",
     types: ["Dragon", "Flying"],
     baseStats: {hp: 91, atk: 134, def: 95, spa: 100, spd: 100, spe: 80},
@@ -649,7 +649,7 @@ dragonite: {
 },
 
 mewtwo: {
-    num: 150,
+    num: 82,
     name: "Mewtwo",
     types: ["Psychic"],
     baseStats: {hp: 106, atk: 110, def: 90, spa: 154, spd: 90, spe: 130},
@@ -657,7 +657,7 @@ mewtwo: {
 },
 
 mew: {
-    num: 151,
+    num: 83,
     name: "Mew",
     types: ["Psychic"],
     baseStats: {hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100},
