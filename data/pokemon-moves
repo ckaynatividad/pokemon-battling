@@ -4,6 +4,8 @@ export const moves: {
 	// morning sun, teleport, roost, heal bell, toxic, icebeam
 	// substitute, knockoff, wish, yawn, throatchop, lovelykiss
     // 
+
+
 growth: {
 		num: 74,
 		accuracy: true,
