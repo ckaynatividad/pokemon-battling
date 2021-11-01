@@ -1,6 +1,6 @@
-export const pokeDex = {
+export const pokeDex = [
     
-venusaur: {
+{
         num: 1,
 		name: "Venusaur",
 		types: ["Grass", "Poison"],
@@ -8,7 +8,7 @@ venusaur: {
         img: './data/pokeimg/venusaur.webp'
 },
 
-charizard: {
+{
     num: 2,
     name: "Charizard",
     types: ["Fire", "Flying"],
@@ -16,7 +16,7 @@ charizard: {
     img: './data/pokeimg/charizard.webp'
 },
 
-blastoise: {
+{
     num: 3,
     name: "Blastoise",
     types: ["Water"],
@@ -24,7 +24,7 @@ blastoise: {
     img: './data/pokeimg/blastoise.webp'
 },
 
-butterfree: {
+{
     num: 4,
     name: "Butterfree",
     types: ["Bug", "Flying"],
@@ -32,7 +32,7 @@ butterfree: {
     img: './data/pokeimg/butterfree.webp'
 },
 
-beedrill: {
+{
     num: 5,
     name: "Beedrill",
     types: ["Bug", "Poison"],
@@ -40,7 +40,7 @@ beedrill: {
     img: './data/pokeimg/beedrill.webp'
 },
 
-pidgeot: {
+{
     num: 6,
     name: "Pidgeot",
     types: ["Normal", "Flying"],
@@ -48,7 +48,7 @@ pidgeot: {
     img: './data/pokeimg/pidgeot.webp'
 },
 
-raticate: {
+{
     num: 7,
     name: "Raticate",
     types: ["Normal"],
@@ -56,7 +56,7 @@ raticate: {
     img: './data/pokeimg/raticate.webp'
 },
 
-fearow: {
+{
     num: 8,
     name: "Fearow",
     types: ["Normal", "Flying"],
@@ -64,7 +64,7 @@ fearow: {
     img: './data/pokeimg/fearow.webp'
 },
 
-arbok: {
+{
     num: 9,
     name: "Arbok",
     types: ["Poison"],
@@ -72,7 +72,7 @@ arbok: {
     img: './data/pokeimg/arbok.webp'
 },
 
-pikachu: {
+{
     num: 10,
     name: "Pikachu",
     types: ["Electric"],
@@ -80,7 +80,7 @@ pikachu: {
     img: './data/pokeimg/pikachu.webp'
 },
 
-raichu: {
+{
     num: 11,
     name: "Raichu",
     types: ["Electric"],
@@ -88,7 +88,7 @@ raichu: {
     img: './data/pokeimg/raichu.webp'
 },
 
-sandslash: {
+{
     num: 12,
     name: "Sandslash",
     types: ["Ground"],
@@ -96,7 +96,7 @@ sandslash: {
     img: './data/pokeimg/sandslash.webp'
 },
 
-nidoqueen: {
+{
     num: 13,
     name: "Nidoqueen",
     types: ["Poison", "Ground"],
@@ -104,7 +104,7 @@ nidoqueen: {
     img: './data/pokeimg/nidoqueen.webp'
 },
 
-nidoking: {
+{
     num: 14,
     name: "Nidoking",
     types: ["Poison", "Ground"],
@@ -112,7 +112,7 @@ nidoking: {
     img: './data/pokeimg/nidoking.webp'
 },
 
-clefable: {
+{
     num: 15,
     name: "Clefable",
     types: ["Fairy"],
@@ -120,7 +120,7 @@ clefable: {
     img: './data/pokeimg/clefable.webp'
 },
 
-ninetales: {
+{
     num: 16,
     name: "Ninetales",
     types: ["Fire"],
@@ -128,7 +128,7 @@ ninetales: {
     img: './data/pokeimg/ninetales.webp'
 },
 
-wigglytuff: {
+{
     num: 17,
     name: "Wigglytuff",
     types: ["Normal", "Fairy"],
@@ -136,7 +136,7 @@ wigglytuff: {
     img: './data/pokeimg/wigglytuff.webp'
 },
 
-golbat: {
+{
     num: 18,
     name: "Golbat",
     types: ["Poison", "Flying"],
@@ -144,7 +144,7 @@ golbat: {
     img: './data/pokeimg/golbat.webp'
 },
 
-vileplume: {
+{
     num: 19,
     name: "Vileplume",
     types: ["Grass", "Poison"],
@@ -152,7 +152,7 @@ vileplume: {
     img: './data/pokeimg/vileplume.webp'
 },
 
-parasect: {
+{
     num: 20,
     name: "Parasect",
     types: ["Bug", "Grass"],
@@ -160,7 +160,7 @@ parasect: {
     img: './data/pokeimg/parasect.webp'
 },
 
-venomoth: {
+{
     num: 21,
     name: "Venomoth",
     types: ["Bug", "Poison"],
@@ -168,7 +168,7 @@ venomoth: {
     img: './data/pokeimg/venomoth.webp'
 },
 
-dugtrio: {
+{
     num: 22,
     name: "Dugtrio",
     types: ["Ground"],
@@ -176,7 +176,7 @@ dugtrio: {
     img: './data/pokeimg/dugtrio.webp'
 },
 
-persian: {
+{
     num: 23,
     name: "Persian",
     types: ["Normal"],
@@ -184,7 +184,7 @@ persian: {
     img: './data/pokeimg/persian.webp'
 },
 
-golduck: {
+{
     num: 24,
     name: "Golduck",
     types: ["Water"],
@@ -192,7 +192,7 @@ golduck: {
     img: './data/pokeimg/golduck.webp'
 },
 
-primeape: {
+{
     num: 25,
     name: "Primeape",
     types: ["Fighting"],
@@ -200,7 +200,7 @@ primeape: {
     img: './data/pokeimg/primeape.webp'
 },
 
-arcanine: {
+{
     num: 26,
     name: "Arcanine",
     types: ["Fire"],
@@ -208,7 +208,7 @@ arcanine: {
     img: './data/pokeimg/arcanine.webp'
 },
 
-poliwrath: {
+{
     num: 27,
     name: "Poliwrath",
     types: ["Water", "Fighting"],
@@ -216,7 +216,7 @@ poliwrath: {
     img: './data/pokeimg/poliwrath.webp'
 },
 
-alakazam: {
+{
     num: 28,
     name: "Alakazam",
     types: ["Psychic"],
@@ -224,7 +224,7 @@ alakazam: {
     img: './data/pokeimg/alakazam.webp'
 },
 
-machamp: {
+{
     num: 29,
     name: "Machamp",
     types: ["Fighting"],
@@ -232,7 +232,7 @@ machamp: {
     img: './data/pokeimg/machamp.webp'
 },
 
-victreebel: {
+{
     num: 30,
     name: "Victreebel",
     types: ["Grass", "Poison"],
@@ -240,7 +240,7 @@ victreebel: {
     img: './data/pokeimg/victrebel.webp'
 },
 
-tentacruel: {
+{
     num: 31,
     name: "Tentacruel",
     types: ["Water", "Poison"],
@@ -248,7 +248,7 @@ tentacruel: {
     img: './data/pokeimg/tentacruel.webp'
 },
 
-golem: {
+{
     num: 32,
     name: "Golem",
     types: ["Rock", "Ground"],
@@ -256,7 +256,7 @@ golem: {
     img: './data/pokeimg/golem.webp'
 },
 
-rapidash: {
+{
     num: 33,
     name: "Rapidash",
     types: ["Fire"],
@@ -264,7 +264,7 @@ rapidash: {
     img: './data/pokeimg/rapidash.webp'
 },
 
-slowbro: {
+{
     num: 34,
     name: "Slowbro",
     types: ["Water", "Psychic"],
@@ -272,7 +272,7 @@ slowbro: {
     img: './data/pokeimg/slowbro.webp'
 },
 
-magneton: {
+{
     num: 35,
     name: "Magneton",
     types: ["Electric", "Steel"],
@@ -280,7 +280,7 @@ magneton: {
     img: './data/pokeimg/mageneton.webp'
 },
 
-farfetchd: {
+{
     num: 36,
     name: "Farfetch\u2019d",
     types: ["Normal", "Flying"],
@@ -288,7 +288,7 @@ farfetchd: {
     img: './data/pokeimg/farfetchd.webp'
 },
 
-dodrio: {
+{
     num: 37,
     name: "Dodrio",
     types: ["Normal", "Flying"],
@@ -296,7 +296,7 @@ dodrio: {
     img: './data/pokeimg/dodrio.webp'
 },
 
-dewgong: {
+{
     num: 38,
     name: "Dewgong",
     types: ["Water", "Ice"],
@@ -304,7 +304,7 @@ dewgong: {
     img: './data/pokeimg/dewgong.webp'
 },
 
-muk: {
+{
     num: 39,
     name: "Muk",
     types: ["Poison"],
@@ -312,7 +312,7 @@ muk: {
     img: './data/pokeimg/muk.webp'
 },
 
-cloyster: {
+{
     num: 40,
     name: "Cloyster",
     types: ["Water", "Ice"],
@@ -320,7 +320,7 @@ cloyster: {
     img: './data/pokeimg/cloyster.webp'
 },
 
-gengar: {
+{
     num: 41,
     name: "Gengar",
     types: ["Ghost", "Poison"],
@@ -328,7 +328,7 @@ gengar: {
     img: './data/pokeimg/gengar.webp'
 },
 
-onix: {
+{
     num: 42,
     name: "Onix",
     types: ["Rock", "Ground"],
@@ -336,7 +336,7 @@ onix: {
     img: './data/pokeimg/onix.webp'
 },
 
-hypno: {
+{
     num: 43,
     name: "Hypno",
     types: ["Psychic"],
@@ -344,7 +344,7 @@ hypno: {
     img: './data/pokeimg/hypno.webp'
 },
 
-kingler: {
+{
     num: 44,
     name: "Kingler",
     types: ["Water"],
@@ -352,7 +352,7 @@ kingler: {
     img: './data/pokeimg/kingler.webp'
 },
 
-electrode: {
+{
     num: 45,
     name: "Electrode",
     types: ["Electric"],
@@ -360,7 +360,7 @@ electrode: {
     img: './data/pokeimg/electrode.webp'
 },
 
-exeggutor: {
+{
     num: 46,
     name: "Exeggutor",
     types: ["Grass", "Psychic"],
@@ -368,7 +368,7 @@ exeggutor: {
     img: './data/pokeimg/exeggutor.webp'
 },
 
-marowak: {
+{
     num: 47,
     name: "Marowak",
     types: ["Ground"],
@@ -376,7 +376,7 @@ marowak: {
     img: './data/pokeimg/marowak.webp'
 },
 
-hitmonlee: {
+{
     num: 48,
     name: "Hitmonlee",
     types: ["Fighting"],
@@ -384,7 +384,7 @@ hitmonlee: {
     img: './data/pokeimg/hitmonlee.webp'
 },
 
-hitmonchan: {
+{
     num: 49,
     name: "Hitmonchan",
     types: ["Fighting"],
@@ -392,7 +392,7 @@ hitmonchan: {
     img: './data/pokeimg/hitmonchan.webp'
 },
 
-lickitung: {
+{
     num: 50,
     name: "Lickitung",
     types: ["Normal"],
@@ -400,7 +400,7 @@ lickitung: {
     img: './data/pokeimg/lickitung.webp'
 },
 
-weezing: {
+{
     num: 51,
     name: "Weezing",
     types: ["Poison"],
@@ -408,7 +408,7 @@ weezing: {
     img: './data/pokeimg/weezing.webp'
 },
 
-rhydon: {
+{
     num: 52,
     name: "Rhydon",
     types: ["Ground", "Rock"],
@@ -416,7 +416,7 @@ rhydon: {
     img: './data/pokeimg/rhydon.webp'
 },
 
-chansey: {
+{
     num: 53,
     name: "Chansey",
     types: ["Normal"],
@@ -424,7 +424,7 @@ chansey: {
     img: './data/pokeimg/chansey.webp'
 },
 
-tangela: {
+{
     num: 54,
     name: "Tangela",
     types: ["Grass"],
@@ -432,7 +432,7 @@ tangela: {
     img: './data/pokeimg/tangela.webp'
 },
 
-kangaskhan: {
+{
     num: 55,
     name: "Kangaskhan",
     types: ["Normal"],
@@ -440,7 +440,7 @@ kangaskhan: {
     img: './data/pokeimg/kangaskhan.webp'
 },
 
-seadra: {
+{
     num: 56,
     name: "Seadra",
     types: ["Water"],
@@ -448,7 +448,7 @@ seadra: {
     img: './data/pokeimg/seadra.webp'
 },
 
-seaking: {
+{
     num: 57,
     name: "Seaking",
     types: ["Water"],
@@ -456,7 +456,7 @@ seaking: {
     img: './data/pokeimg/seaking.webp'
 },
 
-starmie: {
+{
     num: 58,
     name: "Starmie",
     types: ["Water", "Psychic"],
@@ -464,7 +464,7 @@ starmie: {
     img: './data/pokeimg/starmie.webp'
 },
 
-mrmime: {
+{
     num: 59,
     name: "Mr. Mime",
     types: ["Psychic", "Fairy"],
@@ -472,7 +472,7 @@ mrmime: {
     img: './data/pokeimg/mrmine.webp'
 },
 
-scyther: {
+{
     num: 60,
     name: "Scyther",
     types: ["Bug", "Flying"],
@@ -480,7 +480,7 @@ scyther: {
     img: './data/pokeimg/scyther.webp'
 },
 
-jynx: {
+{
     num: 61,
     name: "Jynx",
     types: ["Ice", "Psychic"],
@@ -488,7 +488,7 @@ jynx: {
     img: './data/pokeimg/jynx.webp'
 },
 
-electabuzz: {
+{
     num: 62,
     name: "Electabuzz",
     types: ["Electric"],
@@ -496,7 +496,7 @@ electabuzz: {
     img: './data/pokeimg/electabuzz.webp'
 },
 
-magmar: {
+{
     num: 63,
     name: "Magmar",
     types: ["Fire"],
@@ -504,7 +504,7 @@ magmar: {
     img: './data/pokeimg/magmar.webp'
 },
 
-pinsir: {
+{
     num: 64,
     name: "Pinsir",
     types: ["Bug"],
@@ -512,7 +512,7 @@ pinsir: {
     img: './data/pokeimg/pinsir.webp'
 },
 
-tauros: {
+{
     num: 65,
     name: "Tauros",
     types: ["Normal"],
@@ -520,7 +520,7 @@ tauros: {
     img: './data/pokeimg/tauros.webp'
 },
 
-gyarados: {
+{
     num: 66,
     name: "Gyarados",
     types: ["Water", "Flying"],
@@ -528,7 +528,7 @@ gyarados: {
     img: './data/pokeimg/gyarados.webp'
 },
 
-lapras: {
+{
     num: 67,
     name: "Lapras",
     types: ["Water", "Ice"],
@@ -536,7 +536,7 @@ lapras: {
     img: './data/pokeimg/lapras.webp'
 },
 
-ditto: {
+{
     num: 68,
     name: "Ditto",
     types: ["Normal"],
@@ -544,7 +544,7 @@ ditto: {
     img: './data/pokeimg/ditto.webp'
 },
 
-eevee: {
+{
     num: 69,
     name: "Eevee",
     types: ["Normal"],
@@ -552,7 +552,7 @@ eevee: {
     img: './data/pokeimg/eevee.webp'
 },
 
-vaporeon: {
+{
     num: 70,
     name: "Vaporeon",
     types: ["Water"],
@@ -560,7 +560,7 @@ vaporeon: {
     img: './data/pokeimg/vaporeon.webp'
 },
 
-jolteon: {
+{
     num: 71,
     name: "Jolteon",
     types: ["Electric"],
@@ -568,7 +568,7 @@ jolteon: {
     img: './data/pokeimg/jolteon.webp'
 },
 
-flareon: {
+{
     num: 72,
     name: "Flareon",
     types: ["Fire"],
@@ -576,7 +576,7 @@ flareon: {
     img: './data/pokeimg/flareon.webp'
 },
 
-porygon: {
+{
     num: 73,
     name: "Porygon",
     types: ["Normal"],
@@ -584,7 +584,7 @@ porygon: {
     img: './data/pokeimg/porygon.webp'
 },
 
-omastar: {
+{
     num: 74,
     name: "Omastar",
     types: ["Rock", "Water"],
@@ -592,7 +592,7 @@ omastar: {
     img: './data/pokeimg/omastar.webp'
 },
 
-kabutops: {
+{
     num: 75,
     name: "Kabutops",
     types: ["Rock", "Water"],
@@ -600,7 +600,7 @@ kabutops: {
     img: './data/pokeimg/kabutops.webp'
 },
 
-aerodactyl: {
+{
     num: 76,
     name: "Aerodactyl",
     types: ["Rock", "Flying"],
@@ -608,7 +608,7 @@ aerodactyl: {
     img: './data/pokeimg/aerodactyl.webp'
 },
 
-snorlax: {
+{
     num: 77,
     name: "Snorlax",
     types: ["Normal"],
@@ -616,7 +616,7 @@ snorlax: {
     img: './data/pokeimg/snorlax.webp'
 },
 
-articuno: {
+{
     num: 78,
     name: "Articuno",
     types: ["Ice", "Flying"],
@@ -624,7 +624,7 @@ articuno: {
     img: './data/pokeimg/articuno.webp'
 },
 
-zapdos: {
+{
     num: 79,
     name: "Zapdos",
     types: ["Electric", "Flying"],
@@ -632,7 +632,7 @@ zapdos: {
     img: './data/pokeimg/zapdos.webp'
 },
 
-moltres: {
+{
     num: 80,
     name: "Moltres",
     types: ["Fire", "Flying"],
@@ -640,7 +640,7 @@ moltres: {
     img: './data/pokeimg/moltres.webp'
 },
 
-dragonite: {
+{
     num: 81,
     name: "Dragonite",
     types: ["Dragon", "Flying"],
@@ -648,7 +648,7 @@ dragonite: {
     img: './data/pokeimg/dragonite.webp'
 },
 
-mewtwo: {
+{
     num: 82,
     name: "Mewtwo",
     types: ["Psychic"],
@@ -656,7 +656,7 @@ mewtwo: {
     img: './data/pokeimg/mewtwo.webp'
 },
 
-mew: {
+{
     num: 83,
     name: "Mew",
     types: ["Psychic"],
@@ -665,4 +665,4 @@ mew: {
 
 }
 
-};
+];
