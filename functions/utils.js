@@ -39,8 +39,8 @@ export function getPokemon(){
     return pokemon;
 }
 
-export function setPokemon(pokemon){
-    localStorage.setItem('POKEMON', JSON.stringify(pokemon));
+export function setPokemon(num){
+    localStorage.setItem('POKEMON', JSON.stringify(num));
 }
 
 export function getpokeDex(){
@@ -160,13 +160,13 @@ export function generatePokemon() {
     poke5input.value = poke5.num;
     poke6input.value = poke6.num;
 
-    return [
-        poke1,
-        poke2,
-        poke3,
-        poke4,
-        poke5,
-        poke6
-    ];
+    // return [
+    //     poke1,
+    //     poke2,
+    //     poke3,
+    //     poke4,
+    //     poke5,
+    //     poke6
+    // ];
 
 }
