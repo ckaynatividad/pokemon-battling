@@ -1,10 +1,5 @@
 export const pokeDex: {
-  
-// NO MOVES FOR:  dodrio, eevee, farfetchd, kingler, victrebell, venomoth, raticate, primeape, pedgeot, parasect, muk, hypno, fearow, dewgong, beedrill, arbok
-
-// need to change num to ids, and change the numbers
-
-
+    
 venusaur: {
         num: 1,
 		name: "Venusaur",
