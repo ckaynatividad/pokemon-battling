@@ -1,4 +1,5 @@
 import { pokeDex } from '../data/pokemon-data.js';
+import findById from './findById.js';
 
 // NEEDS 'pokeDex' ARRAY IMPORT OR REPLACE 'pokeDex' W/ ARRAY NAME
 export function generateComPokemon(){
@@ -38,8 +39,8 @@ export function getPokemon(){
     return pokemon;
 }
 
-export function setPokemon(){
-    localStorage.setItem('POKEMON', JSON.stringify())
+export function setPokemon(pokemon){
+    localStorage.setItem('POKEMON', JSON.stringify(pokemon));
 }
 
 export function getpokeDex(){
@@ -145,7 +146,27 @@ export function generatePokemon() {
     pokename5.textContent = poke5.name;
     pokename6.textContent = poke6.name;
 
-}
+    const poke1input = document.getElementById('poke1');
+    const poke2input = document.getElementById('poke2');
+    const poke3input = document.getElementById('poke3');
+    const poke4input = document.getElementById('poke4');
+    const poke5input = document.getElementById('poke5');
+    const poke6input = document.getElementById('poke6');
 
-   
-    
+    poke1input.value = poke1.num;
+    poke2input.value = poke2.num;
+    poke3input.value = poke3.num;
+    poke4input.value = poke4.num;
+    poke5input.value = poke5.num;
+    poke6input.value = poke6.num;
+
+    return [
+        poke1,
+        poke2,
+        poke3,
+        poke4,
+        poke5,
+        poke6
+    ];
+
+}
