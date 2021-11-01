@@ -1,5 +1,6 @@
+import { generatePokemon } from './functions/utils.js';
 
-
+generatePokemon();
 
 const submit = document.getElementById('submit');
 
@@ -10,6 +11,6 @@ submit.addEventListener('click', ()=>{
         alert('Please only choose three.');
         window.location.reload();
     } else {
-    window.location = './battle';
+        window.location = './battle';
     }
 });
