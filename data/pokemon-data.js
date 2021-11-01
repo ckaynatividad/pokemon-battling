@@ -1,3 +1,4 @@
+/* eslint-disable */
 export const pokeDex = [
     
     {
@@ -330,7 +331,7 @@ export const pokeDex = [
 
     {
         num: 42,
-        name: 'Onix',
+        name: 'Onyx',
         types: ['Rock', 'Ground'],
         baseStats: { hp: 35, atk: 45, def: 160, spa: 30, spd: 45, spe: 70 },
         img: './data/pokeimg/onix.webp'
