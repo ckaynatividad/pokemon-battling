@@ -1,4 +1,5 @@
 import { pokeDex } from '../data/pokemon-data.js';
+import findById from './findById.js';
 
 // NEEDS 'pokeDex' ARRAY IMPORT OR REPLACE 'pokeDex' W/ ARRAY NAME
 export function generateComPokemon(){
@@ -159,6 +160,13 @@ export function generatePokemon() {
     poke5input.value = poke5.num;
     poke6input.value = poke6.num;
 
-    console.log(poke1input.value);
+    return [
+        poke1,
+        poke2,
+        poke3,
+        poke4,
+        poke5,
+        poke6
+    ];
 
 }

@@ -8,16 +8,17 @@ const submit = document.getElementById('submit');
 
 submit.addEventListener('click', ()=>{
     const selected = document.querySelectorAll('input[type=radio]:checked');
-    console.log(selected);
-    const huwwo = findById(pokeDex, selected.values);
-    console.log(huwwo);
 
     if (selected.length > 3 || selected.length < 3) {
         alert('Please only choose three.');
         // window.location.reload();
     } else {
-  
-        setPokemon(selected);
+        for (let select of selected) {      
+            
+            const chosen = findById(pokeDex, +select.value);
+            console.log(chosen);
+            setPokemon(chosen);
+        }
         // window.location = './battle';
     }
 });

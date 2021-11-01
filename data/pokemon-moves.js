@@ -4,6 +4,8 @@ export const moves: {
 	// morning sun, teleport, roost, heal bell, toxic, icebeam
 	// substitute, knockoff, wish, yawn, throatchop, lovelykiss
     // 
+
+
 growth: {
 		num: 74,
 		accuracy: true,
@@ -850,3 +852,650 @@ suckerpunch: {
 	name: "Sucker Punch",
 	type: "Dark",
 }
+
+sheercold: {
+	num: 329,
+	accuracy: 30,
+	basePower: 0,
+	category: "Special",
+	name: "Sheer Cold",
+	pp: 5,
+	priority: 0,
+	flags: {protect: 1, mirror: 1},
+	secondary: null,
+	ohko: 'Ice',
+	target: "normal",
+	type: "Ice",
+	zMove: {basePower: 180},
+	maxMove: {basePower: 130},
+	contestType: "Beautiful",
+},
+
+horndrill: {
+	num: 32,
+	accuracy: 30,
+	basePower: 0,
+	category: "Physical",
+	name: "Horn Drill",
+	pp: 5,
+	priority: 0,
+	flags: {contact: 1, protect: 1, mirror: 1},
+	ohko: true,
+	secondary: null,
+	target: "normal",
+	type: "Normal",
+	zMove: {basePower: 180},
+	maxMove: {basePower: 130},
+	contestType: "Cool",
+},
+
+bodyslam: {
+	num: 34,
+	accuracy: 100,
+	basePower: 85,
+	category: "Physical",
+	name: "Body Slam",
+	pp: 15,
+	priority: 0,
+	flags: {contact: 1, protect: 1, mirror: 1, nonsky: 1},
+	secondary: {
+		chance: 30,
+		status: 'par',
+	},
+	target: "normal",
+	type: "Normal",
+	contestType: "Tough",
+},
+
+ironhead: {
+	num: 442,
+	accuracy: 100,
+	basePower: 80,
+	category: "Physical",
+	name: "Iron Head",
+	pp: 15,
+	priority: 0,
+	flags: {contact: 1, protect: 1, mirror: 1},
+	secondary: {
+		chance: 30,
+		volatileStatus: 'flinch',
+	},
+	target: "normal",
+	type: "Steel",
+	contestType: "Tough",
+},
+
+sludgebomb: {
+	num: 188,
+	accuracy: 100,
+	basePower: 90,
+	category: "Special",
+	name: "Sludge Bomb",
+	pp: 10,
+	priority: 0,
+	flags: {bullet: 1, protect: 1, mirror: 1},
+	secondary: {
+		chance: 30,
+		status: 'psn',
+	},
+	target: "normal",
+	type: "Poison",
+	contestType: "Tough",
+},
+
+recover: {
+	num: 105,
+	accuracy: true,
+	basePower: 0,
+	category: "Status",
+	name: "Recover",
+	pp: 10,
+	priority: 0,
+	flags: {snatch: 1, heal: 1},
+	heal: [1, 2],
+	secondary: null,
+	target: "self",
+	type: "Normal",
+	zMove: {effect: 'clearnegativeboost'},
+	contestType: "Clever",
+},
+
+leechseed: {
+	num: 73,
+	accuracy: 90,
+	basePower: 0,
+	category: "Status",
+	name: "Leech Seed",
+	pp: 10,
+	priority: 0,
+	// flags: {protect: 1, reflectable: 1, mirror: 1},
+	// volatileStatus: 'leechseed',
+	// condition: {
+	// 	onStart(target) {
+	// 		this.add('-start', target, 'move: Leech Seed');
+	// 	},
+	// 	onResidualOrder: 8,
+	// 	onResidual(pokemon) {
+	// 		const target = this.getAtSlot(pokemon.volatiles['leechseed'].sourceSlot);
+	// 		if (!target || target.fainted || target.hp <= 0) {
+	// 			this.debug('Nothing to leech into');
+	// 			return;
+	// 		}
+	// 		const damage = this.damage(pokemon.baseMaxhp / 8, pokemon, target);
+	// 		if (damage) {
+	// 			this.heal(damage, target, pokemon);
+	// 		}
+	// 	},
+	// },
+	// onTryImmunity(target) {
+	// 	return !target.hasType('Grass');
+	// },
+	// secondary: null,
+	// target: "normal",
+	// type: "Grass",
+	// zMove: {effect: 'clearnegativeboost'},
+	// contestType: "Clever",
+},
+
+bodyslam: {
+	num: 34,
+	accuracy: 100,
+	basePower: 85,
+	category: "Physical",
+	name: "Body Slam",
+	pp: 15,
+	priority: 0,
+	flags: {contact: 1, protect: 1, mirror: 1, nonsky: 1},
+	secondary: {
+		chance: 30,
+		status: 'par',
+	},
+	target: "normal",
+	type: "Normal",
+	contestType: "Tough",
+},
+
+curse: {
+	num: 174,
+	accuracy: true,
+	basePower: 0,
+	category: "Status",
+	name: "Curse",
+	pp: 10,
+	// priority: 0,
+	// flags: {bypasssub: 1},
+	// volatileStatus: 'curse',
+	// onModifyMove(move, source, target) {
+	// 	if (!source.hasType('Ghost')) {
+	// 		move.target = move.nonGhostTarget as MoveTarget;
+	// 	}
+	// },
+	// onTryHit(target, source, move) {
+	// 	if (!source.hasType('Ghost')) {
+	// 		delete move.volatileStatus;
+	// 		delete move.onHit;
+	// 		move.self = {boosts: {spe: -1, atk: 1, def: 1}};
+	// 	} else if (move.volatileStatus && target.volatiles['curse']) {
+	// 		return false;
+	// 	}
+	// },
+	// onHit(target, source) {
+	// 	this.directDamage(source.maxhp / 2, source, source);
+	// },
+	// condition: {
+	// 	onStart(pokemon, source) {
+	// 		this.add('-start', pokemon, 'Curse', '[of] ' + source);
+	// 	},
+	// 	onResidualOrder: 12,
+	// 	onResidual(pokemon) {
+	// 		this.damage(pokemon.baseMaxhp / 4);
+	// 	},
+	// },
+	// secondary: null,
+	// target: "randomNormal",
+	// nonGhostTarget: "self",
+	// type: "Ghost",
+	// zMove: {effect: 'curse'},
+	// contestType: "Tough",
+},
+
+slackoff: {
+	num: 303,
+	accuracy: true,
+	basePower: 0,
+	category: "Status",
+	name: "Slack Off",
+	pp: 10,
+	priority: 0,
+	flags: {snatch: 1, heal: 1},
+	heal: [1, 2],
+	secondary: null,
+	target: "self",
+	type: "Normal",
+	zMove: {effect: 'clearnegativeboost'},
+	contestType: "Cute",
+},
+
+rockslide: {
+	num: 157,
+	accuracy: 90,
+	basePower: 75,
+	category: "Physical",
+	name: "Rock Slide",
+	pp: 10,
+	priority: 0,
+	flags: {protect: 1, mirror: 1},
+	secondary: {
+		chance: 30,
+		volatileStatus: 'flinch',
+	},
+	target: "allAdjacentFoes",
+	type: "Rock",
+	contestType: "Tough",
+},
+
+willowisp: {
+	num: 261,
+	accuracy: 85,
+	basePower: 0,
+	category: "Status",
+	name: "Will-O-Wisp",
+	pp: 15,
+	priority: 0,
+	flags: {protect: 1, reflectable: 1, mirror: 1},
+	status: 'brn',
+	secondary: null,
+	target: "normal",
+	type: "Fire",
+	zMove: {boost: {atk: 1}},
+	contestType: "Beautiful",
+},
+
+highhorsepower: {
+	num: 667,
+	accuracy: 95,
+	basePower: 95,
+	category: "Physical",
+	name: "High Horsepower",
+	pp: 10,
+	priority: 0,
+	flags: {contact: 1, protect: 1, mirror: 1},
+	secondary: null,
+	target: "normal",
+	type: "Ground",
+	contestType: "Tough",
+},
+
+agility: {
+	num: 97,
+	accuracy: true,
+	basePower: 0,
+	category: "Status",
+	name: "Agility",
+	pp: 30,
+	priority: 0,
+	flags: {snatch: 1},
+	boosts: {
+		spe: 2,
+	},
+
+	icepunch: {
+		num: 8,
+		accuracy: 100,
+		basePower: 75,
+		category: "Physical",
+		name: "Ice Punch",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+		secondary: {
+			chance: 10,
+			status: 'frz',
+		},
+		target: "normal",
+		type: "Ice",
+		contestType: "Beautiful",
+	},
+
+	triattack: {
+		num: 161,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Tri Attack",
+		pp: 10,
+		priority: 0,
+		// flags: {protect: 1, mirror: 1},
+		// secondary: {
+		// 	chance: 20,
+		// 	onHit(target, source) {
+		// 		const result = this.random(3);
+		// 		if (result === 0) {
+		// 			target.trySetStatus('brn', source);
+		// 		} else if (result === 1) {
+		// 			target.trySetStatus('par', source);
+		// 		} else {
+		// 			target.trySetStatus('frz', source);
+		// 		}
+		// 	},
+		// },
+		// target: "normal",
+		// type: "Normal",
+		// contestType: "Beautiful",
+	},
+
+	quickattack: {
+		num: 98,
+		accuracy: 100,
+		basePower: 40,
+		category: "Physical",
+		name: "Quick Attack",
+		pp: 30,
+		priority: 1,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		contestType: "Cool",
+	},
+
+	frustration: {
+		num: 218,
+		accuracy: 100,
+		basePower: 0,
+		basePowerCallback(pokemon) {
+			return Math.floor(((255 - pokemon.happiness) * 10) / 25) || 1;
+		},
+		category: "Physical",
+		isNonstandard: "Past",
+		name: "Frustration",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		zMove: {basePower: 160},
+		maxMove: {basePower: 130},
+		contestType: "Cute",
+	},
+
+	voltswitch: {
+		num: 521,
+		accuracy: 100,
+		basePower: 70,
+		category: "Special",
+		name: "Volt Switch",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		selfSwitch: true,
+		secondary: null,
+		target: "normal",
+		type: "Electric",
+		contestType: "Cool",
+	},
+
+	extremespeed: {
+		num: 245,
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "Extreme Speed",
+		pp: 5,
+		priority: 2,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		contestType: "Cool",
+	},
+
+	explosion: {
+		num: 153,
+		accuracy: 100,
+		basePower: 250,
+		category: "Physical",
+		name: "Explosion",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		selfdestruct: "always",
+		secondary: null,
+		target: "allAdjacent",
+		type: "Normal",
+		contestType: "Beautiful",
+	},
+
+	energyball: {
+		num: 412,
+		accuracy: 100,
+		basePower: 90,
+		category: "Special",
+		name: "Energy Ball",
+		pp: 10,
+		priority: 0,
+		flags: {bullet: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 10,
+			boosts: {
+				spd: -1,
+			},
+		},
+		target: "normal",
+		type: "Grass",
+		contestType: "Beautiful",
+	},
+
+	scorchingsands: {
+		num: 815,
+		accuracy: 100,
+		basePower: 70,
+		category: "Special",
+		name: "Scorching Sands",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, defrost: 1},
+		thawsTarget: true,
+		secondary: {
+			chance: 30,
+			status: 'brn',
+		},
+		target: "normal",
+		type: "Ground",
+	},
+
+	meteorbeam: {
+		num: 800,
+		accuracy: 90,
+		basePower: 120,
+		category: "Special",
+		name: "Meteor Beam",
+		pp: 10,
+		priority: 0,
+		// flags: {charge: 1, protect: 1, mirror: 1},
+		// onTryMove(attacker, defender, move) {
+		// 	if (attacker.removeVolatile(move.id)) {
+		// 		return;
+		// 	}
+		// 	this.add('-prepare', attacker, move.name);
+		// 	this.boost({spa: 1}, attacker, attacker, move);
+		// 	if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+		// 		return;
+		// 	}
+		// 	attacker.addVolatile('twoturnmove', defender);
+		// 	return null;
+		// },
+		secondary: null,
+		target: "normal",
+		type: "Rock",
+	},
+	
+	meteormash: {
+		num: 309,
+		accuracy: 90,
+		basePower: 90,
+		category: "Physical",
+		name: "Meteor Mash",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+		secondary: {
+			chance: 20,
+			self: {
+				boosts: {
+					atk: 1,
+				},
+			},
+		},
+		target: "normal",
+		type: "Steel",
+		contestType: "Cool",
+	},
+
+	healingwish: {
+		num: 361,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Healing Wish",
+		pp: 10,
+		// priority: 0,
+		// flags: {snatch: 1, heal: 1},
+		// onTryHit(pokemon, target, move) {
+		// 	if (!this.canSwitch(pokemon.side)) {
+		// 		delete move.selfdestruct;
+		// 		return false;
+		// 	}
+		// },
+		// selfdestruct: "ifHit",
+		// slotCondition: 'healingwish',
+		// condition: {
+		// 	onSwap(target) {
+		// 		if (!target.fainted && (target.hp < target.maxhp || target.status)) {
+		// 			target.heal(target.maxhp);
+		// 			target.setStatus('');
+		// 			this.add('-heal', target, target.getHealth, '[from] move: Healing Wish');
+		// 			target.side.removeSlotCondition(target, 'healingwish');
+		// 		}
+		// 	},
+		// },
+		secondary: null,
+		target: "self",
+		type: "Psychic",
+		contestType: "Beautiful",
+	},
+
+	flashcannon: {
+		num: 430,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Flash Cannon",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 10,
+			boosts: {
+				spd: -1,
+			},
+		},
+		target: "normal",
+		type: "Steel",
+		contestType: "Beautiful",
+	},
+
+	lavaplume: {
+		num: 436,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Lava Plume",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			status: 'brn',
+		},
+		target: "allAdjacent",
+		type: "Fire",
+		contestType: "Tough",
+	},
+	
+	bulletpunch: {
+		num: 418,
+		accuracy: 100,
+		basePower: 40,
+		category: "Physical",
+		name: "Bullet Punch",
+		pp: 30,
+		priority: 1,
+		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
+		secondary: null,
+		target: "normal",
+		type: "Steel",
+		contestType: "Tough",
+	},
+
+	facade: {
+		num: 263,
+		accuracy: 100,
+		basePower: 70,
+		category: "Physical",
+		name: "Facade",
+		// pp: 20,
+		// priority: 0,
+		// flags: {contact: 1, protect: 1, mirror: 1},
+		// onBasePower(basePower, pokemon) {
+		// 	if (pokemon.status && pokemon.status !== 'slp') {
+		// 		return this.chainModify(2);
+		// 	}
+		// },
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		contestType: "Cute",
+	},
+
+	heavyslam: {
+		num: 484,
+		accuracy: 100,
+		basePower: 0,
+		// basePowerCallback(pokemon, target) {
+		// 	const targetWeight = target.getWeight();
+		// 	const pokemonWeight = pokemon.getWeight();
+		// 	if (pokemonWeight >= targetWeight * 5) {
+		// 		return 120;
+		// 	}
+		// 	if (pokemonWeight >= targetWeight * 4) {
+		// 		return 100;
+		// 	}
+		// 	if (pokemonWeight >= targetWeight * 3) {
+		// 		return 80;
+		// 	}
+		// 	if (pokemonWeight >= targetWeight * 2) {
+		// 		return 60;
+		// 	}
+		// 	return 40;
+		// },
+		// category: "Physical",
+		// name: "Heavy Slam",
+		// pp: 10,
+		// priority: 0,
+		// flags: {contact: 1, protect: 1, mirror: 1, nonsky: 1},
+		// onTryHit(target, pokemon, move) {
+		// 	if (target.volatiles['dynamax']) {
+		// 		this.add('-fail', pokemon, 'Dynamax');
+		// 		this.attrLastMove('[still]');
+		// 		return null;
+		// 	}
+		// },
+		secondary: null,
+		target: "normal",
+		type: "Steel",
+		zMove: {basePower: 160},
+		maxMove: {basePower: 130},
+		contestType: "Tough",
+	},
