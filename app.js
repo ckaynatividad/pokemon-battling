@@ -10,6 +10,6 @@ submit.addEventListener('click', ()=>{
         alert('Please only choose three.');
         window.location.reload();
     } else {
-    window.location = './battle';
+        window.location = './battle';
     }
 });

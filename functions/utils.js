@@ -96,7 +96,7 @@ export function generatePokemon() {
         rando3 === rando6 ||
         rando4 === rando5 ||
         rando4 === rando6 ||
-        rando5 === rando6 ||
+        rando5 === rando6
 
     ) {
         rando1 = Math.floor(Math.random() * pokeDex.length);
