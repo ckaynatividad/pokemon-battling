@@ -5,6 +5,5 @@ export function findById(array, num){
             return item;
         }
     }
-    return null;
 }
 export default findById;
