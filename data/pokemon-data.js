@@ -1,4 +1,4 @@
-export const Pokedex: {
+export const pokeDex: {
     
 venusaur: {
         num: 3,
