@@ -39,7 +39,7 @@ export function getPokemon(){
 }
 
 export function setPokemon(){
-    localStorage.setItem('POKEMON', JSON.stringify())
+    localStorage.setItem('POKEMON', JSON.stringify()); //added missing semicolon
 }
 
 export function getPokeDex(){
