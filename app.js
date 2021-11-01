@@ -1,5 +1,6 @@
+import { generatePokemon } from './functions/utils.js';
 
-
+generatePokemon();
 
 const submit = document.getElementById('submit');
 

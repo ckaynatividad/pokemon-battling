@@ -96,7 +96,7 @@ export function generatePokemon() {
         rando3 === rando6 ||
         rando4 === rando5 ||
         rando4 === rando6 ||
-        rando5 === rando6
+        rando5 === rando6 
 
     ) {
         rando1 = Math.floor(Math.random() * pokeDex.length);
@@ -115,4 +115,37 @@ export function generatePokemon() {
     let poke4 = pokeDex[rando4];
     let poke5 = pokeDex[rando5];
     let poke6 = pokeDex[rando6];
+    console.log(poke1);
+
+    const pokeimg1 = document.getElementById('poke1-img');
+    const pokeimg2 = document.getElementById('poke2-img');
+    const pokeimg3 = document.getElementById('poke3-img');
+    const pokeimg4 = document.getElementById('poke4-img');
+    const pokeimg5 = document.getElementById('poke5-img');
+    const pokeimg6 = document.getElementById('poke6-img');
+
+    pokeimg1.src = poke1.img;
+    pokeimg2.src = poke2.img;
+    pokeimg3.src = poke3.img;
+    pokeimg4.src = poke4.img;
+    pokeimg5.src = poke5.img;
+    pokeimg6.src = poke6.img;
+    
+    const pokename1 = document.getElementById('poke1-name');
+    const pokename2 = document.getElementById('poke2-name');
+    const pokename3 = document.getElementById('poke3-name');
+    const pokename4 = document.getElementById('poke4-name');
+    const pokename5 = document.getElementById('poke5-name');
+    const pokename6 = document.getElementById('poke6-name');
+
+    pokename1.textContent = poke1.name;
+    pokename2.textContent = poke2.name;
+    pokename3.textContent = poke3.name;
+    pokename4.textContent = poke4.name;
+    pokename5.textContent = poke5.name;
+    pokename6.textContent = poke6.name;
+
 }
+
+   
+    
