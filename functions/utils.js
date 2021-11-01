@@ -1,4 +1,4 @@
-
+import pokeDex from '../data/pokemon-data';
 
 // NEEDS 'pokeDex' ARRAY IMPORT OR REPLACE 'pokeDex' W/ ARRAY NAME
 export function generatePokemon(){
@@ -39,7 +39,7 @@ export function getPokemon(){
 }
 
 export function setPokemon(){
-    localStorage.setItem('POKEMON', JSON.stringify()); //added missing semicolon
+    localStorage.setItem('POKEMON', JSON.stringify())
 }
 
 export function getPokeDex(){
