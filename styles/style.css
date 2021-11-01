@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    flex-direction: column;
+    line-height: 50px;
+    align-items: center;
+    font-family: 'Play', sans-serif;
+}
+
+#description {
+    border: 1px solid black;
+    padding: 10px;
+    font-family: 'Play', sans-serif;
+}
+
+#choose-pokemon {
+    display: flex;
+    justify-content: space-between;
+    width: fit-content;
+    flex-direction: column;
+}
+
+button {
+    width: min-content;
+    margin-top: 10px;
+    padding: 10px;
+    font-family: 'Play', sans-serif;
+}
+
+h1 {
+    font-family: 'Press Start 2P', sans-serif;
+}

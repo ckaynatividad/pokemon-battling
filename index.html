@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Monda:wght@400;700&family=Play:wght@400;700&family=Press+Start+2P&family=Work+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
     <!-- Stylesheets -->
     <link rel="stylesheet" href="./styles/reset.css">
@@ -15,9 +18,12 @@
 </head>
 
 <body>
-    Choose 3
+    <h1>Pokemon Battling</h1>
+    <p id="description">
+    Description Here
+    </p>
 <div id="choose-pokemon">
-    
+    <p>
     <label>
     <input type="radio" name="pokemon1" id="poke1">
     <img id="poke1-img">
@@ -30,6 +36,8 @@
     <input type="radio" name="pokemon3" id="poke3">
     <img id="poke3-img">
     </label>
+    </p>
+    <p>
     <label>
     <input type="radio" name="pokemon4" id="poke4">
     <img id="poke4-img">
@@ -42,9 +50,14 @@
     <input type="radio" name="pokemon6" id="poke6">
     <img id="poke6-img">
     </label>
+    </p>
 </div>
 
-    <button id="submit">Play</button>
+    <button id="submit">Choose</button>
+
+    <p>
+        <a href="./about">About Us</a>
+    </p>
 
     <script type="module" src="./app.js"></script>
 </body>
