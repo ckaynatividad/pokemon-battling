@@ -75,6 +75,7 @@ submit.addEventListener('click', (e) => {
         console.log('switch');
     } else {
         const selectedMove = selectedMoveRadio.value;
+        console.log(selectedMove);
         const moveData = moves[selectedMove];
         console.log(moveData);
     }
