@@ -13,16 +13,18 @@
         <h3>Battle</h3>
     </header>
     <main id="main">
-        <span id="computer-pokemon">
-            HP:
-            <span id="comp-hp"></span>
-            <img src="" alt="" id="comp-image">
-        </span>
-        <span id="player-pokemon">
-            HP:
-            <span id="player-hp"></span>
-            <img src="" alt="" id="player-image">
-        </span>
+        <div id="battle-box">
+            <span id="computer-pokemon">
+                HP:
+                <span id="comp-hp"></span>
+                <img src="" alt="" id="comp-image">
+            </span>
+            <span id="player-pokemon">
+                <img src="" alt="" id="player-image">
+                HP:
+                <span id="player-hp"></span>
+            </span>
+        </div>
         <form action="submit" id="move-select-form">
             <div id="form-div">
                 <label for="move-1">
@@ -41,7 +43,7 @@
                     <span id="move-4-span"></span>
                     <input type="radio" name="battle-select" id="move4">
                 </label>
-                <label for="switch">
+                <label for="switch">Switch
                     <input type="radio" name="battle-select" id="switch">
                 </label>
             </div>

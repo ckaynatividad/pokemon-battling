@@ -1,6 +1,45 @@
-#form-div {
+body {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#form-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+}
+
+#battle-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid black;
+    margin-left: 33vw;
+    margin-right: 33vw;
+}
+
+#computer-pokemon {
+    margin-left: 20vw;
+    margin-bottom: 3vw;
+}
+
+#player-pokemon {
+    margin-top: 3vw;
+    margin-right: 20vw;
+    margin-bottom: 20px;
 }
