@@ -1,9 +1,12 @@
-body {
-    display: flex;
-    flex-direction: column;
+#pokemon-form {
     line-height: 50px;
-    align-items: center;
     font-family: 'Play', sans-serif;
+    width: fit-content;
+    display: flex;
+    flex-flow: row;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin: auto;
 }
 
 #description {
@@ -12,11 +15,13 @@ body {
     font-family: 'Play', sans-serif;
 }
 
-#choose-pokemon {
+header {
     display: flex;
-    justify-content: space-between;
-    width: fit-content;
     flex-direction: column;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
 }
 
 button {
@@ -26,6 +31,17 @@ button {
     font-family: 'Play', sans-serif;
 }
 
+#bottom {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
 h1 {
     font-family: 'Press Start 2P', sans-serif;
+}
+
+img {
+    /* width: 120px;
+    height: 120px; */
 }
