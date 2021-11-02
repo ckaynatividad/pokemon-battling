@@ -1,7 +1,8 @@
 import { getPokemon, generateComPokemon } from '../functions/utils.js';
 import { moves } from '../data/pokemon-moves.js';
 import { getActive } from '../functions/getActive.js';
-// import { pokeDex } from '../data/pokemon-data.js';
+import { baseStat } from '../functions/baseStat.js';
+import { pokeDex } from '../data/pokemon-data.js';
 
 const move1 = document.getElementById('move1');
 const move2 = document.getElementById('move2');
@@ -18,13 +19,39 @@ const move2Span = document.getElementById('move-2-span');
 const move3Span = document.getElementById('move-3-span');
 const move4Span = document.getElementById('move-4-span');
 
-const playerPokemon = getPokemon();
-playerPokemon[0].active = true;
-console.log(playerPokemon);
 
-const computerPokemon = generateComPokemon();
-const activePokemon = getActive(playerPokemon);
+const playerPokemon1 = getPokemon();
+playerPokemon1[0].active = true;
+console.log(playerPokemon1);
+
+const computerPokemon1 = generateComPokemon();
+const activePokemon = getActive(playerPokemon1);
 //player pokemon data
+
+let playerPokemon = [];
+playerPokemon1.forEach((Object)=>{
+    playerPokemon.push({
+        num: Object.num,
+        name: Object.name,
+        types: Object.types,
+        moves: Object.moves, 
+        baseStats: { hp: baseStat(Object.baseStats.hp), atk: baseStat(Object.baseStats.atk), def: baseStat(Object.baseStats.def), spa: baseStat(Object.baseStats.spa), spd: baseStat(Object.baseStats.spd), spe: baseStat(Object.baseStats.spe) },
+        img: Object.img
+    });
+});
+
+let computerPokemon = [];
+computerPokemon1.forEach((Object)=>{
+    computerPokemon.push({
+        num: Object.num,
+        name: Object.name,
+        types: Object.types,
+        moves: Object.moves, 
+        baseStats: { hp: baseStat(Object.baseStats.hp), atk: baseStat(Object.baseStats.atk), def: baseStat(Object.baseStats.def), spa: baseStat(Object.baseStats.spa), spd: baseStat(Object.baseStats.spd), spe: baseStat(Object.baseStats.spe) },
+        img: Object.img
+    });
+});
+
 playerHP.textContent = playerPokemon[0].baseStats.hp;
 playerImage.src = `../${playerPokemon[0].img}`;
 
@@ -82,3 +109,12 @@ submit.addEventListener('click', (e) => {
     }
     
 });
+
+
+
+
+// playerPokemon.baseStats.forEach((Object)=>{
+//     baseStat(Object);
+// });
+
+// console.log(playerPokemon);
