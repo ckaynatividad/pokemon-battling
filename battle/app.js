@@ -79,5 +79,4 @@ submit.addEventListener('click', (e) => {
         const selectedMove = selectedMoveRadio.value;
         const moveData = moves[selectedMove];
     }
-    
 });
