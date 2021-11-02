@@ -1,5 +1,4 @@
 #pokemon-form {
-    line-height: 50px;
     font-family: 'Play', sans-serif;
     width: fit-content;
     display: flex;
@@ -10,9 +9,11 @@
 }
 
 #description {
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.432);
     padding: 10px;
     font-family: 'Play', sans-serif;
+    margin-bottom: 50px;
+    color: rgba(0, 0, 0, 0.651);
 }
 
 header {
@@ -24,17 +25,24 @@ header {
     margin: auto;
 }
 
+input[type=radio] {
+    display: none;
+}
 button {
     width: min-content;
-    margin-top: 10px;
+    margin-top: 50px;
     padding: 10px;
     font-family: 'Play', sans-serif;
 }
 
-#bottom {
+footer {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    margin: auto;
+    line-height: 50px;
 }
 
 h1 {
@@ -42,6 +50,33 @@ h1 {
 }
 
 img {
-    /* width: 120px;
-    height: 120px; */
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+input:checked + img {
+    /* border: 1.5pt solid rgba(238, 71, 71, 0.87); */
+    animation: bounce 1.5s;
+    animation-iteration-count: 1;
+    box-shadow: 1px 1px 2px 1px rgba(85, 64, 65, 0.349)
+}
+
+@keyframes bounce {
+    80% { transform:translateY(-15%); }
+    90% { transform:translateY(0%); }
+    95% { transform:translateY(-7%); }
+    97% { transform:translateY(0%); }
+    99% { transform:translateY(-3%); }
+    100% { transform:translateY(0); }
+}
+
+h5 {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    margin: auto;
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 6pt;
+    color: rgba(29, 28, 28, 0.774);
 }
