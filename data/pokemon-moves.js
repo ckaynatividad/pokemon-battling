@@ -97,6 +97,25 @@ nastyplot: {
 	contestType: "Clever",
 },
 
+brickbreak: {
+	num: 280,
+	accuracy: 100,
+	basePower: 75,
+	category: "Physical",
+	name: "Brick Break",
+	type: "Fighting",
+	Priority: "0",
+	flags: {contact: 1, protect: 1, mirror: 1},
+		onTryHit(pokemon) {
+			// will shatter screens through sub, before you hit
+			pokemon.side.removeSideCondition('reflect');
+			pokemon.side.removeSideCondition('lightscreen');
+			pokemon.side.removeSideCondition('auroraveil');
+		},
+	},
+},
+	
+
 psychic: {
 	num: 94,
 	accuracy: 100,
@@ -104,7 +123,122 @@ psychic: {
 	category: "Special",
 	name: "Psychic",
 	type: "Psychic",
-}
+},
+
+iciclecrash: {
+	num: 556,
+	accuracy: 90,
+	basePower: 85,
+	category: "Physical",
+	name: "Icicle Crash",
+	pp: 10,
+	priority: 0,
+	flags: {protect: 1, mirror: 1},
+	secondary: {
+		chance: 30,
+		volatileStatus: 'flinch',
+	},
+	target: "normal",
+	type: "Ice",
+	contestType: "Beautiful",
+},
+
+zenheadbutt: {
+	num: 428,
+	accuracy: 90,
+	basePower: 80,
+	category: "Physical",
+	name: "Zen Headbutt",
+	pp: 15,
+	priority: 0,
+	flags: {contact: 1, protect: 1, mirror: 1},
+	secondary: {
+		chance: 20,
+		volatileStatus: 'flinch',
+	},
+	target: "normal",
+	type: "Psychic",
+	contestType: "Clever",
+},
+
+hypervoice: {
+	num: 304,
+	accuracy: 100,
+	basePower: 90,
+	category: "Special",
+	name: "Hyper Voice",
+	pp: 10,
+	priority: 0,
+	flags: {protect: 1, mirror: 1, sound: 1, bypasssub: 1},
+	secondary: null,
+	target: "allAdjacentFoes",
+	type: "Normal",
+	contestType: "Cool",
+},
+
+pollenpuff: {
+	num: 676,
+	accuracy: 100,
+	basePower: 90,
+	category: "Special",
+	name: "Pollen Puff",
+	pp: 15,
+	priority: 0,
+	flags: {bullet: 1, protect: 1, mirror: 1, allyanim: 1},
+	onTryHit(target, source, move) {
+		if (source.isAlly(target)) {
+			move.basePower = 0;
+			move.infiltrates = true;
+		}
+	},
+	onHit(target, source) {
+		if (source.isAlly(target)) {
+			if (!this.heal(Math.floor(target.baseMaxhp * 0.5))) {
+				this.add('-immune', target);
+			}
+		}
+	},
+	secondary: null,
+	target: "normal",
+	type: "Bug",
+	contestType: "Cute",
+},
+
+blizzard: {
+	num: 59,
+	accuracy: 70,
+	basePower: 110,
+	category: "Special",
+	name: "Blizzard",
+	pp: 5,
+	priority: 0,
+	flags: {protect: 1, mirror: 1},
+	onModifyMove(move) {
+		if (this.field.isWeather('hail')) move.accuracy = true;
+	},
+	secondary: {
+		chance: 10,
+		status: 'frz',
+	},
+	target: "allAdjacentFoes",
+	type: "Ice",
+	contestType: "Beautiful",
+},
+
+xscissor: {
+	num: 404,
+	accuracy: 100,
+	basePower: 80,
+	category: "Physical",
+	name: "X-Scissor",
+	pp: 15,
+	priority: 0,
+	flags: {contact: 1, protect: 1, mirror: 1},
+	secondary: null,
+	target: "normal",
+	type: "Bug",
+	contestType: "Cool",
+},
 
 psyshock: {
 	num: 473,
@@ -383,10 +517,10 @@ transform: {
 	category: "Status",
 	name: "Transform",
 	type: "Normal",
-	// onHit(target, pokemon) {
-	// 	if (!pokemon.transformInto(target)) {
-	// 		return false;
-	// 	}
+	onHit(target, pokemon) {
+		if (!pokemon.transformInto(target)) {
+			return false;
+		}
 }
 
 futuresight: {
@@ -440,27 +574,27 @@ wish: {
 	category: "Status",
 	name: "Wish",
 	type: "Normal",
-	// pp: 10,
-	// priority: 0,
-	// flags: {snatch: 1, heal: 1},
-	// slotCondition: 'Wish',
-	// condition: {
-	// 	duration: 2,
-	// 	onStart(pokemon, source) {
-	// 		this.effectState.hp = source.maxhp / 2;
-	// 	},
-	// 	onResidualOrder: 4,
-	// 	onEnd(target) {
-	// 		if (target && !target.fainted) {
-	// 			const damage = this.heal(this.effectState.hp, target, target);
-	// 			if (damage) {
-	// 				this.add('-heal', target, target.getHealth, '[from] move: Wish', '[wisher] ' + this.effectState.source.name);
-	// 			}
-	// 		}
-	// 	},
-	// },
-	// secondary: null,
-	// target: "self",
+	pp: 10,
+	priority: 0,
+	flags: {snatch: 1, heal: 1},
+	slotCondition: 'Wish',
+	condition: {
+		duration: 2,
+		onStart(pokemon, source) {
+			this.effectState.hp = source.maxhp / 2;
+		},
+		onResidualOrder: 4,
+		onEnd(target) {
+			if (target && !target.fainted) {
+				const damage = this.heal(this.effectState.hp, target, target);
+				if (damage) {
+					this.add('-heal', target, target.getHealth, '[from] move: Wish', '[wisher] ' + this.effectState.source.name);
+				}
+			}
+		},
+	},
+	secondary: null,
+	target: "self",
 
 }
 
@@ -577,11 +711,11 @@ superfang: {
 	num: 162,
 	accuracy: 90,
 	basePower: 0,
-	// damageCallback(pokemon, target) {
-	// 	return this.clampIntRange(target.getUndynamaxedHP() / 2, 1);
-	// },
-	// category: "Physical",
-	// name: "Super Fang",
+	damageCallback(pokemon, target) {
+		return this.clampIntRange(target.getUndynamaxedHP() / 2, 1);
+	},
+	category: "Physical",
+	name: "Super Fang",
 	type: "Normal",
 }
 
@@ -968,33 +1102,33 @@ leechseed: {
 	name: "Leech Seed",
 	pp: 10,
 	priority: 0,
-	// flags: {protect: 1, reflectable: 1, mirror: 1},
-	// volatileStatus: 'leechseed',
-	// condition: {
-	// 	onStart(target) {
-	// 		this.add('-start', target, 'move: Leech Seed');
-	// 	},
-	// 	onResidualOrder: 8,
-	// 	onResidual(pokemon) {
-	// 		const target = this.getAtSlot(pokemon.volatiles['leechseed'].sourceSlot);
-	// 		if (!target || target.fainted || target.hp <= 0) {
-	// 			this.debug('Nothing to leech into');
-	// 			return;
-	// 		}
-	// 		const damage = this.damage(pokemon.baseMaxhp / 8, pokemon, target);
-	// 		if (damage) {
-	// 			this.heal(damage, target, pokemon);
-	// 		}
-	// 	},
-	// },
-	// onTryImmunity(target) {
-	// 	return !target.hasType('Grass');
-	// },
-	// secondary: null,
-	// target: "normal",
-	// type: "Grass",
-	// zMove: {effect: 'clearnegativeboost'},
-	// contestType: "Clever",
+	flags: {protect: 1, reflectable: 1, mirror: 1},
+	volatileStatus: 'leechseed',
+	condition: {
+		onStart(target) {
+			this.add('-start', target, 'move: Leech Seed');
+		},
+		onResidualOrder: 8,
+		onResidual(pokemon) {
+			const target = this.getAtSlot(pokemon.volatiles['leechseed'].sourceSlot);
+			if (!target || target.fainted || target.hp <= 0) {
+				this.debug('Nothing to leech into');
+				return;
+			}
+			const damage = this.damage(pokemon.baseMaxhp / 8, pokemon, target);
+			if (damage) {
+				this.heal(damage, target, pokemon);
+			}
+		},
+	},
+	onTryImmunity(target) {
+		return !target.hasType('Grass');
+	},
+	secondary: null,
+	target: "normal",
+	type: "Grass",
+	zMove: {effect: 'clearnegativeboost'},
+	contestType: "Clever",
 },
 
 bodyslam: {
@@ -1022,41 +1156,41 @@ curse: {
 	category: "Status",
 	name: "Curse",
 	pp: 10,
-	// priority: 0,
-	// flags: {bypasssub: 1},
-	// volatileStatus: 'curse',
-	// onModifyMove(move, source, target) {
-	// 	if (!source.hasType('Ghost')) {
-	// 		move.target = move.nonGhostTarget as MoveTarget;
-	// 	}
-	// },
-	// onTryHit(target, source, move) {
-	// 	if (!source.hasType('Ghost')) {
-	// 		delete move.volatileStatus;
-	// 		delete move.onHit;
-	// 		move.self = {boosts: {spe: -1, atk: 1, def: 1}};
-	// 	} else if (move.volatileStatus && target.volatiles['curse']) {
-	// 		return false;
-	// 	}
-	// },
-	// onHit(target, source) {
-	// 	this.directDamage(source.maxhp / 2, source, source);
-	// },
-	// condition: {
-	// 	onStart(pokemon, source) {
-	// 		this.add('-start', pokemon, 'Curse', '[of] ' + source);
-	// 	},
-	// 	onResidualOrder: 12,
-	// 	onResidual(pokemon) {
-	// 		this.damage(pokemon.baseMaxhp / 4);
-	// 	},
-	// },
-	// secondary: null,
-	// target: "randomNormal",
-	// nonGhostTarget: "self",
-	// type: "Ghost",
-	// zMove: {effect: 'curse'},
-	// contestType: "Tough",
+	priority: 0,
+	flags: {bypasssub: 1},
+	volatileStatus: 'curse',
+	onModifyMove(move, source, target) {
+		if (!source.hasType('Ghost')) {
+			move.target = move.nonGhostTarget as MoveTarget;
+		}
+	},
+	onTryHit(target, source, move) {
+		if (!source.hasType('Ghost')) {
+			delete move.volatileStatus;
+			delete move.onHit;
+			move.self = {boosts: {spe: -1, atk: 1, def: 1}};
+		} else if (move.volatileStatus && target.volatiles['curse']) {
+			return false;
+		}
+	},
+	onHit(target, source) {
+		this.directDamage(source.maxhp / 2, source, source);
+	},
+	condition: {
+		onStart(pokemon, source) {
+			this.add('-start', pokemon, 'Curse', '[of] ' + source);
+		},
+		onResidualOrder: 12,
+		onResidual(pokemon) {
+			this.damage(pokemon.baseMaxhp / 4);
+		},
+	},
+	secondary: null,
+	target: "randomNormal",
+	nonGhostTarget: "self",
+	type: "Ghost",
+	zMove: {effect: 'curse'},
+	contestType: "Tough",
 },
 
 slackoff: {
@@ -1165,23 +1299,23 @@ agility: {
 		name: "Tri Attack",
 		pp: 10,
 		priority: 0,
-		// flags: {protect: 1, mirror: 1},
-		// secondary: {
-		// 	chance: 20,
-		// 	onHit(target, source) {
-		// 		const result = this.random(3);
-		// 		if (result === 0) {
-		// 			target.trySetStatus('brn', source);
-		// 		} else if (result === 1) {
-		// 			target.trySetStatus('par', source);
-		// 		} else {
-		// 			target.trySetStatus('frz', source);
-		// 		}
-		// 	},
-		// },
-		// target: "normal",
-		// type: "Normal",
-		// contestType: "Beautiful",
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 20,
+			onHit(target, source) {
+				const result = this.random(3);
+				if (result === 0) {
+					target.trySetStatus('brn', source);
+				} else if (result === 1) {
+					target.trySetStatus('par', source);
+				} else {
+					target.trySetStatus('frz', source);
+				}
+			},
+		},
+		target: "normal",
+		type: "Normal",
+		contestType: "Beautiful",
 	},
 
 	quickattack: {
@@ -1313,19 +1447,19 @@ agility: {
 		name: "Meteor Beam",
 		pp: 10,
 		priority: 0,
-		// flags: {charge: 1, protect: 1, mirror: 1},
-		// onTryMove(attacker, defender, move) {
-		// 	if (attacker.removeVolatile(move.id)) {
-		// 		return;
-		// 	}
-		// 	this.add('-prepare', attacker, move.name);
-		// 	this.boost({spa: 1}, attacker, attacker, move);
-		// 	if (!this.runEvent('ChargeMove', attacker, defender, move)) {
-		// 		return;
-		// 	}
-		// 	attacker.addVolatile('twoturnmove', defender);
-		// 	return null;
-		// },
+		flags: {charge: 1, protect: 1, mirror: 1},
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			this.boost({spa: 1}, attacker, attacker, move);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
+		},
 		secondary: null,
 		target: "normal",
 		type: "Rock",
@@ -1360,26 +1494,26 @@ agility: {
 		category: "Status",
 		name: "Healing Wish",
 		pp: 10,
-		// priority: 0,
-		// flags: {snatch: 1, heal: 1},
-		// onTryHit(pokemon, target, move) {
-		// 	if (!this.canSwitch(pokemon.side)) {
-		// 		delete move.selfdestruct;
-		// 		return false;
-		// 	}
-		// },
-		// selfdestruct: "ifHit",
-		// slotCondition: 'healingwish',
-		// condition: {
-		// 	onSwap(target) {
-		// 		if (!target.fainted && (target.hp < target.maxhp || target.status)) {
-		// 			target.heal(target.maxhp);
-		// 			target.setStatus('');
-		// 			this.add('-heal', target, target.getHealth, '[from] move: Healing Wish');
-		// 			target.side.removeSlotCondition(target, 'healingwish');
-		// 		}
-		// 	},
-		// },
+		priority: 0,
+		flags: {snatch: 1, heal: 1},
+		onTryHit(pokemon, target, move) {
+			if (!this.canSwitch(pokemon.side)) {
+				delete move.selfdestruct;
+				return false;
+			}
+		},
+		selfdestruct: "ifHit",
+		slotCondition: 'healingwish',
+		condition: {
+			onSwap(target) {
+				if (!target.fainted && (target.hp < target.maxhp || target.status)) {
+					target.heal(target.maxhp);
+					target.setStatus('');
+					this.add('-heal', target, target.getHealth, '[from] move: Healing Wish');
+					target.side.removeSlotCondition(target, 'healingwish');
+				}
+			},
+		},
 		secondary: null,
 		target: "self",
 		type: "Psychic",
@@ -1445,14 +1579,14 @@ agility: {
 		basePower: 70,
 		category: "Physical",
 		name: "Facade",
-		// pp: 20,
-		// priority: 0,
-		// flags: {contact: 1, protect: 1, mirror: 1},
-		// onBasePower(basePower, pokemon) {
-		// 	if (pokemon.status && pokemon.status !== 'slp') {
-		// 		return this.chainModify(2);
-		// 	}
-		// },
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onBasePower(basePower, pokemon) {
+			if (pokemon.status && pokemon.status !== 'slp') {
+				return this.chainModify(2);
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Normal",
@@ -1463,39 +1597,40 @@ agility: {
 		num: 484,
 		accuracy: 100,
 		basePower: 0,
-		// basePowerCallback(pokemon, target) {
-		// 	const targetWeight = target.getWeight();
-		// 	const pokemonWeight = pokemon.getWeight();
-		// 	if (pokemonWeight >= targetWeight * 5) {
-		// 		return 120;
-		// 	}
-		// 	if (pokemonWeight >= targetWeight * 4) {
-		// 		return 100;
-		// 	}
-		// 	if (pokemonWeight >= targetWeight * 3) {
-		// 		return 80;
-		// 	}
-		// 	if (pokemonWeight >= targetWeight * 2) {
-		// 		return 60;
-		// 	}
-		// 	return 40;
-		// },
-		// category: "Physical",
-		// name: "Heavy Slam",
-		// pp: 10,
-		// priority: 0,
-		// flags: {contact: 1, protect: 1, mirror: 1, nonsky: 1},
-		// onTryHit(target, pokemon, move) {
-		// 	if (target.volatiles['dynamax']) {
-		// 		this.add('-fail', pokemon, 'Dynamax');
-		// 		this.attrLastMove('[still]');
-		// 		return null;
-		// 	}
-		// },
+		basePowerCallback(pokemon, target) {
+			const targetWeight = target.getWeight();
+			const pokemonWeight = pokemon.getWeight();
+			if (pokemonWeight >= targetWeight * 5) {
+				return 120;
+			}
+			if (pokemonWeight >= targetWeight * 4) {
+				return 100;
+			}
+			if (pokemonWeight >= targetWeight * 3) {
+				return 80;
+			}
+			if (pokemonWeight >= targetWeight * 2) {
+				return 60;
+			}
+			return 40;
+		},
+		category: "Physical",
+		name: "Heavy Slam",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, nonsky: 1},
+		onTryHit(target, pokemon, move) {
+			if (target.volatiles['dynamax']) {
+				this.add('-fail', pokemon, 'Dynamax');
+				this.attrLastMove('[still]');
+				return null;
+			}
+		},
 		secondary: null,
 		target: "normal",
 		type: "Steel",
 		zMove: {basePower: 160},
 		maxMove: {basePower: 130},
 		contestType: "Tough",
-	},
+	};
+
