@@ -5,7 +5,7 @@ export const pokeDex = [
         num: 1,
         name: 'Venusaur',
         types: ['Grass', 'Poison'],
-        moves: ['growth', 'gigadrain', 'weatherball', 'earthpower'],
+        moves: ['quickattack', 'gigadrain', 'weatherball', 'earthpower'],
         baseStats: { hp: 80, atk: 82, def: 83, spa: 100, spd: 100, spe: 80 },
         img: './data/pokeimg/venusaur.webp'
     },
@@ -32,7 +32,7 @@ export const pokeDex = [
         num: 4,
         name: 'Butterfree',
         types: ['Bug', 'Flying'],
-        moves: ['bravebird', 'sludgewave', 'hurricane', 'sleeppowder'],
+        moves: ['bravebird', 'sludgewave', 'hurricane', 'quickattack'],
         baseStats: { hp: 60, atk: 45, def: 50, spa: 90, spd: 80, spe: 70 },
         img: './data/pokeimg/butterfree.webp'
     },
@@ -50,7 +50,7 @@ export const pokeDex = [
         num: 6,
         name: 'Pidgeot',
         types: ['Normal', 'Flying'],
-        moves: ['doubleedge', 'hurricane', 'heatwave', 'steelwing'].
+        moves: ['doubleedge', 'hurricane', 'heatwave', 'steelwing'],
         baseStats: { hp: 83, atk: 80, def: 75, spa: 70, spd: 70, spe: 101 },
         img: './data/pokeimg/pidgeot.webp'
     },
@@ -129,7 +129,7 @@ export const pokeDex = [
         num: 15,
         name: 'Clefable',
         types: ['Fairy'],
-        moves: ['moonblast', 'softboiled', 'stealthrock', 'knockoff'],
+        moves: ['moonblast', 'softboiled', 'quickattack', 'knockoff'],
         baseStats: { hp: 95, atk: 70, def: 73, spa: 95, spd: 90, spe: 60 },
         img: './data/pokeimg/clefable.webp'
     },
@@ -165,7 +165,7 @@ export const pokeDex = [
         num: 19,
         name: 'Vileplume',
         types: ['Grass', 'Poison'],
-        moves: ['sludgewave', 'gigadrain', 'moonblast', 'pollenpuff']
+        moves: ['sludgewave', 'gigadrain', 'moonblast', 'pollenpuff'],
         baseStats: { hp: 75, atk: 80, def: 85, spa: 110, spd: 90, spe: 50 },
         img: './data/pokeimg/vileplume.webp'
     },
@@ -174,7 +174,7 @@ export const pokeDex = [
         num: 20,
         name: 'Parasect',
         types: ['Bug', 'Grass'],
-        moves: ['seedbomb', 'xscissor', 'throatchop', 'brickbreak']
+        moves: ['seedbomb', 'xscissor', 'throatchop', 'brickbreak'],
         baseStats: { hp: 60, atk: 95, def: 80, spa: 60, spd: 80, spe: 30 },
         img: './data/pokeimg/parasect.webp'
     },
@@ -218,7 +218,7 @@ export const pokeDex = [
         num: 25,
         name: 'Primeape',
         types: ['Fighting'],
-        moves: ['crosschop', 'gunkshot', 'seedbomb', 'icepunch']
+        moves: ['crosschop', 'gunkshot', 'seedbomb', 'icepunch'],
         baseStats: { hp: 65, atk: 105, def: 60, spa: 60, spd: 70, spe: 95 },
         img: './data/pokeimg/primeape.webp'
     },
@@ -227,7 +227,7 @@ export const pokeDex = [
         num: 26,
         name: 'Arcanine',
         types: ['Fire'],
-        moves: ['flamethrower', 'morningsun', 'teleport', 'toxic'],
+        moves: ['flamethrower', 'morningsun', 'quickattack', 'flareblitz'],
         baseStats: { hp: 90, atk: 110, def: 80, spa: 100, spd: 80, spe: 95 },
         img: './data/pokeimg/arcanine.webp'
     },
@@ -263,7 +263,7 @@ export const pokeDex = [
         num: 30,
         name: 'Victreebel',
         types: ['Grass', 'Poison'],
-        moves: ['poisonjab', 'powerwhip', 'leafstorm', 'sythensis']
+        moves: ['poisonjab', 'powerwhip', 'leafstorm', 'sythensis'],
         baseStats: { hp: 80, atk: 105, def: 65, spa: 100, spd: 70, spe: 70 },
         img: './data/pokeimg/victrebell.webp'
     },
@@ -281,7 +281,7 @@ export const pokeDex = [
         num: 32,
         name: 'Golem',
         types: ['Rock', 'Ground'],
-        moves: ['rockslide', 'earthquake', 'firepunch', 'thunderpunch']
+        moves: ['rockslide', 'earthquake', 'firepunch', 'thunderpunch'],
         baseStats: { hp: 80, atk: 120, def: 130, spa: 55, spd: 65, spe: 45 },
         img: './data/pokeimg/golem.webp'
     },
@@ -299,7 +299,7 @@ export const pokeDex = [
         num: 34,
         name: 'Slowbro',
         types: ['Water', 'Psychic'],
-        moves: ['scald', 'icebeam', 'slackoff', 'futuresight'],
+        moves: ['scald', 'icebeam', 'slackoff', 'quickattack'],
         baseStats: { hp: 95, atk: 75, def: 110, spa: 100, spd: 80, spe: 30 },
         img: './data/pokeimg/slowbro.webp'
     },
@@ -350,7 +350,7 @@ export const pokeDex = [
         num: 40,
         name: 'Cloyster',
         types: ['Water', 'Ice'],
-        moves: ['iciclesmash', 'liquidation', 'poisonjab', 'hydropump']
+        moves: ['iciclecrash', 'liquidation', 'posionjab', 'hydropump'],
         baseStats: { hp: 50, atk: 95, def: 180, spa: 85, spd: 45, spe: 70 },
         img: './data/pokeimg/cloyster.webp'
     },
@@ -368,7 +368,7 @@ export const pokeDex = [
         num: 42,
         name: 'Onyx',
         types: ['Rock', 'Ground'],
-        moves: ['earthquake', 'rockblast', 'stealthrock', 'explosion'],
+        moves: ['earthquake', 'rockblast', 'quickattack', 'rockslide'],
         baseStats: { hp: 35, atk: 45, def: 160, spa: 30, spd: 45, spe: 70 },
         img: './data/pokeimg/onix.webp'
     },
@@ -377,7 +377,7 @@ export const pokeDex = [
         num: 43,
         name: 'Hypno',
         types: ['Psychic'],
-        moves: ['zenheadbutt', 'moonblast', 'foulplay', 'psychic']
+        moves: ['zenheadbutt', 'moonblast', 'foulplay', 'phychic'],
         baseStats: { hp: 85, atk: 73, def: 70, spa: 73, spd: 115, spe: 67 },
         img: './data/pokeimg/hypno.webp'
     },
@@ -402,7 +402,7 @@ export const pokeDex = [
         num: 46,
         name: 'Exeggutor',
         types: ['Grass', 'Psychic'],
-        moves: ['futuresight', 'leafstorm', 'sleeppowder', 'psychic'],
+        moves: ['quickattack', 'leafstorm', 'earthquake', 'psychic'],
         baseStats: { hp: 95, atk: 95, def: 85, spa: 125, spd: 75, spe: 55 },
         img: './data/pokeimg/exeggutor.webp'
     },
@@ -446,7 +446,7 @@ export const pokeDex = [
         num: 51,
         name: 'Weezing',
         types: ['Poison'],
-        moves: ['sludgebomb', 'fireblast', 'thunderbolt', 'psychic']
+        moves: ['sludgebomb', 'fireblast', 'thunderbolt', 'psychic'],
         baseStats: { hp: 65, atk: 90, def: 120, spa: 85, spd: 70, spe: 60 },
         img: './data/pokeimg/weezing.webp'
     },
@@ -460,14 +460,14 @@ export const pokeDex = [
         img: './data/pokeimg/rhydon.webp'
     },
 
-    {
-        num: 53,
-        name: 'Chansey',
-        types: ['Normal'],
-        moves: ['seismictoss', 'toxic', 'softboiled', 'teleport'],
-        baseStats: { hp: 250, atk: 5, def: 5, spa: 35, spd: 105, spe: 50 },
-        img: './data/pokeimg/chansey.webp'
-    },
+    // {
+    //     num: 53,
+    //     name: 'Chansey',
+    //     types: ['Normal'],
+    //     moves: ['seismictoss', 'toxic', 'softboiled', 'quickattack'],
+    //     baseStats: { hp: 250, atk: 5, def: 5, spa: 35, spd: 105, spe: 50 },
+    //     img: './data/pokeimg/chansey.webp'
+    // },
 
     {
         num: 54,
@@ -545,7 +545,7 @@ export const pokeDex = [
         num: 62,
         name: 'Electabuzz',
         types: ['Electric'],
-        moves: ['discharge', 'psychic', 'icebeam', 'doubleedge']
+        moves: ['discharge', 'psychic', 'icebeam', 'doubleedge'],
         baseStats: { hp: 65, atk: 83, def: 57, spa: 95, spd: 85, spe: 105 },
         img: './data/pokeimg/electabuzz.webp'
     },
@@ -625,7 +625,7 @@ export const pokeDex = [
         num: 71,
         name: 'Jolteon',
         types: ['Electric'],
-        moves: ['thunderbold', 'voltswitch', 'shadowball' ,'toxic'],
+        moves: ['thunderbolt', 'voltswitch', 'shadowball' ,'toxic'],
         baseStats: { hp: 65, atk: 65, def: 60, spa: 110, spd: 95, spe: 130 },
         img: './data/pokeimg/jolteon.webp'
     },
@@ -643,7 +643,7 @@ export const pokeDex = [
         num: 73,
         name: 'Porygon',
         types: ['Normal'],
-        moves: ['triattack', 'psychic', 'icebeam', 'agility']
+        moves: ['triattack', 'psychic', 'icebeam', 'agility'],
         baseStats: { hp: 65, atk: 60, def: 70, spa: 85, spd: 75, spe: 40 },
         img: './data/pokeimg/porygon.webp'
     },
@@ -697,7 +697,7 @@ export const pokeDex = [
         num: 79,
         name: 'Zapdos',
         types: ['Electric', 'Flying'],
-        moves: ['roost', 'heatwave', 'discharge', 'hurricane']
+        moves: ['roost', 'heatwave', 'discharge', 'hurricane'],
         baseStats: { hp: 90, atk: 90, def: 85, spa: 125, spd: 90, spe: 100 },
         img: './data/pokeimg/zapdos.webp'
     },
@@ -706,7 +706,7 @@ export const pokeDex = [
         num: 80,
         name: 'Moltres',
         types: ['Fire', 'Flying'],
-        moves: ['flamethrower', 'roost', 'scorchingsands', 'hurricane']
+        moves: ['flamethrower', 'roost', 'scorchingsands', 'hurricane'],
         baseStats: { hp: 90, atk: 100, def: 90, spa: 125, spd: 85, spe: 90 },
         img: './data/pokeimg/moltres.webp'
     },
