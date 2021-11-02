@@ -102,7 +102,7 @@ export const pokeDex = [
         num: 12,
         name: 'Sandslash',
         types: ['Ground'],
-        moves: ['swordsdance', 'earthquake', 'rockslide', 'rapidspin'],
+        moves: ['quickattack', 'earthquake', 'rockslide', 'rapidspin'],
         baseStats: { hp: 75, atk: 100, def: 110, spa: 45, spd: 55, spe: 65 },
         img: './data/pokeimg/sandslash.webp'
     },
@@ -227,7 +227,7 @@ export const pokeDex = [
         num: 26,
         name: 'Arcanine',
         types: ['Fire'],
-        moves: ['flamethrower', 'morningsun', 'quickattack', 'flareblitz'],
+        moves: ['flamethrower', 'crunch', 'quickattack', 'flareblitz'],
         baseStats: { hp: 90, atk: 110, def: 80, spa: 100, spd: 80, spe: 95 },
         img: './data/pokeimg/arcanine.webp'
     },
@@ -263,7 +263,7 @@ export const pokeDex = [
         num: 30,
         name: 'Victreebel',
         types: ['Grass', 'Poison'],
-        moves: ['poisonjab', 'powerwhip', 'leafstorm', 'sythensis'],
+        moves: ['poisonjab', 'powerwhip', 'leafstorm', 'quickattack'],
         baseStats: { hp: 80, atk: 105, def: 65, spa: 100, spd: 70, spe: 70 },
         img: './data/pokeimg/victrebell.webp'
     },
@@ -350,7 +350,7 @@ export const pokeDex = [
         num: 40,
         name: 'Cloyster',
         types: ['Water', 'Ice'],
-        moves: ['iciclesmash', 'liquidation', 'poisonjab', 'hydropump'],
+        moves: ['iciclecrash', 'liquidation', 'poisonjab', 'hydropump'],
         baseStats: { hp: 50, atk: 95, def: 180, spa: 85, spd: 45, spe: 70 },
         img: './data/pokeimg/cloyster.webp'
     },
