@@ -18,6 +18,8 @@ const move3Span = document.getElementById('move-3-span');
 const move4Span = document.getElementById('move-4-span');
 
 const playerPokemon = getPokemon();
+playerPokemon[0].active = true;
+console.log(playerPokemon);
 
 const computerPokemon = generateComPokemon();
 
