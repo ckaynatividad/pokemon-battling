@@ -14,6 +14,40 @@ export let moves = {
         name: 'Growth',
     },
 
+    drillrun: {
+        num: 529,
+        accuracy: 95,
+        basePower: 80,
+        category: 'Physical',
+        name: 'Drill Run',
+        pp: 10,
+        priority: 0,
+        flags: { contact: 1, protect: 1, mirror: 1 },
+        critRatio: 2,
+        secondary: null,
+        target: 'normal',
+        type: 'Ground',
+        contestType: 'Tough',
+    },
+
+    sludgewave: {
+        num: 482,
+        accuracy: 100,
+        basePower: 95,
+        category: 'Special',
+        name: 'Sludge Wave',
+        pp: 10,
+        priority: 0,
+        flags: { protect: 1, mirror: 1 },
+        secondary: {
+            chance: 10,
+            status: 'psn',
+        },
+        target: 'allAdjacent',
+        type: 'Poison',
+        contestType: 'Tough',
+    },
+
     gigadrain: {
         num: 202,
         accuracy: 100,
@@ -952,6 +986,21 @@ export let moves = {
         contestType: 'Tough',
     },
 
+    aquatail: {
+        num: 401,
+        accuracy: 90,
+        basePower: 90,
+        category: 'Physical',
+        name: 'Aqua Tail',
+        pp: 10,
+        priority: 0,
+        flags: { contact: 1, protect: 1, mirror: 1 },
+        secondary: null,
+        target: 'normal',
+        type: 'Water',
+        contestType: 'Beautiful',
+    },
+
     aquajet: {
         num: 453,
         accuracy: 100,
@@ -1002,6 +1051,30 @@ export let moves = {
         zMove: { basePower: 180 },
         maxMove: { basePower: 130 },
         contestType: 'Beautiful',
+    },
+
+    fakeout: {
+        num: 252,
+        accuracy: 100,
+        basePower: 40,
+        category: 'Physical',
+        name: 'Fake Out',
+        pp: 10,
+        priority: 3,
+        flags: { contact: 1, protect: 1, mirror: 1 },
+        // onTry(source) {
+        //     if (source.activeMoveActions > 1) {
+        //         this.hint('Fake Out only works on your first turn out.');
+        //         return false;
+        //     }
+        // },
+        // secondary: {
+        //     chance: 100,
+        //     volatileStatus: 'flinch',
+        // },
+        // target: 'normal',
+        type: 'Normal',
+        // contestType: 'Cute',
     },
 
     horndrill: {
@@ -1058,6 +1131,46 @@ export let moves = {
         contestType: 'Tough',
     },
 
+    heatwave: {
+        num: 257,
+        accuracy: 90,
+        basePower: 95,
+        category: 'Special',
+        name: 'Heat Wave',
+        pp: 10,
+        priority: 0,
+        flags: { protect: 1, mirror: 1 },
+        secondary: {
+            chance: 10,
+            status: 'brn',
+        },
+        target: 'allAdjacentFoes',
+        type: 'Fire',
+        contestType: 'Beautiful',
+    },
+
+    steelwing: {
+        num: 211,
+        accuracy: 90,
+        basePower: 70,
+        category: 'Physical',
+        name: 'Steel Wing',
+        pp: 25,
+        priority: 0,
+        flags: { contact: 1, protect: 1, mirror: 1 },
+        secondary: {
+            chance: 10,
+            self: {
+                boosts: {
+                    def: 1,
+                },
+            },
+        },
+        target: 'normal',
+        type: 'Steel',
+        contestType: 'Cool',
+    },
+
     sludgebomb: {
         num: 188,
         accuracy: 100,
@@ -1091,6 +1204,39 @@ export let moves = {
         type: 'Normal',
         zMove: { effect: 'clearnegativeboost' },
         contestType: 'Clever',
+    },
+
+    seedbomb: {
+        num: 402,
+        accuracy: 100,
+        basePower: 80,
+        category: 'Physical',
+        name: 'Seed Bomb',
+        pp: 15,
+        priority: 0,
+        flags: { bullet: 1, protect: 1, mirror: 1 },
+        secondary: null,
+        target: 'normal',
+        type: 'Grass',
+        contestType: 'Tough',
+    },
+
+    gunkshot: {
+        num: 441,
+        accuracy: 80,
+        basePower: 120,
+        category: 'Physical',
+        name: 'Gunk Shot',
+        pp: 5,
+        priority: 0,
+        flags: { protect: 1, mirror: 1 },
+        secondary: {
+            chance: 30,
+            status: 'psn',
+        },
+        target: 'normal',
+        type: 'Poison',
+        contestType: 'Tough',
     },
 
     leechseed: {
