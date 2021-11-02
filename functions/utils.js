@@ -107,15 +107,12 @@ export function generatePokemon() {
         rando6 = Math.floor(Math.random() * pokeDex.length);
     }
     
-    
-    
     let poke1 = pokeDex[rando1];
     let poke2 = pokeDex[rando2];
     let poke3 = pokeDex[rando3];
     let poke4 = pokeDex[rando4];
     let poke5 = pokeDex[rando5];
     let poke6 = pokeDex[rando6];
-    console.log(poke1);
 
     const pokeimg1 = document.getElementById('poke1-img');
     const pokeimg2 = document.getElementById('poke2-img');
