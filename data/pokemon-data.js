@@ -473,7 +473,7 @@ export const pokeDex = [
         num: 54,
         name: 'Tangela',
         types: ['Grass'],
-        moves: ['gigadrain', 'leafstorm', 'sludgebomb', 'toxic'],
+        moves: ['gigadrain', 'leafstorm', 'sludgebomb', 'quickattack'],
         baseStats: { hp: 65, atk: 55, def: 115, spa: 100, spd: 40, spe: 60 },
         img: './data/pokeimg/tangela.webp'
     },
@@ -518,7 +518,7 @@ export const pokeDex = [
         num: 59,
         name: 'Mr. Mime',
         types: ['Psychic', 'Fairy'],
-        moves: ['psychic', 'dazzlinggleam', 'trick', 'healingwish'],
+        moves: ['psychic', 'dazzlinggleam', 'quickattack', 'healingwish'],
         baseStats: { hp: 40, atk: 45, def: 65, spa: 100, spd: 120, spe: 90 },
         img: './data/pokeimg/mrmime.webp'
     },
@@ -563,7 +563,7 @@ export const pokeDex = [
         num: 64,
         name: 'Pinsir',
         types: ['Bug'],
-        moves: ['swordsdance', 'frustration', 'closecombat', 'quickattack'],
+        moves: ['quickattack', 'frustration', 'closecombat', 'quickattack'],
         baseStats: { hp: 65, atk: 125, def: 100, spa: 55, spd: 70, spe: 85 },
         img: './data/pokeimg/pinsir.webp'
     },
@@ -733,7 +733,7 @@ export const pokeDex = [
         num: 83,
         name: 'Mew',
         types: ['Psychic'],
-        moves: ['quickattack', 'knockoff', 'willowisp', 'roost'],
+        moves: ['quickattack', 'knockoff', 'psychic', 'roost'],
         baseStats: { hp: 100, atk: 100, def: 100, spa: 100, spd: 100, spe: 100 },
         img: './data/pokeimg/mew.webp'
 
