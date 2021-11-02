@@ -31,11 +31,11 @@ playerImage.src = `../${playerPokemon[0].img}`;
 move1Span.textContent = playerPokemon[0].moves[0];
 move1.value = playerPokemon[0].moves[0];
 move2Span.textContent = playerPokemon[0].moves[1];
-move2.value = playerPokemon[0].moves[2];
+move2.value = playerPokemon[0].moves[1];
 move3Span.textContent = playerPokemon[0].moves[2];
-move3.value = playerPokemon[0].moves[3];
+move3.value = playerPokemon[0].moves[2];
 move4Span.textContent = playerPokemon[0].moves[3];
-move4.value = playerPokemon[0].moves[4];
+move4.value = playerPokemon[0].moves[3];
 
 //computer pokemon data
 compHP.textContent = computerPokemon[0].baseStats.hp;
@@ -72,12 +72,10 @@ submit.addEventListener('click', (e) => {
     e.preventDefault();
     const selectedMoveRadio = document.querySelector('input[type=radio]:checked');
     if (selectedMoveRadio.id === 'switch') {
-        console.log('switch');
+        console.log('switch button pressed');
     } else {
         const selectedMove = selectedMoveRadio.value;
-        console.log(selectedMove);
         const moveData = moves[selectedMove];
-        console.log(moveData);
     }
     
 });
