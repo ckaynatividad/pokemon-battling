@@ -2,22 +2,35 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: 'Play', sans-serif;
+    background-color: rgb(228, 227, 225);
 }
 
 p {
-    width: 20vw;
+    width: 25vw;
 }
 
 #brevan-div, #chase-div, #ckay-div, #james-div {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    margin: 5vw;
+    justify-content: center;
+    align-items: center;
+    margin: 3vw;
+    font-size: 1.2rem;
+}
+
+h3 {
+    font-size: 2rem;
 }
 
 img {
     width: 200px;
     height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 main {
