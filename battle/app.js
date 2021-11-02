@@ -58,3 +58,5 @@ compImage.src = `../${computerPokemon[0].img}`;
             //save new health
             //if isDead(player) === true || isDead(comp)) === true
             //if isCompKO() === true - switch pokemon
+
+
