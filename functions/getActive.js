@@ -1,7 +1,7 @@
 export function getActive(playerPokemon) {
-    playerPokemon.forEach(element => {
-        if (element.active === true) {
-            return element;
+    for (let pokemon of playerPokemon) {
+        if (pokemon.active === true) {
+            return pokemon;
         }
-    });
+    }
 }

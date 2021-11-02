@@ -1,5 +1,6 @@
 import { getPokemon, generateComPokemon } from '../functions/utils.js';
 import { moves } from '../data/pokemon-moves.js';
+import { getActive } from '../functions/getActive.js';
 // import { pokeDex } from '../data/pokemon-data.js';
 
 const move1 = document.getElementById('move1');
@@ -22,22 +23,22 @@ playerPokemon[0].active = true;
 console.log(playerPokemon);
 
 const computerPokemon = generateComPokemon();
-
+const activePokemon = getActive(playerPokemon);
 //player pokemon data
 playerHP.textContent = playerPokemon[0].baseStats.hp;
 playerImage.src = `../${playerPokemon[0].img}`;
 
-
+console.log(activePokemon);
 
 //radio buttons
-move1Span.textContent = playerPokemon[0].moves[0];
-move1.value = playerPokemon[0].moves[0];
-move2Span.textContent = playerPokemon[0].moves[1];
-move2.value = playerPokemon[0].moves[1];
-move3Span.textContent = playerPokemon[0].moves[2];
-move3.value = playerPokemon[0].moves[2];
-move4Span.textContent = playerPokemon[0].moves[3];
-move4.value = playerPokemon[0].moves[3];
+move1Span.textContent = activePokemon.moves[0];
+move1.value = activePokemon.moves[0];
+move2Span.textContent = activePokemon.moves[1];
+move2.value = activePokemon.moves[1];
+move3Span.textContent = activePokemon.moves[2];
+move3.value = activePokemon.moves[2];
+move4Span.textContent = activePokemon.moves[3];
+move4.value = activePokemon.moves[3];
 
 //computer pokemon data
 compHP.textContent = computerPokemon[0].baseStats.hp;
