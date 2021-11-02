@@ -9,13 +9,16 @@
 }
 
 #description {
-    border: 1px solid rgba(0, 0, 0, 0.432);
+    border: 1px solid rgba(0, 0, 0, 0.623);
     padding: 10px;
     font-family: 'Play', sans-serif;
     margin-bottom: 50px;
-    color: rgba(0, 0, 0, 0.651);
+    color: rgba(0, 0, 0, 0.781);
 }
 
+body {
+    background-color: rgb(228, 227, 225);
+}
 header {
     display: flex;
     flex-direction: column;
@@ -31,7 +34,7 @@ input[type=radio] {
 button {
     width: min-content;
     margin-top: 50px;
-    padding: 10px;
+    padding: 7px;
     font-family: 'Play', sans-serif;
 }
 
@@ -59,7 +62,7 @@ input:checked + img {
     /* border: 1.5pt solid rgba(238, 71, 71, 0.87); */
     animation: bounce 1.5s;
     animation-iteration-count: 1;
-    box-shadow: 1px 1px 2px 1px rgba(85, 64, 65, 0.349)
+    box-shadow: 1px 2px 2px 1px rgba(85, 64, 65, 0.349)
 }
 
 @keyframes bounce {
@@ -78,5 +81,5 @@ h5 {
     margin: auto;
     font-family: 'Press Start 2P', sans-serif;
     font-size: 6pt;
-    color: rgba(29, 28, 28, 0.774);
+    color: rgba(29, 28, 28, 0.877);
 }

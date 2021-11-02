@@ -350,7 +350,7 @@ export const pokeDex = [
         num: 40,
         name: 'Cloyster',
         types: ['Water', 'Ice'],
-        moves: ['iciclesmash', 'liquidation', 'poisonjab', 'hydropump']
+        moves: ['iciclesmash', 'liquidation', 'poisonjab', 'hydropump'],
         baseStats: { hp: 50, atk: 95, def: 180, spa: 85, spd: 45, spe: 70 },
         img: './data/pokeimg/cloyster.webp'
     },
@@ -377,7 +377,7 @@ export const pokeDex = [
         num: 43,
         name: 'Hypno',
         types: ['Psychic'],
-        moves: ['zenheadbutt', 'moonblast', 'foulplay', 'psychic']
+        moves: ['zenheadbutt', 'moonblast', 'foulplay', 'psychic'],
         baseStats: { hp: 85, atk: 73, def: 70, spa: 73, spd: 115, spe: 67 },
         img: './data/pokeimg/hypno.webp'
     },
