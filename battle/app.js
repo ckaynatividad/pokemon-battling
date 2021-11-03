@@ -113,20 +113,37 @@ submit.addEventListener('click', (e) => {
         const selectedMove = selectedMoveRadio.value;
         const moveData = moves[selectedMove];
         //*FIX CONSOLE ERROR FOR .SPE
-        if (activePokemon.baseStats.spe > computerPokemon.baseStats.spe) {
+        if (moveData.priority > computerMove.priority){
             if (moveData.category === 'physical') {
                 let hello = damage(activePokemon.baseStats.atk, computerPokemon.baseStats.def, computerPokemon.baseStats.hp);
                 console.log(hello);
             } else {
                 let hello1 = damage(activePokemon.baseStats.spa, computerPokemon.baseStats.spd, computerPokemon.baseStats.hp);
                 console.log(hello1);
+            } 
+        } else if (computerMove.priority > moveData.priority) {
+            if (computerMove.category === 'physical') {
+                let hello2 = damage(computerPokemon.baseStats.atk, activePokemon.baseStats.def, activePokemon.baseStats.hp);
+                console.log(hello2);
+            } else {
+                let hello3 = damage(computerPokemon.baseStats.spa, activePokemon.baseStats.spd, activePokemon.baseStats.hp);
+                console.log(hello3);
             }
-        } else if (computerMove.category === 'physical') {
-            let hello2 = damage(computerPokemon.baseStats.atk, activePokemon.baseStats.def, activePokemon.baseStats.hp);
-            console.log(hello2);
         } else {
-            let hello3 = damage(computerPokemon.baseStats.spa, activePokemon.baseStats.spd, activePokemon.baseStats.hp);
-            console.log(hello3);
+            if (activePokemon.baseStats.spe > computerPokemon.baseStats.spe) {
+                if (moveData.category === 'physical') {
+                    let hello = damage(activePokemon.baseStats.atk, computerPokemon.baseStats.def, computerPokemon.baseStats.hp);
+                    console.log(hello);
+                } else {
+                    let hello1 = damage(activePokemon.baseStats.spa, computerPokemon.baseStats.spd, computerPokemon.baseStats.hp);
+                    console.log(hello1);
+                }
+            } else if (computerMove.category === 'physical') {
+                let hello2 = damage(computerPokemon.baseStats.atk, activePokemon.baseStats.def, activePokemon.baseStats.hp);
+                console.log(hello2);
+            } else {
+                let hello3 = damage(computerPokemon.baseStats.spa, activePokemon.baseStats.spd, activePokemon.baseStats.hp);
+                console.log(hello3);
+            }
         }
-}
-});
+    }});
