@@ -41,29 +41,19 @@ playerPokemon1.forEach((Object)=>{
 
 
 
-let computerPokemon = [];
-computerPokemon1.forEach((Object)=>{
-    computerPokemon.push({
-        num: Object.num,
-        name: Object.name,
-        types: Object.types,
-        moves: Object.moves, 
-        baseStats: { hp: baseStat(Object.baseStats.hp), atk: baseStat(Object.baseStats.atk), def: baseStat(Object.baseStats.def), spa: baseStat(Object.baseStats.spa), spd: baseStat(Object.baseStats.spd), spe: baseStat(Object.baseStats.spe) },
-        img: Object.img
-    });
-});
+// let computerPokemon = [];
+// computerPokemon1.forEach((Object)=>{
+//     computerPokemon.push({
+//         num: Object.num,
+//         name: Object.name,
+//         types: Object.types,
+//         moves: Object.moves, 
+//         baseStats: { hp: baseStat(Object.baseStats.hp), atk: baseStat(Object.baseStats.atk), def: baseStat(Object.baseStats.def), spa: baseStat(Object.baseStats.spa), spd: baseStat(Object.baseStats.spd), spe: baseStat(Object.baseStats.spe) },
+//         img: Object.img
+//     });
+// });
 
-let compStats = [];
-computerPokemon.forEach((Object)=>{
-    compStats.push({
-        hp: Object.baseStats.hp,
-        atk: Object.baseStats.atk,
-        def: Object.baseStats.def,
-        spa: Object.baseStats.spa,
-        spd: Object.baseStats.spd,
-        spe: Object.baseStats.spe
-    });
-});
+
 playerPokemon1[0].active = true;
 
 
@@ -77,7 +67,7 @@ const activePokemon = {
     baseStats: { hp: baseStat(activePokemon1.baseStats.hp), atk: baseStat(activePokemon1.baseStats.atk), def: baseStat(activePokemon1.baseStats.def), spa: baseStat(activePokemon1.baseStats.spa), spd: baseStat(activePokemon1.baseStats.spd), spe: baseStat(activePokemon1.baseStats.spe) },
     img: activePokemon1.img
 };
-activePokemon.active = true;
+playerPokemon[0].active = true;
 console.log(activePokemon);
 playerHP.textContent = activePokemon.baseStats.hp;
 playerImage.src = `../${activePokemon.img}`;
@@ -102,9 +92,29 @@ move3.value = activePokemon.moves[2];
 move4Span.textContent = activePokemon.moves[3];
 move4.value = activePokemon.moves[3];
 
+computerPokemon1[0].active = true;
 //computer pokemon data
-compHP.textContent = computerPokemon[0].baseStats.hp;
-compImage.src = `../${computerPokemon[0].img}`;
+const activeComp1 = getActive(computerPokemon1);
+console.log(activeComp1);
+const computerPokemon = {
+    num: activeComp1.num,
+    name: activeComp1.name,
+    types: activeComp1.types,
+    moves: activeComp1.moves, 
+    baseStats: { hp: baseStat(activeComp1.baseStats.hp), atk: baseStat(activeComp1.baseStats.atk), def: baseStat(activeComp1.baseStats.def), spa: baseStat(activeComp1.baseStats.spa), spd: baseStat(activeComp1.baseStats.spd), spe: baseStat(activeComp1.baseStats.spe) },
+    img: activeComp1.img
+};
+compHP.textContent = computerPokemon.baseStats.hp;
+compImage.src = `../${computerPokemon.img}`;
+
+let compStats = {
+    hp: computerPokemon.baseStats.hp,
+    atk: computerPokemon.baseStats.atk,
+    def: computerPokemon.baseStats.def,
+    spa: computerPokemon.baseStats.spa,
+    spd: computerPokemon.baseStats.spd,
+    spe: computerPokemon.baseStats.spe
+};
 
 //turn - start on click 'submit'
 //if isDead(player) === true || isDead(comp)) === true
@@ -134,21 +144,21 @@ compImage.src = `../${computerPokemon[0].img}`;
 // const pokeForm = document.getElementById('move-select-form');
 let turn = 0;
 const maxHealth = playerStats.hp;
+console.log(playerStats.spe);
 submit.addEventListener('click', (e) => {
     e.preventDefault();
     const selectedMoveRadio = document.querySelector('input[type=radio]:checked');
     turn++;
     let randomNumber = Math.floor(Math.random() * 3);
-    let computerMove = computerPokemon[0].moves[randomNumber];
-    console.log(activePokemon.baseStats);
+    let computerMove = computerPokemon.moves[randomNumber];
+    // let compMoveData = moves[computerMove];
     if (selectedMoveRadio.id === 'switch') {
         console.log('switch button pressed');
     } else {
         const selectedMove = selectedMoveRadio.value;
         const moveData = moves[selectedMove];
-        //*FIX CONSOLE ERROR FOR .SPE
         if (moveData.priority > computerMove.priority){
-            if (moveData.category === 'physical') {
+            if (moveData.category === 'Physical') {
                 let hello = damage(playerStats.atk, compStats.def, compStats.hp);
                 console.log(hello);
             } else {
@@ -156,7 +166,7 @@ submit.addEventListener('click', (e) => {
                 console.log(hello1);
             } 
         } else if (computerMove.priority > moveData.priority) {
-            if (computerMove.category === 'physical') {
+            if (computerMove.category === 'Physical') {
                 let hello2 = damage(compStats.atk, playerStats.def, playerStats.hp);
                 console.log(hello2);
             } else {
@@ -165,19 +175,21 @@ submit.addEventListener('click', (e) => {
             }
         } else {
             if (playerStats.spe > compStats.spe) {
-                if (moveData.category === 'physical') {
+                if (moveData.category === 'Physical') {
                     let hello = damage(playerStats.atk, compStats.def, compStats.hp);
                     console.log(hello);
                 } else {
                     let hello1 = damage(playerStats.spa, compStats.spd, compStats.hp);
                     console.log(hello1);
                 }
-            } else if (computerMove.category === 'physical') {
+            } else if (computerMove.category === 'Physical') {
                 let hello2 = damage(compStats.atk, playerStats.def, playerStats.hp);
                 console.log(hello2);
             } else {
                 let hello3 = damage(compStats.spa, playerStats.spd, playerStats.hp);
                 console.log(hello3);
+                console.log('noodles');
+        
             }
         }
 

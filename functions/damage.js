@@ -1,8 +1,8 @@
 export function damage(attStat, defStat, defHP) {
     const dmg = (((210) / 250) * (attStat / defStat) * ((Math.random() * 0.3) + 0.85) + 2);
     const hp = defHP - dmg;
-
-    return hp;
+    console.log(attStat, defStat, defHP);
+    return Number(hp);
 }
 export function heals(maxHealth, currenthp) {
     const heal = maxHealth * .5;
