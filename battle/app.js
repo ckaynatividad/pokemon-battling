@@ -150,8 +150,10 @@ submit.addEventListener('click', (e) => {
     const selectedMoveRadio = document.querySelector('input[type=radio]:checked');
     turn++;
     let randomNumber = Math.floor(Math.random() * 3);
-    let computerMove = computerPokemon.moves[randomNumber];
-    // let compMoveData = moves[computerMove];
+    let compMove = computerPokemon.moves[randomNumber];
+    let computerMove = moves[compMove];
+    console.log(compMove);
+    console.log(computerMove);
     if (selectedMoveRadio.id === 'switch') {
         console.log('switch button pressed');
     } else {
@@ -187,8 +189,7 @@ submit.addEventListener('click', (e) => {
                 console.log(hello2);
             } else {
                 let hello3 = damage(compStats.spa, playerStats.spd, playerStats.hp);
-                console.log(hello3);
-                console.log('noodles');
+                console.log(hello3);    
         
             }
         }
