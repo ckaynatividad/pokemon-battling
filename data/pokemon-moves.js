@@ -1616,8 +1616,9 @@ export let moves = {
             chance: 10,
             boosts: {
                 spd: -1,
-            },
+            }
 
+        }
     },
 
 
@@ -1846,4 +1847,4 @@ export let moves = {
         type: 'Grass',
         contestType: 'Tough',
     }
-};
+}
