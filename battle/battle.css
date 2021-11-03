@@ -1,7 +1,12 @@
 body {
+    font-family: 'Play', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+h1 {
+    font-family: 'Press Start 2P', sans-serif;
 }
 
 main {
@@ -42,4 +47,21 @@ img {
     margin-top: 3vw;
     margin-right: 20vw;
     margin-bottom: 20px;
+}
+
+label {
+    border: 3px solid black;
+    margin-left: 3px;
+    margin-right: 3px;
+    padding: 3px;
+    text-transform: uppercase;
+}
+
+
+input[type = "radio"] {
+    display: none;
+}
+
+input:checked {
+    background-color: green;
 }
