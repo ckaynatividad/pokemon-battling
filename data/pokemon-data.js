@@ -527,7 +527,7 @@ export const pokeDex = [
         num: 60,
         name: 'Scyther',
         types: ['Bug', 'Flying'],
-        moves: ['quickattck', 'uturn', 'dualwingbeat', 'knockoff'],
+        moves: ['quickattack', 'uturn', 'dualwingbeat', 'knockoff'],
         baseStats: { hp: 70, atk: 110, def: 80, spa: 55, spd: 80, spe: 105 },
         img: './data/pokeimg/scyther.webp'
     },
