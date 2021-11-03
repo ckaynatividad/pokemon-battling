@@ -12,6 +12,7 @@ export let moves = {
         basePower: 0,
         category: 'Status',
         name: 'Growth',
+        priority: 0,
     },
 
     drillrun: {
@@ -65,6 +66,7 @@ export let moves = {
         category: 'Special',
         name: 'Weather Ball',
         type: 'Normal',
+        priority: 0,
     },
 
     earthpower: {
@@ -74,6 +76,7 @@ export let moves = {
         category: 'Special',
         name: 'Earth Power',
         type: 'Ground',
+        priority: 0,
     },
 
     stoneedge: {
@@ -83,6 +86,7 @@ export let moves = {
         category: 'Physical',
         name: 'Stone Edge',
         type: 'Rock',
+        priority: 0,
     },
 
     dualwingbeat: {
@@ -92,6 +96,7 @@ export let moves = {
         category: 'Physical',
         name: 'Dual Wingbeat',
         type: 'Flying',
+        priority: 0,
     },
 
     earthquake: {
@@ -101,6 +106,7 @@ export let moves = {
         category: 'Physical',
         name: 'Earthquake',
         type: 'Ground',
+        priority: 0,
     },
 
     crunch: {
@@ -110,6 +116,7 @@ export let moves = {
         category: 'Physical',
         name: 'Crunch',
         type: 'Dark',
+        priority: 0,
     },
 
     nastyplot: {
@@ -138,7 +145,7 @@ export let moves = {
         category: 'Physical',
         name: 'Brick Break',
         type: 'Fighting',
-        Priority: '0',
+        Priority: 0,
         flags: { contact: 1, protect: 1, mirror: 1 },
 		// onTryHit(pokemon) {
 		// 	// will shatter screens through sub, before you hit
@@ -157,6 +164,7 @@ export let moves = {
         category: 'Special',
         name: 'Psychic',
         type: 'Psychic',
+        priority: 0,
     },
 
     iciclecrash: {
@@ -281,6 +289,7 @@ export let moves = {
         defensiveCategory: 'Physical',
         name: 'Psyshock',
         type: 'Psychic',
+        priority: 0,
     },
 
     shadowball: {
@@ -290,6 +299,7 @@ export let moves = {
         category: 'Special',
         name: 'Shadow Ball',
         type: 'Ghost',
+        priority: 0,
     },
 
     flamethrower: {
@@ -299,6 +309,7 @@ export let moves = {
         category: 'Special',
         name: 'Flamethrower',
         type: 'Fire',
+        priority: 0,
     },
 
 
@@ -309,6 +320,7 @@ export let moves = {
         category: 'Status',
         name: 'Roost',
         type: 'Flying',
+        priority: 0,
     },
 
     freezedry: {
@@ -318,6 +330,7 @@ export let moves = {
         category: 'Special',
         name: 'Freeze-Dry',
         type: 'Ice',
+        priority: 0,
     },
 
     uturn: {
@@ -327,6 +340,7 @@ export let moves = {
         category: 'Physical',
         name: 'U-turn',
         type: 'Bug',
+        priority: 0,
     },
 
     bravebird: {
@@ -336,6 +350,7 @@ export let moves = {
         category: 'Physical',
         name: 'Brave Bird',
         type: 'Flying',
+        priority: 0,
     },
 
     healbell: {
@@ -346,6 +361,7 @@ export let moves = {
         name: 'Heal Bell',
         pp: 5,
         type: 'Normal',
+        priority: 0,
     },
 
     toxic: {
@@ -355,6 +371,7 @@ export let moves = {
         category: 'Status',
         name: 'Toxic',
         type: 'Poison',
+        priority: 0,
     },
 
     shellsmash: {
@@ -364,6 +381,7 @@ export let moves = {
         category: 'Status',
         name: 'Shell Smash',
         type: 'Normal',
+        priority: 0,
     },
 
     surf: {
@@ -373,6 +391,7 @@ export let moves = {
         category: 'Special',
         name: 'Surf',
         type: 'Water',
+        priority: 0,
     },
 
     darkpulse: {
@@ -382,6 +401,7 @@ export let moves = {
         category: 'Special',
         name: 'Dark Pulse',
         type: 'Dark',
+        priority: 0,
     },
 
     icebeam: {
@@ -391,6 +411,7 @@ export let moves = {
         category: 'Special',
         name: 'Ice Beam',
         type: 'Ice',
+        priority: 0,
     },
 
     substitute: {
@@ -400,6 +421,7 @@ export let moves = {
         category: 'Status',
         name: 'Substitute',
         type: 'Normal',
+        priority: 0,
     },
 
     quiverdance: {
@@ -413,7 +435,8 @@ export let moves = {
             spa: 1,
             spd: 1,
             spe: 1,
-        }
+        },
+        priority: 0,
     },
 
     hurricane: {
@@ -423,6 +446,7 @@ export let moves = {
         category: 'Special',
         name: 'Hurricane',
         type: 'Flying',
+        priority: 0,
     },
 
     seismictoss: {
@@ -433,6 +457,7 @@ export let moves = {
         category: 'Physical',
         name: 'Seismic Toss',
         type: 'Fighting',
+        priority: 0,
     },
 
     softboiled: {
@@ -442,6 +467,7 @@ export let moves = {
         category: 'Status',
         name: 'Soft-Boiled',
         type: 'Normal',
+        priority: 0,
     },
 
     stealthrock: {
@@ -451,6 +477,7 @@ export let moves = {
         category: 'Status',
         name: 'Stealth Rock',
         type: 'Rock',
+        priority: 0,
     },
 
     fireblast: {
@@ -460,6 +487,7 @@ export let moves = {
         category: 'Special',
         name: 'Fire Blast',
         type: 'Fire',
+        priority: 0,
     },
 
     focusblast: {
@@ -469,6 +497,7 @@ export let moves = {
         category: 'Special',
         name: 'Focus Blast',
         type: 'Fighting',
+        priority: 0,
     },
 
     defog: {
@@ -478,6 +507,7 @@ export let moves = {
         category: 'Status',
         name: 'Defog',
         type: 'Flying',
+        priority: 0,
     },
 
     moonblast: {
@@ -487,6 +517,7 @@ export let moves = {
         category: 'Special',
         name: 'Moonblast',
         type: 'Fairy',
+        priority: 0,
     },
 
     knockoff: {
@@ -496,6 +527,7 @@ export let moves = {
         category: 'Physical',
         name: 'Knock Off',
         type: 'Dark',
+        priority: 0,
     },
 
     iciclespear: {
@@ -505,6 +537,7 @@ export let moves = {
         category: 'Physical',
         name: 'Icicle Spear',
         type: 'Ice',
+        priority: 0,
     },
 
     rockblast: {
@@ -514,6 +547,7 @@ export let moves = {
         category: 'Physical',
         name: 'Rock Blast',
         type: 'Rock',
+        priority: 0,
     },
 
     hydropump: {
@@ -523,6 +557,7 @@ export let moves = {
         category: 'Special',
         name: 'Hydro Pump',
         type: 'Water',
+        priority: 0,
     },
 
     shadowclaw: {
@@ -532,6 +567,7 @@ export let moves = {
         category: 'Physical',
         name: 'Shadow Claw',
         type: 'Ghost',
+        priority: 0,
     },
 
     memento: {
@@ -563,6 +599,7 @@ export let moves = {
         category: 'Special',
         name: 'Future Sight',
         type: 'Psychic',
+        priority: 0,
 
     },
 
@@ -638,6 +675,7 @@ export let moves = {
         category: 'Status',
         name: 'Protect',
         type: 'Normal',
+        priority: 6,
 
     },
 
@@ -807,6 +845,7 @@ export let moves = {
         category: 'Physical',
         name: 'Bounce',
         type: 'Flying',
+        priority: 0,
     },
 
     rapidspin: {
@@ -816,6 +855,7 @@ export let moves = {
         category: 'Physical',
         name: 'Rapid Spin',
         type: 'Fire',
+        priority: 0,
     },
 
     drainpunch: {
@@ -841,6 +881,7 @@ export let moves = {
         category: 'Physical',
         name: 'Throat Chop',
         type: 'Fighting',
+        priority: 0,
     },
 
     machpunch: {
@@ -1008,6 +1049,7 @@ export let moves = {
         category: 'Physical',
         name: 'Aqua Jet',
         type: 'Water',
+        priority: 6,
     },
 
     doubleedge: {
