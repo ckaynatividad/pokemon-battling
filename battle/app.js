@@ -2,8 +2,7 @@ import { getPokemon, generateComPokemon } from '../functions/utils.js';
 import { moves } from '../data/pokemon-moves.js';
 import { getActive } from '../functions/getActive.js';
 import { baseStat } from '../functions/baseStat.js';
-import { damage } from '../functions/damage.js';
-import { pokeDex } from '../data/pokemon-data.js';
+import { damage, heals } from '../functions/damage.js';
 
 const move1 = document.getElementById('move1');
 const move2 = document.getElementById('move2');
@@ -149,6 +148,7 @@ submit.addEventListener('click', (e) => {
     e.preventDefault();
     const selectedMoveRadio = document.querySelector('input[type=radio]:checked');
     turn++;
+    let currentHp = playerStats.hp;
     let randomNumber = Math.floor(Math.random() * 3);
     let compMove = computerPokemon.moves[randomNumber];
     let computerMove = moves[compMove];
@@ -159,14 +159,18 @@ submit.addEventListener('click', (e) => {
     } else {
         const selectedMove = selectedMoveRadio.value;
         const moveData = moves[selectedMove];
+        console.log(moveData.priority);
         if (moveData.priority > computerMove.priority){
             if (moveData.category === 'Physical') {
-                let hello = damage(playerStats.atk, compStats.def, compStats.hp);
-                console.log(hello);
+                let currentHp = damage(playerStats.atk, compStats.def, compStats.hp);
+                playerHP.textContent = currentHp;
+            } else if (moveData.category === 'Special') {
+                let currentHp = damage(playerStats.spa, compStats.spd, compStats.hp);
+                playerHP.textContent = currentHp;
             } else {
-                let hello1 = damage(playerStats.spa, compStats.spd, compStats.hp);
-                console.log(hello1);
-            } 
+                heals(maxHealth, currentHp);
+                playerHP.textContent = currentHp;
+            }
         } else if (computerMove.priority > moveData.priority) {
             if (computerMove.category === 'Physical') {
                 let hello2 = damage(compStats.atk, playerStats.def, playerStats.hp);
@@ -188,8 +192,8 @@ submit.addEventListener('click', (e) => {
                 let hello2 = damage(compStats.atk, playerStats.def, playerStats.hp);
                 console.log(hello2);
             } else {
-                let hello3 = damage(compStats.spa, playerStats.spd, playerStats.hp);
-                console.log(hello3);    
+                let currenthp = damage(compStats.spa, playerStats.spd, playerStats.hp);
+                playerHP.textContent = currentHp;
         
             }
         }
