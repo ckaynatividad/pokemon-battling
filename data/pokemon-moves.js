@@ -1588,19 +1588,35 @@ export let moves = {
         contestType: 'Beautiful',
     },
 
-    energyball: {
-        num: 412,
-        accuracy: 100,
-        basePower: 90,
-        category: 'Special',
-        name: 'Energy Ball',
-        pp: 10,
-        priority: 0,
-        flags: { bullet: 1, protect: 1, mirror: 1 },
-        secondary: {
-            chance: 10,
-            boosts: {
-                spd: -1,
+        dazzlinggleam: {
+            num: 605,
+            accuracy: 100,
+            basePower: 80,
+            category: 'Special',
+            name: 'Dazzling Gleam',
+            pp: 10,
+            priority: 0,
+            flags: { protect: 1, mirror: 1 },
+            secondary: null,
+            target: 'allAdjacentFoes',
+            type: 'Fairy',
+            contestType: 'Beautiful',
+        },
+
+        energyball: {
+            num: 412,
+            accuracy: 100,
+            basePower: 90,
+            category: 'Special',
+            name: 'Energy Ball',
+            pp: 10,
+            priority: 0,
+            flags: { bullet: 1, protect: 1, mirror: 1 },
+            secondary: {
+                chance: 10,
+                boosts: {
+                    spd: -1,
+                },
             },
         },
         target: 'normal',
