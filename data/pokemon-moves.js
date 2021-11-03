@@ -1602,6 +1602,21 @@ export let moves = {
             contestType: 'Beautiful',
         },
 
+        dazzlinggleam: {
+            num: 605,
+            accuracy: 100,
+            basePower: 80,
+            category: 'Special',
+            name: 'Dazzling Gleam',
+            pp: 10,
+            priority: 0,
+            flags: { protect: 1, mirror: 1 },
+            secondary: null,
+            target: 'allAdjacentFoes',
+            type: 'Fairy',
+            contestType: 'Beautiful',
+        },
+
         energyball: {
             num: 412,
             accuracy: 100,
