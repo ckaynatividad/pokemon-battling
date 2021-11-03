@@ -1617,7 +1617,7 @@ export let moves = {
             boosts: {
                 spd: -1,
             },
-        }
+
     },
 
 
