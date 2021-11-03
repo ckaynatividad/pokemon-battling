@@ -1622,6 +1622,21 @@ export let moves = {
             contestType: 'Beautiful',
         },
 
+        psystrike: {
+            num: 540,
+            accuracy: 100,
+            basePower: 100,
+            category: "Special",
+            defensiveCategory: "Physical",
+            name: "Psystrike",
+            pp: 10,
+            priority: 0,
+            flags: {protect: 1, mirror: 1},
+            secondary: null,
+            target: "normal",
+            type: "Psychic",
+        },
+
         scorchingsands: {
             num: 815,
             accuracy: 100,
