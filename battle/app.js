@@ -99,7 +99,7 @@ compImage.src = `../${computerPokemon[0].img}`;
 
 // const pokeForm = document.getElementById('move-select-form');
 let turn = 0;
-
+const maxHealth = activePokemon.baseStat.hp;
 submit.addEventListener('click', (e) => {
     e.preventDefault();
     const selectedMoveRadio = document.querySelector('input[type=radio]:checked');

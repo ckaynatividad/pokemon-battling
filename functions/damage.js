@@ -4,3 +4,7 @@ export function damage(attStat, defStat, defHP) {
 
     return hp;
 }
+export function heals(maxHealth) {
+    const heal = maxHealth * .5;
+    const
+}
