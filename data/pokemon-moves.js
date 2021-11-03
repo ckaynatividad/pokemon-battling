@@ -297,6 +297,22 @@ export let moves = {
         contestType: 'Clever',
     },
 
+    crosschop: {
+        num: 238,
+        accuracy: 80,
+        basePower: 100,
+        category: 'Physical',
+        name: 'Cross Chop',
+        pp: 5,
+        priority: 0,
+        flags: { contact: 1, protect: 1, mirror: 1 },
+        critRatio: 2,
+        secondary: null,
+        target: 'normal',
+        type: 'Fighting',
+        contestType: 'Cool',
+    },
+
     psyshock: {
         num: 473,
         accuracy: 100,
