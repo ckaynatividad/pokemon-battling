@@ -36,6 +36,8 @@ img {
     border: 3px solid black;
     margin-left: 33vw;
     margin-right: 33vw;
+    box-shadow: 10px 10px 2px 1px rgba(78, 64, 64, 0.349);
+    margin-bottom: 7px;
 }
 
 #computer-pokemon {
@@ -49,12 +51,13 @@ img {
     margin-bottom: 20px;
 }
 
-label {
+input + span {
     border: 3px solid black;
     margin-left: 3px;
     margin-right: 3px;
     padding: 3px;
     text-transform: uppercase;
+    box-shadow: 3px 3px 1px 1px rgba(78, 64, 64, 0.349)
 }
 
 
@@ -62,6 +65,6 @@ input[type = "radio"] {
     display: none;
 }
 
-input:checked {
-    background-color: green;
+input:checked + span {
+    background-color: #b4d455;
 }
