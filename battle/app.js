@@ -149,34 +149,34 @@ submit.addEventListener('click', (e) => {
         //*FIX CONSOLE ERROR FOR .SPE
         if (moveData.priority > computerMove.priority){
             if (moveData.category === 'physical') {
-                let hello = damage(activePokemon.baseStats.atk, computerPokemon.baseStats.def, computerPokemon.baseStats.hp);
+                let hello = damage(playerStats.atk, compStats.def, compStats.hp);
                 console.log(hello);
             } else {
-                let hello1 = damage(activePokemon.baseStats.spa, computerPokemon.baseStats.spd, computerPokemon.baseStats.hp);
+                let hello1 = damage(playerStats.spa, compStats.spd, compStats.hp);
                 console.log(hello1);
             } 
         } else if (computerMove.priority > moveData.priority) {
             if (computerMove.category === 'physical') {
-                let hello2 = damage(computerPokemon.baseStats.atk, activePokemon.baseStats.def, activePokemon.baseStats.hp);
+                let hello2 = damage(compStats.atk, playerStats.def, playerStats.hp);
                 console.log(hello2);
             } else {
-                let hello3 = damage(computerPokemon.baseStats.spa, activePokemon.baseStats.spd, activePokemon.baseStats.hp);
+                let hello3 = damage(compStats.spa, playerStats.spd, playerStats.hp);
                 console.log(hello3);
             }
         } else {
-            if (activePokemon.baseStats.spe > computerPokemon.baseStats.spe) {
+            if (playerStats.spe > compStats.spe) {
                 if (moveData.category === 'physical') {
-                    let hello = damage(activePokemon.baseStats.atk, computerPokemon.baseStats.def, computerPokemon.baseStats.hp);
+                    let hello = damage(playerStats.atk, compStats.def, compStats.hp);
                     console.log(hello);
                 } else {
-                    let hello1 = damage(activePokemon.baseStats.spa, computerPokemon.baseStats.spd, computerPokemon.baseStats.hp);
+                    let hello1 = damage(playerStats.spa, compStats.spd, compStats.hp);
                     console.log(hello1);
                 }
             } else if (computerMove.category === 'physical') {
-                let hello2 = damage(computerPokemon.baseStats.atk, activePokemon.baseStats.def, activePokemon.baseStats.hp);
+                let hello2 = damage(compStats.atk, playerStats.def, playerStats.hp);
                 console.log(hello2);
             } else {
-                let hello3 = damage(computerPokemon.baseStats.spa, activePokemon.baseStats.spd, activePokemon.baseStats.hp);
+                let hello3 = damage(compStats.spa, playerStats.spd, playerStats.hp);
                 console.log(hello3);
             }
         }
