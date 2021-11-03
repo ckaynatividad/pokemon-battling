@@ -1626,6 +1626,7 @@ export let moves = {
             num: 540,
             accuracy: 100,
             basePower: 100,
+chasebranch
             category: 'Special',
             defensiveCategory: 'Physical',
             name: 'Psystrike',
@@ -1635,6 +1636,7 @@ export let moves = {
             secondary: null,
             target: 'normal',
             type: 'Psychic',
+
         },
 
         scorchingsands: {
