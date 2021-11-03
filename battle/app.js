@@ -2,6 +2,7 @@ import { getPokemon, generateComPokemon } from '../functions/utils.js';
 import { moves } from '../data/pokemon-moves.js';
 import { getActive } from '../functions/getActive.js';
 import { baseStat } from '../functions/baseStat.js';
+import { damage } from '../functions/damage.js';
 import { pokeDex } from '../data/pokemon-data.js';
 
 const move1 = document.getElementById('move1');
@@ -25,9 +26,8 @@ playerPokemon1[0].active = true;
 console.log(playerPokemon1);
 
 const computerPokemon1 = generateComPokemon();
-const activePokemon = getActive(playerPokemon1);
-//player pokemon data
 
+//player pokemon data
 let playerPokemon = [];
 playerPokemon1.forEach((Object)=>{
     playerPokemon.push({
@@ -51,9 +51,10 @@ computerPokemon1.forEach((Object)=>{
         img: Object.img
     });
 });
-
-playerHP.textContent = playerPokemon[0].baseStats.hp;
-playerImage.src = `../${playerPokemon[0].img}`;
+// NEED TO WORK ON ACTIVE POKEMON BASE STATS
+const activePokemon = getActive(playerPokemon1);
+playerHP.textContent = activePokemon.baseStats.hp;
+playerImage.src = `../${activePokemon.img}`;
 
 console.log(activePokemon);
 
@@ -97,24 +98,35 @@ compImage.src = `../${computerPokemon[0].img}`;
             //if isCompKO() === true - switch pokemon
 
 // const pokeForm = document.getElementById('move-select-form');
+let turn = 0;
 
 submit.addEventListener('click', (e) => {
     e.preventDefault();
     const selectedMoveRadio = document.querySelector('input[type=radio]:checked');
+    turn++;
+    let randomNumber = Math.floor(Math.random() * 3);
+    let computerMove = computerPokemon[0].moves[randomNumber];
+    console.log(activePokemon.baseStats);
     if (selectedMoveRadio.id === 'switch') {
         console.log('switch button pressed');
     } else {
         const selectedMove = selectedMoveRadio.value;
         const moveData = moves[selectedMove];
-    }
-    
+        //*FIX CONSOLE ERROR FOR .SPE
+        if (activePokemon.baseStats.spe > computerPokemon.baseStats.spe) {
+            if (moveData.category === 'physical') {
+                let hello = damage(activePokemon.baseStats.atk, computerPokemon.baseStats.def, computerPokemon.baseStats.hp);
+                console.log(hello);
+            } else {
+                let hello1 = damage(activePokemon.baseStats.spa, computerPokemon.baseStats.spd, computerPokemon.baseStats.hp);
+                console.log(hello1);
+            }
+        } else if (computerMove.category === 'physical') {
+            let hello2 = damage(computerPokemon.baseStats.atk, activePokemon.baseStats.def, activePokemon.baseStats.hp);
+            console.log(hello2);
+        } else {
+            let hello3 = damage(computerPokemon.baseStats.spa, activePokemon.baseStats.spd, activePokemon.baseStats.hp);
+            console.log(hello3);
+        }
+}
 });
-
-
-
-
-// playerPokemon.baseStats.forEach((Object)=>{
-//     baseStat(Object);
-// });
-
-// console.log(playerPokemon);
