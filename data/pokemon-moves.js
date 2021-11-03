@@ -281,6 +281,22 @@ export let moves = {
         contestType: 'Cool',
     },
 
+    foulplay: {
+        num: 492,
+        accuracy: 100,
+        basePower: 95,
+        category: 'Physical',
+        name: 'Foul Play',
+        pp: 15,
+        priority: 0,
+        flags: { contact: 1, protect: 1, mirror: 1 },
+        useTargetOffensive: true,
+        secondary: null,
+        target: 'normal',
+        type: 'Dark',
+        contestType: 'Clever',
+    },
+
     psyshock: {
         num: 473,
         accuracy: 100,
