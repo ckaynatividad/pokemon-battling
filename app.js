@@ -4,6 +4,7 @@ import { generatePokemon, setPokemon } from './functions/utils.js';
 
 generatePokemon();
 
+
 const submit = document.getElementById('submit');
 
 submit.addEventListener('click', ()=>{
@@ -11,14 +12,15 @@ submit.addEventListener('click', ()=>{
     const chosenArray = [];
     if (selected.length > 3 || selected.length < 3) {
         alert('Please only choose three.');
-        window.location.reload();
+        // window.location.reload();
     } else {
         for (let select of selected) {      
             const chosen = findById(pokeDex, +select.value);
+            
             chosenArray.push(chosen);
             
             setPokemon(chosenArray);
         }
-        window.location = './battle';
+        // window.location = './battle';
     }
 });

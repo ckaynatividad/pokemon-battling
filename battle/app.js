@@ -22,7 +22,6 @@ const move4Span = document.getElementById('move-4-span');
 
 
 const playerPokemon1 = getPokemon();
-playerPokemon1[0].active = true;
 console.log(playerPokemon1);
 
 const computerPokemon1 = generateComPokemon();
@@ -40,6 +39,8 @@ playerPokemon1.forEach((Object)=>{
     });
 });
 
+
+
 let computerPokemon = [];
 computerPokemon1.forEach((Object)=>{
     computerPokemon.push({
@@ -51,12 +52,45 @@ computerPokemon1.forEach((Object)=>{
         img: Object.img
     });
 });
+
+let compStats = [];
+computerPokemon.forEach((Object)=>{
+    compStats.push({
+        hp: Object.baseStats.hp,
+        atk: Object.baseStats.atk,
+        def: Object.baseStats.def,
+        spa: Object.baseStats.spa,
+        spd: Object.baseStats.spd,
+        spe: Object.baseStats.spe
+    });
+});
+playerPokemon1[0].active = true;
+
+
 // NEED TO WORK ON ACTIVE POKEMON BASE STATS
-const activePokemon = getActive(playerPokemon1);
+const activePokemon1 = getActive(playerPokemon1);
+const activePokemon = {
+    num: activePokemon1.num,
+    name: activePokemon1.name,
+    types: activePokemon1.types,
+    moves: activePokemon1.moves, 
+    baseStats: { hp: baseStat(activePokemon1.baseStats.hp), atk: baseStat(activePokemon1.baseStats.atk), def: baseStat(activePokemon1.baseStats.def), spa: baseStat(activePokemon1.baseStats.spa), spd: baseStat(activePokemon1.baseStats.spd), spe: baseStat(activePokemon1.baseStats.spe) },
+    img: activePokemon1.img
+};
+activePokemon.active = true;
+console.log(activePokemon);
 playerHP.textContent = activePokemon.baseStats.hp;
 playerImage.src = `../${activePokemon.img}`;
 
-console.log(activePokemon);
+let playerStats = {
+    hp: activePokemon.baseStats.hp,
+    atk: activePokemon.baseStats.atk,
+    def: activePokemon.baseStats.def,
+    spa: activePokemon.baseStats.spa,
+    spd: activePokemon.baseStats.spd,
+    spe: activePokemon.baseStats.spe
+};
+console.log(playerStats);
 
 //radio buttons
 move1Span.textContent = activePokemon.moves[0];
@@ -128,5 +162,5 @@ submit.addEventListener('click', (e) => {
             let hello3 = damage(computerPokemon.baseStats.spa, activePokemon.baseStats.spd, activePokemon.baseStats.hp);
             console.log(hello3);
         }
-}
+    }
 });
