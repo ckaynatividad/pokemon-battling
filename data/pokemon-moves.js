@@ -1617,8 +1617,9 @@ export let moves = {
             boosts: {
                 spd: -1,
             },
-        },
+
     },
+
 
     psystrike: {
         num: 540,
@@ -1844,5 +1845,5 @@ export let moves = {
         target: 'normal',
         type: 'Grass',
         contestType: 'Tough',
-    },
+    }
 };
