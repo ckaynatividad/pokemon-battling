@@ -68,3 +68,7 @@ input[type = "radio"] {
 input:checked + span {
     background-color: #b4d455;
 }
+
+.hidden {
+    display: none;
+}
