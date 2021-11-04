@@ -105,14 +105,14 @@ let computerPokemon = {
     baseStats: { hp: baseStat(activeComp1.baseStats.hp), atk: baseStat(activeComp1.baseStats.atk), def: baseStat(activeComp1.baseStats.def), spa: baseStat(activeComp1.baseStats.spa), spd: baseStat(activeComp1.baseStats.spd), spe: baseStat(activeComp1.baseStats.spe) },
     img: activeComp1.img
 };
-let compStats = {
+/*let compStats = {
     hp: computerPokemon.baseStats.hp,
     atk: computerPokemon.baseStats.atk,
     def: computerPokemon.baseStats.def,
     spa: computerPokemon.baseStats.spa,
     spd: computerPokemon.baseStats.spd,
     spe: computerPokemon.baseStats.spe
-};
+};*/
 
 
 compHP.textContent = computerPokemon.baseStats.hp;
@@ -152,9 +152,9 @@ let compStats = {
 
 
 // const pokeForm = document.getElementById('move-select-form');
-let turn = 0;
+//let turn = 0;
 const maxHealth = playerStats.hp;
-const compHealth = compStats.hp
+const compHealth = compStats.hp;
 let currentHp = activePokemon.baseStats.hp;
 let computerHp = computerPokemon.baseStats.hp;
 console.log(computerHp);
@@ -162,7 +162,7 @@ submit.addEventListener('click', (e) => {
     console.log('ONCLICK', currentHp);
     e.preventDefault();
     const selectedMoveRadio = document.querySelector('input[type=radio]:checked');
-    turn++;
+    //turn++;
     let randomNumber = Math.floor(Math.random() * 3); // make this 
     let compMove = computerPokemon.moves[randomNumber];
     let computerMove = moves[compMove];
@@ -347,7 +347,7 @@ submit.addEventListener('click', (e) => {
                 //ABOVE IS IF COM IS USING PRIORITY AND IT IS PHYSICAL
                 //
                 //
-                 if (isKO(activePokemon) === true) {
+                if (isKO(activePokemon) === true) {
                     move1Span.classList.add('hidden');
                     move2Span.classList.add('hidden');
                     move3Span.classList.add('hidden');
@@ -390,7 +390,7 @@ submit.addEventListener('click', (e) => {
                         //
                         //
                     
-                    } else {
+                } else {
                     currentHp = heals(maxHealth, currentHp);
                     playerHP.textContent = currentHp;
                      //ABOVE IS OUR HEALING AFTER SURVIVING COM PHYSICCAL AND PRIORITY ATTACK
@@ -405,7 +405,7 @@ submit.addEventListener('click', (e) => {
                 playerStats.hp = currentHp;
                 console.log(playerStats.hp);
                 //ABOVE IS COM SPECIAL PRIORITY WHICH DOES NOT EXIST
-             }
+            }
             
         } else {
             if (playerStats.spe >= compStats.spe) {
@@ -442,7 +442,7 @@ submit.addEventListener('click', (e) => {
                             move3Span.classList.add('hidden');
                             move4Span.classList.add('hidden');
                         }
-                    }  else if (computerMove.category === 'Special') {
+                    } else if (computerMove.category === 'Special') {
                         let compDamage = damage(compStats.spa, playerStats.spd, playerStats.hp, computerMove.basePower);
                         currentHp = currentHp - compDamage;
                         console.log(computerHp);
@@ -497,7 +497,7 @@ submit.addEventListener('click', (e) => {
                             move3Span.classList.add('hidden');
                             move4Span.classList.add('hidden');
                         }
-                    }  else if (computerMove.category === 'Special') {
+                    } else if (computerMove.category === 'Special') {
                         let moveDamage = damage(compStats.spa, playerStats.spd, playerStats.hp, computerMove.basePower);
                         currentHp = currentHp - moveDamage;
                         console.log(currentHp);
@@ -508,16 +508,16 @@ submit.addEventListener('click', (e) => {
                     //
                     //
                         if (isKO(activePokemon) === true) {
-                        move1Span.classList.add('hidden');
-                        move2Span.classList.add('hidden');
-                        move3Span.classList.add('hidden');
-                        move4Span.classList.add('hidden');
-                    }
-                } else {
-                    computerHp = heals(compHealth, computerHp);
-                    compHP.textContent = computerHp;
+                            move1Span.classList.add('hidden');
+                            move2Span.classList.add('hidden');
+                            move3Span.classList.add('hidden');
+                            move4Span.classList.add('hidden');
+                        }
+                    } else {
+                        computerHp = heals(compHealth, computerHp);
+                        compHP.textContent = computerHp;
                     //ABOVE IS THE COM HEAL AFTER BEING HIT BY A PHYSICAL FASTER ATTACK
-                }
+                    }
 
                 } else {
                     currentHp = heals(maxHealth, currentHp);
@@ -525,47 +525,46 @@ submit.addEventListener('click', (e) => {
                     activePokemon.hp = currentHp;
                     console.log('HEAL', currentHp);
                     //ABOVE IS OUR HEAL IF FASTER
-                 }
-                } else if (computerMove.category === 'Physical') {
-                    let compDamage = damage(compStats.atk, playerStats.def, playerStats.hp, computerMove.basePower);
-                    currentHp = currentHp - compDamage;                    
-                    playerHP.textContent = currentHp;
-                    playerStats.hp = currentHp;
+                    if (computerMove.category === 'Physical') {
+                        let compDamage = damage(compStats.atk, playerStats.def, playerStats.hp, computerMove.basePower);
+                        currentHp = currentHp - compDamage;                    
+                        playerHP.textContent = currentHp;
+                        playerStats.hp = currentHp;
                     //ABOVE IS COM PHYSICAL ATTACK AFTER WE ARE FASTER AND HEAL
                 //
                 //
                 //
-                    console.log(playerStats.hp);
-                    if (isKO(activePokemon) === true) {
-                        move1Span.classList.add('hidden');
-                        move2Span.classList.add('hidden');
-                        move3Span.classList.add('hidden');
-                        move4Span.classList.add('hidden');
-                    }
-                }  else if (computerMove.category === 'Special') {
-                    let moveDamage = damage(compStats.spa, playerStats.spd, playerStats.hp, computerMove.basePower);
-                    currentHp = currentHp - moveDamage;
-                    console.log(currentHp);
-                    compHP.textContent = currentHp;
-                    compStats.hp = currentHp;
+                        console.log(playerStats.hp);
+                        if (isKO(activePokemon) === true) {
+                            move1Span.classList.add('hidden');
+                            move2Span.classList.add('hidden');
+                            move3Span.classList.add('hidden');
+                            move4Span.classList.add('hidden');
+                        }
+                    } else if (computerMove.category === 'Special') {
+                        let moveDamage = damage(compStats.spa, playerStats.spd, playerStats.hp, computerMove.basePower);
+                        currentHp = currentHp - moveDamage;
+                        console.log(currentHp);
+                        compHP.textContent = currentHp;
+                        compStats.hp = currentHp;
                   //ABOVE IS COM SPECIAL ATTACK AFTER WE ARE FASTER AND HEAL
                 //
                 //
                 //
-                    if (isKO(activePokemon) === true) {
-                    move1Span.classList.add('hidden');
-                    move2Span.classList.add('hidden');
-                    move3Span.classList.add('hidden');
-                    move4Span.classList.add('hidden');
-                }
-            } else {
-                computerHp = heals(compHealth, computerHp);
-                compHP.textContent = computerHp;
+                        if (isKO(activePokemon) === true) {
+                            move1Span.classList.add('hidden');
+                            move2Span.classList.add('hidden');
+                            move3Span.classList.add('hidden');
+                            move4Span.classList.add('hidden');
+                        }
+                    } else {
+                        computerHp = heals(compHealth, computerHp);
+                        compHP.textContent = computerHp;
                 //ABOVE IS THE COM HEAL WE HEAL FASTER
                 //
                 //
-            }
-            } else if (playerStats.spe < compStats.spe){
+                    } 
+                }} else if (playerStats.spe < compStats.spe){
             
                 if (compMove.category === 'Physical') {
                     console.log('asdfasdf');
@@ -612,11 +611,11 @@ submit.addEventListener('click', (e) => {
                             computerPokemon = computerPokemon1[1];
                         //ABOVE IS IF OUR SLOWER SPECIAL MOVE KNOCKS OUR FASTER PHYSICAL
                         }
-                     else {
-                        currentHp = heals(maxHealth, currentHp);
-                        playerHP.textContent = currentHp;
+                        else {
+                            currentHp = heals(maxHealth, currentHp);
+                            playerHP.textContent = currentHp;
                         //ABOVE IS IF FASTER PHYSICAL MOVE DOESN'T KO US AND WE USE HEAL
-                    }
+                        }}
                 } else if (compMove.category === 'Special') {
                     console.log('asdfasdf');
                     let compDamage = damage(compStats.spa, playerStats.spd, playerStats.hp, compMove.basePower);
@@ -663,31 +662,29 @@ submit.addEventListener('click', (e) => {
                         //
                         if (isKO(compStats) === true) {
                             computerPokemon = computerPokemon1[1];}
-                     else {
-                        currentHp = heals(maxHealth, currentHp);
-                        playerHP.textContent = currentHp;
+                        else {
+                            currentHp = heals(maxHealth, currentHp);
+                            playerHP.textContent = currentHp;
                         //ABOVE IS IF A FASTER SPECIAL ATTACK AND WE USE HEALING
                         //
                         //
                         //
-                    }
-                } 
+                        }
+                    } 
                
-            } else {
-                computerHp = heals(compHealth, computerHp);
-                compHP.textContent = computerHp;
+                } else {
+                    computerHp = heals(compHealth, computerHp);
+                    compHP.textContent = computerHp;
                 //ABOVE IS IF COM IS FASTER AND USES A HEALING MOVE
                 //
                 //
                 //
+                }
             }
-        }
-        console.log('currentHP-end FUNCTION', currentHp);
-        activePokemon.baseStats.hp = currentHp;
-        console.log('active pokemon', activePokemon);
-        playerHP.textContent = currentHp;
-        compHP.textContent = computerHp;
-    }
-}};
-
-
+            console.log('currentHP-end FUNCTION', currentHp);
+            activePokemon.baseStats.hp = currentHp;
+            console.log('active pokemon', activePokemon);
+            playerHP.textContent = currentHp;
+            compHP.textContent = computerHp;
+    
+        }}});
