@@ -15,7 +15,7 @@ main {
     align-items: center;
 }
 
-#form-div {
+#form-div, #switch-form-div {
     display: flex;
     flex-direction: row;
     align-items: center;
