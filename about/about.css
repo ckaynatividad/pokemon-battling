@@ -17,7 +17,7 @@ p {
     align-items: center;
     margin: 2vw;
     font-size: 1rem;
-    animation: fadeIn linear 9s;
+    animation: fadeIn linear 5s;
     font-size: 11pt;
 }
 
@@ -57,13 +57,41 @@ h3, h1 {
 } */
 
 img {
-    width: 185px;
-    height: 185px;
+    border-radius: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 5px;
     margin-right: 5px;
+}
+
+
+#brevan {
+    opacity: 80%;
+    width: 130px;
+    height: 120px;
+    padding-right: 1rem;
+}
+
+#chase {
+    opacity: 80%;
+    width: 120px;
+    height: 125px;
+    padding-left: 1rem
+}
+
+#ckay {
+    opacity: 80%;
+    width: 135px;
+    height: 135px;
+    padding-right: 1rem;
+}
+
+#james {
+    opacity: 80%;
+    width: 85px;
+    height: 140px;
+    padding-left: 1rem;
 }
 
 main {
@@ -77,7 +105,7 @@ main {
 }
 
 #gif1 {
-    margin-left: 190px;
+    margin-left: 150px;
     width: 80px;
     height: 80px;
 }
@@ -89,7 +117,7 @@ main {
 }
 
 #gif3 {
-    margin-left: 170px;
+    margin-left: 120px;
     width: 100px;
     height: 100px;
 }
@@ -98,4 +126,8 @@ main {
     margin-left: 110px;
     width: 85px;
     height: 85px;
+}
+
+h6 {
+    color: rgba(73, 72, 72, 0.144);
 }
