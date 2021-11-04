@@ -185,6 +185,9 @@ submit.addEventListener('click', (e) => {
                 spe: computerPokemon.baseStats.spe
             };
         } else {
+            let didWin = true;
+            localStorage.setItem('DIDWIN', JSON.stringify(didWin));
+            window.location.replace('../endGame/');
             window.location.replace('../endGame/');
         }
     }
@@ -199,6 +202,12 @@ submit.addEventListener('click', (e) => {
         move2Span.classList.add('hidden');
         move3Span.classList.add('hidden');
         move4Span.classList.add('hidden');
+        koCount++;
+        if (koCount >= 3) {
+            let didWin = false;
+            localStorage.setItem('DIDWIN', JSON.stringify(didWin));
+            window.location.replace('../endGame/');
+        }
     }
 
     if (selectedMoveRadio.id === 'switch') {

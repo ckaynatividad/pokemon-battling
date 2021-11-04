@@ -1,8 +1,9 @@
-import { isDead } from '../functions/isDead..js';
+// import { isDead } from '../functions/isDead.js';
 
 
 export function resultsDisplay(){
-    if (isDead) {
+    const didWin = JSON.parse(localStorage.getItem('DIDWIN'));
+    if (!didWin) {
         return 'defeat';
     } else {
         return 'congrats';
