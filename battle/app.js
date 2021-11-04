@@ -104,6 +104,16 @@ let computerPokemon = {
     baseStats: { hp: baseStat(activeComp1.baseStats.hp), atk: baseStat(activeComp1.baseStats.atk), def: baseStat(activeComp1.baseStats.def), spa: baseStat(activeComp1.baseStats.spa), spd: baseStat(activeComp1.baseStats.spd), spe: baseStat(activeComp1.baseStats.spe) },
     img: activeComp1.img
 };
+let compStats = {
+    hp: computerPokemon.baseStats.hp,
+    atk: computerPokemon.baseStats.atk,
+    def: computerPokemon.baseStats.def,
+    spa: computerPokemon.baseStats.spa,
+    spd: computerPokemon.baseStats.spd,
+    spe: computerPokemon.baseStats.spe
+};
+
+
 compHP.textContent = computerPokemon.baseStats.hp;
 compImage.src = `../${computerPokemon.img}`;
 
@@ -136,6 +146,7 @@ compImage.src = `../${computerPokemon.img}`;
 // const pokeForm = document.getElementById('move-select-form');
 let turn = 0;
 const maxHealth = playerStats.hp;
+const compHealth = compStats.hp
 let currentHp = activePokemon.baseStats.hp;
 let computerHp = computerPokemon.baseStats.hp;
 console.log(computerHp);
@@ -222,24 +233,24 @@ submit.addEventListener('click', (e) => {
             if (moveData.category === 'Physical') {
                 let moveDamage = damage(playerStats.atk, compStats.def, compStats.hp, moveData.basePower); 
                 console.log(moveDamage);
-                compputerHp = computerHp - moveDamage;
+                computerHp = computerHp - moveDamage;
                 console.log(computerHp);
                 compHP.textContent = computerHp;
                 compStats.hp = computerHp;
-                if (isKO(computerPokemon) === true) {
+                if (isKO(compStats) === true) {
                     computerPokemon = computerPokemon1[1];
                 } else if (compMove.category === 'Physical') {
                     console.log('asdfasdf');
-                    currentHp = damage(compStats.atk, playerStats.def, playerStats.hp, compMove.basePower);
+                    let compDamage = damage(compStats.atk, playerStats.def, playerStats.hp, compMove.basePower);
+                    currentHp = currentHp - compDamage;                    
                     playerHP.textContent = currentHp;
-
                     playerStats.hp = currentHp;
                     console.log(playerStats.hp);
                 } else if (compMove.category === 'Special') {
                     console.log('asdfasdf');
-                    currentHp = damage(compStats.spa, playerStats.spd, playerStats.hp, compMove.basePower);
+                    let compDamage = damage(compStats.spa, playerStats.spd, playerStats.hp, compMove.basePower);
+                    currentHp = currentHp - compDamage;                    
                     playerHP.textContent = currentHp;
-                    
                     playerStats.hp = currentHp;
                     console.log(playerStats.hp);
                 } 
@@ -250,8 +261,11 @@ submit.addEventListener('click', (e) => {
                     move4Span.classList.add('hidden');
                 }
             } else if (moveData.category === 'Special') {
-                currentHp = damage(playerStats.spa, compStats.spd, compStats.hp, moveData.basePower);
-                playerHP.textContent = currentHp;
+                let moveDamage = damage(playerStats.spa, compStats.spd, compStats.hp, moveData.basePower);
+                computerHp = computerHp - moveDamage;
+                console.log(computerHp);
+                compHP.textContent = computerHp;
+                compStats.hp = computerHp;
             } else {
                 currentHp = heals(maxHealth, currentHp);
                 playerHP.textContent = currentHp;
@@ -259,26 +273,103 @@ submit.addEventListener('click', (e) => {
             console.log('moveDataCategory', moveData.category);
         } else if (computerMove.priority > moveData.priority) {
             if (computerMove.category === 'Physical') {
-                currentHp = damage(compStats.atk, playerStats.def, playerStats.hp, computerMove.basePower);
-                console.log('HEALTH AFTER BATTLE', currentHp);
-                activePokemon.hp = currentHp;
+                let compDamage = damage(compStats.atk, playerStats.def, playerStats.hp, computerMove.basePower);
+                currentHp = currentHp - compDamage;                    
+                playerHP.textContent = currentHp;
+                playerStats.hp = currentHp;
+                console.log(playerStats.hp);
+                if (isKO(activePokemon) === true) {
+                    move1Span.classList.add('hidden');
+                    move2Span.classList.add('hidden');
+                    move3Span.classList.add('hidden');
+                    move4Span.classList.add('hidden');
+                }}
+                else if (moveData.category === 'Physical') {
+                    let moveDamage = damage(playerStats.atk, compStats.def, compStats.hp, moveData.basePower); 
+                    console.log(moveDamage);
+                    computerHp = computerHp - moveDamage;
+                    console.log(computerHp);
+                    compHP.textContent = computerHp;
+                    compStats.hp = computerHp;
+                    if (isKO(compStats) === true) {
+                        computerPokemon = computerPokemon1[1];}
+                } else if (moveData.category === 'Special') {
+                    let moveDamage = damage(playerStats.spa, compStats.spd, compStats.hp, moveData.basePower);
+                    computerHp = computerHp - moveDamage;
+                    console.log(computerHp);
+                    compHP.textContent = computerHp;
+                    compStats.hp = computerHp;
+                    if (isKO(compStats) === true) {
+                        computerPokemon = computerPokemon1[1];}
+                 else {
+                    currentHp = heals(maxHealth, currentHp);
+                    playerHP.textContent = currentHp;
+                }
             } else {
-                currentHp = damage(compStats.spa, playerStats.spd, playerStats.hp, computerMove.basePower);
-                activePokemon.hp = currentHp;
-                console.log('HEALTH AFTER BATTLE', currentHp);
-            }
+                let compDamage = damage(compStats.spa, playerStats.spd, playerStats.hp, computerMove.basePower);
+                currentHp = currentHp - compDamage;                    
+                playerHP.textContent = currentHp;
+                playerStats.hp = currentHp;
+                console.log(playerStats.hp);
+             }
+            
         } else {
             if (playerStats.spe >= compStats.spe) {
                 if (moveData.category === 'Physical') {
-                    let computerHp = damage(playerStats.atk, compStats.def, compStats.hp, moveData.basePower);
-                    // activePokemon.hp = currentHp;
-                    console.log('COMP HEALTH', currentHp);
+                    let moveDamage = damage(playerStats.atk, compStats.def, compStats.hp, moveData.basePower);
+                    computerHp = computerHp - moveDamage;
+                    console.log(computerHp);
+                    compHP.textContent = computerHp;
+                    compStats.hp = computerHp;
+                    if (isKO(compStats) === true) {
+                        computerPokemon = computerPokemon1[1];
+                    
+                    } else if (computerMove.category === 'Physical') {
+                        let compDamage = damage(compStats.atk, playerStats.def, playerStats.hp, computerMove.basePower);
+                        currentHp = currentHp - compDamage;                    
+                        playerHP.textContent = currentHp;
+                        playerStats.hp = currentHp;
+                        console.log(playerStats.hp);
+                    }  else if (computerMove.category === 'Special') {
+                        let compDamage = damage(compStats.spa, playerStats.spd, playerStats.hp, computerMove.basePower);
+                        currentHp = currentHp - compDamage;
+                        console.log(computerHp);
+                        playerHP.textContent = currentHp;
+                        playerStats.hp = currentHp;
+                    } else (if (isKO(activePokemon) === true) {
+                        move1Span.classList.add('hidden');
+                        move2Span.classList.add('hidden');
+                        move3Span.classList.add('hidden');
+                        move4Span.classList.add('hidden');
+                    }
 
-                    console.log(moveData.basePower);
                 } else if (moveData.category === 'Special') {
-                    let computerHp = damage(playerStats.spa, compStats.spd, compStats.hp, moveData.basePower);
-                    activePokemon.hp = currentHp;
-                    console.log('HEALTH AFTER BATTLE', currentHp);
+                    let moveDamage = damage(playerStats.spa, compStats.spd, compStats.hp, moveData.basePower);
+                    computerHp = computerHp - moveDamage;
+                    console.log(computerHp);
+                    compHP.textContent = computerHp;
+                    compStats.hp = computerHp;
+                    if (isKO(compStats) === true) {
+                        computerPokemon = computerPokemon1[1];
+                    
+                    } else if (computerMove.category === 'Physical') {
+                        let compDamage = damage(compStats.atk, playerStats.def, playerStats.hp, computerMove.basePower);
+                        currentHp = currentHp - compDamage;                    
+                        playerHP.textContent = currentHp;
+                        playerStats.hp = currentHp;
+                        console.log(playerStats.hp);
+                    }  else if (moveData.category === 'Special') {
+                        let moveDamage = damage(playerStats.spa, compStats.spd, compStats.hp, moveData.basePower);
+                        computerHp = computerHp - moveDamage;
+                        console.log(computerHp);
+                        compHP.textContent = computerHp;
+                        compStats.hp = computerHp;
+                    } if (isKO(activePokemon) === true) {
+                        move1Span.classList.add('hidden');
+                        move2Span.classList.add('hidden');
+                        move3Span.classList.add('hidden');
+                        move4Span.classList.add('hidden');
+                    }
 
                 } else {
                     currentHp = heals(maxHealth, currentHp);
@@ -305,6 +396,6 @@ submit.addEventListener('click', (e) => {
         playerHP.textContent = currentHp;
         compHP.textContent = computerHp;
     }
-});
+}};
 
 
