@@ -107,14 +107,6 @@ let computerPokemon = {
 compHP.textContent = computerPokemon.baseStats.hp;
 compImage.src = `../${computerPokemon.img}`;
 
-let compStats = {
-    hp: computerPokemon.baseStats.hp,
-    atk: computerPokemon.baseStats.atk,
-    def: computerPokemon.baseStats.def,
-    spa: computerPokemon.baseStats.spa,
-    spd: computerPokemon.baseStats.spd,
-    spe: computerPokemon.baseStats.spe
-};
 
 //turn - start on click 'submit'
 //if isDead(player) === true || isDead(comp)) === true
@@ -145,7 +137,8 @@ let compStats = {
 let turn = 0;
 const maxHealth = playerStats.hp;
 let currentHp = activePokemon.baseStats.hp;
-let computerHp = compStats.hp;
+let computerHp = computerPokemon.baseStats.hp;
+console.log(computerHp);
 submit.addEventListener('click', (e) => {
     console.log('ONCLICK', currentHp);
     e.preventDefault();
@@ -227,9 +220,12 @@ submit.addEventListener('click', (e) => {
         if (moveData.priority > computerMove.priority){
     
             if (moveData.category === 'Physical') {
-                let computerHP = damage(playerStats.atk, compStats.def, compStats.hp, moveData.basePower); 
-                console.log('if tree health', computerHP);
-                compHP.textContent = computerHP;
+                let moveDamage = damage(playerStats.atk, compStats.def, compStats.hp, moveData.basePower); 
+                console.log(moveDamage);
+                compputerHp = computerHp - moveDamage;
+                console.log(computerHp);
+                compHP.textContent = computerHp;
+                compStats.hp = computerHp;
                 if (isKO(computerPokemon) === true) {
                     computerPokemon = computerPokemon1[1];
                 } else if (compMove.category === 'Physical') {
@@ -276,7 +272,7 @@ submit.addEventListener('click', (e) => {
                 if (moveData.category === 'Physical') {
                     let computerHp = damage(playerStats.atk, compStats.def, compStats.hp, moveData.basePower);
                     // activePokemon.hp = currentHp;
-                    console.log('HEALTH AFTER BATTLE', currentHp);
+                    console.log('COMP HEALTH', currentHp);
 
                     console.log(moveData.basePower);
                 } else if (moveData.category === 'Special') {
