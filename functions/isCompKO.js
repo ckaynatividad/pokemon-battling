@@ -1,5 +1,11 @@
-function isCompKO(compPokemon) { //changed comppokemon to compPokemon
-    return compPokemon <= 0;
+function isCompKO(pokemon, hp) { //changed comppokemon to compPokemon
+    if (hp <= 0) {
+        pokemon.ko = true;
+        return true;
+    } else {
+        pokemon.ko = false;
+        return false;
+    }
 }
 export default isCompKO;
 
