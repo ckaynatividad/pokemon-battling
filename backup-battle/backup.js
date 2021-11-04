@@ -125,15 +125,11 @@ submit.addEventListener('click', (e) => {
     const selectedMoveRadio = document.querySelector('input[type=radio]:checked');
     turn++;
     let isComputerKO = isCompKO(computerPokemon, computerHp);
-    console.log(isComputerKO, computerPokemon, computerHp);
-    console.log(computerPokemon);
     
     if (isComputerKO === true) {
-        console.log(computerPokemon);
         if (computerPokemon.num === computerPokemon1[0].num) {
             computerPokemon.active = false;
             computerPokemon = computerPokemon1[1];
-            console.log(computerPokemon);
             activeComp1 = computerPokemon1[1];
             computerPokemon = {
                 num: activeComp1.num,
@@ -160,7 +156,6 @@ submit.addEventListener('click', (e) => {
         } else if (computerPokemon.num === computerPokemon1[1].num) {
             computerPokemon.active = false;
             computerPokemon = computerPokemon1[2];
-            console.log(computerPokemon);
             activeComp1 = computerPokemon1[2];
             computerPokemon = {
                 num: activeComp1.num,
@@ -185,9 +180,6 @@ submit.addEventListener('click', (e) => {
                 spe: computerPokemon.baseStats.spe
             };
         } else {
-            let didWin = true;
-            localStorage.setItem('DIDWIN', JSON.stringify(didWin));
-            window.location.replace('../endGame/');
             window.location.replace('../endGame/');
         }
     }
@@ -202,12 +194,6 @@ submit.addEventListener('click', (e) => {
         move2Span.classList.add('hidden');
         move3Span.classList.add('hidden');
         move4Span.classList.add('hidden');
-        koCount++;
-        if (koCount >= 3) {
-            let didWin = false;
-            localStorage.setItem('DIDWIN', JSON.stringify(didWin));
-            window.location.replace('../endGame/');
-        }
     }
 
     if (selectedMoveRadio.id === 'switch') {
@@ -338,3 +324,72 @@ submit.addEventListener('click', (e) => {
     playerHP.textContent = currentHp;
     compHP.textContent = computerHp;
 });
+
+setInterval(function(){ 
+    if (isKO(activePokemon) === true) {
+        move1Span.classList.add('hidden');
+        move2Span.classList.add('hidden');
+        move3Span.classList.add('hidden');
+        move4Span.classList.add('hidden');
+    }
+
+    let isComputerKO = isCompKO(computerPokemon, computerHp);
+    
+    if (isComputerKO === true) {
+        if (computerPokemon.num === computerPokemon1[0].num) {
+            computerPokemon.active = false;
+            computerPokemon = computerPokemon1[1];
+            activeComp1 = computerPokemon1[1];
+            computerPokemon = {
+                num: activeComp1.num,
+                name: activeComp1.name,
+                types: activeComp1.types,
+                moves: activeComp1.moves, 
+                baseStats: { hp: baseStat(activeComp1.baseStats.hp), atk: baseStat(activeComp1.baseStats.atk), def: baseStat(activeComp1.baseStats.def), spa: baseStat(activeComp1.baseStats.spa), spd: baseStat(activeComp1.baseStats.spd), spe: baseStat(activeComp1.baseStats.spe) },
+                img: activeComp1.img
+            };
+            computerPokemon.active = true;
+            computerHp = computerPokemon.baseStats.hp;
+            compHP.textContent = computerPokemon.baseStats.hp;
+            compImage.src = `../${computerPokemon.img}`;
+
+            // eslint-disable-next-line no-unused-vars
+            let compStats = {
+                hp: computerPokemon.baseStats.hp,
+                atk: computerPokemon.baseStats.atk,
+                def: computerPokemon.baseStats.def,
+                spa: computerPokemon.baseStats.spa,
+                spd: computerPokemon.baseStats.spd,
+                spe: computerPokemon.baseStats.spe
+            };
+        } else if (computerPokemon.num === computerPokemon1[1].num) {
+            computerPokemon.active = false;
+            computerPokemon = computerPokemon1[2];
+            activeComp1 = computerPokemon1[2];
+            computerPokemon = {
+                num: activeComp1.num,
+                name: activeComp1.name,
+                types: activeComp1.types,
+                moves: activeComp1.moves, 
+                baseStats: { hp: baseStat(activeComp1.baseStats.hp), atk: baseStat(activeComp1.baseStats.atk), def: baseStat(activeComp1.baseStats.def), spa: baseStat(activeComp1.baseStats.spa), spd: baseStat(activeComp1.baseStats.spd), spe: baseStat(activeComp1.baseStats.spe) },
+                img: activeComp1.img
+            };
+            computerPokemon.active = true;
+            computerHp = computerPokemon.baseStats.hp;
+            compHP.textContent = computerPokemon.baseStats.hp;
+            compImage.src = `../${computerPokemon.img}`;
+
+            // eslint-disable-next-line no-unused-vars
+            let compStats = {
+                hp: computerPokemon.baseStats.hp,
+                atk: computerPokemon.baseStats.atk,
+                def: computerPokemon.baseStats.def,
+                spa: computerPokemon.baseStats.spa,
+                spd: computerPokemon.baseStats.spd,
+                spe: computerPokemon.baseStats.spe
+            };
+        } else {
+            window.location.replace('../endGame/');
+        }
+    }
+}, 1000);
