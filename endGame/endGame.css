@@ -7,10 +7,33 @@ body {
     background-attachment: fixed;
     background-position: center;
     background-image: url("../assets/latios.jpeg");
-    background-color: papayawhip;
     color: black;
     background-size: contain;
 };
+
+.playagain {
+    padding: 0.5em 3em;
+    border: 0.16em solid #be0c0c;
+    margin: 0 0.3em 0.3em 0;
+    box-sizing: border-box;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-family:'Roboto',sans-serif;
+    font-weight:400;
+    color:#c00d0d;
+    text-align:center;
+    transition: all 0.15s;
+}
+
+.playagain:hover {
+    color: #970f0f;
+    border-color: #991010;
+};
+
+.playagain:active{
+     color:#6e1212;
+     border-color:#b11b1b;
+    }
 
 h1 {
     box-shadow: 1px 4px 1px 1px rgba(78, 64, 64, 0.349);
