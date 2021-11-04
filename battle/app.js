@@ -287,7 +287,6 @@ submit.addEventListener('click', (e) => {
                     //
                 }
 
-                let isPlayerKO = isKO(activePokemon);
                 if (isKO(activePokemon) === true) {
                     move1Span.classList.add('hidden');
                     move2Span.classList.add('hidden');
@@ -375,7 +374,7 @@ submit.addEventListener('click', (e) => {
                     //
                     //
                     //
-                    if (isKO(compStats) === true) {
+                    if (isKO(computerPokemon) === true) {
                         computerPokemon = computerPokemon1[1];}
                         //ABOVE IS IF WE KO THE OPPPONENT WITH A PHYSICAL MOVE AFTER GETTING HIT BY A PHYSICAL PRIORITY MOVE
                         //
@@ -427,7 +426,7 @@ submit.addEventListener('click', (e) => {
                     //
                     //
                     //
-                    if (isKO(compStats) === true) {
+                    if (isKO(computerPokemon) === true) {
                         computerPokemon = computerPokemon1[1];
                          //ABOVE IS IF OUR PHYSICAL ATTACK KO OPPONENT WHILE FASTY AND NO PRIORITY
                     //
@@ -482,7 +481,7 @@ submit.addEventListener('click', (e) => {
                     //
                     //
                     //
-                    if (isKO(compStats) === true) {
+                    if (isKO(computerPokemon) === true) {
                         computerPokemon = computerPokemon1[1];
                          //ABOVE IS IF OUR SPECIAL ATTACK KO OPPONENT WHILE FASTY AND NO PRIORITY
                     //
@@ -656,7 +655,7 @@ submit.addEventListener('click', (e) => {
                         //
                         //
                         //
-                        if (isKO(compStats) === true) {
+                        if (isKO(computerPokemon) === true) {
                             computerPokemon = computerPokemon1[1];}
                     } else if (moveData.category === 'Special') {
                         let moveDamage = damage(playerStats.spa, compStats.spd, compStats.hp, moveData.basePower);
@@ -668,7 +667,7 @@ submit.addEventListener('click', (e) => {
                         //
                         //
                         //
-                        if (isKO(compStats) === true) {
+                        if (isKO(computerPokemon) === true) {
                             computerPokemon = computerPokemon1[1];}
                         else {
                             currentHp = heals(maxHealth, currentHp);
