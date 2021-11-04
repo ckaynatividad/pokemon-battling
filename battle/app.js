@@ -308,7 +308,7 @@ submit.addEventListener('click', (e) => {
                 console.log(computerHp);
                 compHP.textContent = computerHp;
                 compStats.hp = computerHp;
-                if (isKO(compStats) === true) {
+                if (isKO(computerPokemon) === true) {
                     computerPokemon = computerPokemon1[1];
                 } else if (compMove.category === 'Physical') {
                     console.log('asdfasdf');
@@ -375,7 +375,7 @@ submit.addEventListener('click', (e) => {
                     //
                     //
                     //
-                    if (isKO(compStats) === true) {
+                    if (isKO(computerPokemon) === true) {
                         computerPokemon = computerPokemon1[1];}
                         //ABOVE IS IF WE KO THE OPPPONENT WITH A PHYSICAL MOVE AFTER GETTING HIT BY A PHYSICAL PRIORITY MOVE
                         //
@@ -391,7 +391,7 @@ submit.addEventListener('click', (e) => {
                     //
                     //
                     //
-                    if (isKO(compStats) === true) {
+                    if (isKO(computerPokemon) === true) {
                         computerPokemon = computerPokemon1[1];}
                         //ABOVE IS IF WE KO THE OPPPONENT WITH A SPECIAL MOVE AFTER GETTING HIT BY A PHYSICAL PRIORITY MOVE
                         //
@@ -603,7 +603,7 @@ submit.addEventListener('click', (e) => {
                         //ABOVE IS IF WE SURVIVE A PHYSICAL FASTER MOVE AND ATTACK BACK WITH PHYSICAL
                         //
                         //
-                        if (isKO(compStats) === true) {
+                        if (isKO(computerPokemon) === true) {
                             computerPokemon = computerPokemon1[1];}
                             //ABOVE IS IF OUR PHYSICAL MOVE KO'S COM AFTER WE ARE HIT WITH FASTER PHYSICAL MOVE
                     } else if (moveData.category === 'Special') {
@@ -616,7 +616,7 @@ submit.addEventListener('click', (e) => {
                         //
                         //
                         //
-                        if (isKO(compStats) === true) {
+                        if (isKO(computerPokemon) === true) {
                             computerPokemon = computerPokemon1[1];
                         //ABOVE IS IF OUR SLOWER SPECIAL MOVE KNOCKS OUR FASTER PHYSICAL
                         }
@@ -657,7 +657,7 @@ submit.addEventListener('click', (e) => {
                         //
                         //
                         //
-                        if (isKO(compStats) === true) {
+                        if (isKO(computerPokemon) === true) {
                             computerPokemon = computerPokemon1[1];}
                     } else if (moveData.category === 'Special') {
                         let moveDamage = damage(playerStats.spa, compStats.spd, compStats.hp, moveData.basePower);
@@ -669,7 +669,7 @@ submit.addEventListener('click', (e) => {
                         //
                         //
                         //
-                        if (isKO(compStats) === true) {
+                        if (isKO(computerPokemon) === true) {
                             computerPokemon = computerPokemon1[1];}
                         else {
                             currentHp = heals(maxHealth, currentHp);
