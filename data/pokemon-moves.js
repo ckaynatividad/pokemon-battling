@@ -82,6 +82,29 @@ export let moves = {
         contestType: 'Tough',
     },
 
+    icefang: {
+        num: 423,
+        accuracy: 95,
+        basePower: 65,
+        category: 'Physical',
+        name: 'Ice Fang',
+        pp: 15,
+        priority: 0,
+        flags: { bite: 1, contact: 1, protect: 1, mirror: 1 },
+        secondaries: [
+            {
+                chance: 10,
+                status: 'frz',
+            }, {
+                chance: 10,
+                volatileStatus: 'flinch',
+            },
+        ],
+        target: 'normal',
+        type: 'Ice',
+        contestType: 'Cool',
+    },
+
     gigadrain: {
         num: 202,
         accuracy: 100,
@@ -100,6 +123,42 @@ export let moves = {
         name: 'Weather Ball',
         type: 'Normal',
         priority: 0,
+    },
+
+    firepunch: {
+        num: 7,
+        accuracy: 100,
+        basePower: 75,
+        category: 'Physical',
+        name: 'Fire Punch',
+        pp: 15,
+        priority: 0,
+        flags: { contact: 1, protect: 1, mirror: 1, punch: 1 },
+        secondary: {
+            chance: 10,
+            status: 'brn',
+        },
+        target: 'normal',
+        type: 'Fire',
+        contestType: 'Tough',
+    },
+
+    thunderpunch: {
+        num: 9,
+        accuracy: 100,
+        basePower: 75,
+        category: 'Physical',
+        name: 'Thunder Punch',
+        pp: 15,
+        priority: 0,
+        flags: { contact: 1, protect: 1, mirror: 1, punch: 1 },
+        secondary: {
+            chance: 10,
+            status: 'par',
+        },
+        target: 'normal',
+        type: 'Electric',
+        contestType: 'Cool',
     },
 
     earthpower: {
