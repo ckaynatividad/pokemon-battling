@@ -1543,6 +1543,21 @@ export let moves = {
         contestType: 'Beautiful',
     },
 
+    megahorn: {
+        num: 224,
+        accuracy: 85,
+        basePower: 120,
+        category: 'Physical',
+        name: 'Megahorn',
+        pp: 10,
+        priority: 0,
+        flags: { contact: 1, protect: 1, mirror: 1 },
+        secondary: null,
+        target: 'normal',
+        type: 'Bug',
+        contestType: 'Cool',
+    },
+
     triattack: {
         num: 161,
         accuracy: 100,
