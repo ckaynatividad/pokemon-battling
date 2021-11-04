@@ -655,7 +655,7 @@ submit.addEventListener('click', (e) => {
                         //
                         //
                         //
-                        if (isKO(compStats) === true) {
+                        if (isKO(computerPokemon) === true) {
                             computerPokemon = computerPokemon1[1];}
                     } else if (moveData.category === 'Special') {
                         let moveDamage = damage(playerStats.spa, compStats.spd, compStats.hp, moveData.basePower);
@@ -667,7 +667,7 @@ submit.addEventListener('click', (e) => {
                         //
                         //
                         //
-                        if (isKO(compStats) === true) {
+                        if (isKO(computerPokemon) === true) {
                             computerPokemon = computerPokemon1[1];}
                         else {
                             currentHp = heals(maxHealth, currentHp);
