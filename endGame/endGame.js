@@ -1,5 +1,5 @@
 import { getPokemon } from '../functions/utils.js';
-import { isDead } from '../functions/isDead.js';
+// import { isDead } from '../functions/isDead.js';
 import { resultsDisplay, messages } from './endGameLogic.js';
 
 //get pokemon and check if any are alive(isDead)
@@ -12,5 +12,6 @@ const resultsPlace = document.getElementById('main-container');
 const results = resultsDisplay();
 //call text from js
 const resultsMessage = messages[results];
+console.log(typeof(resultsMessage));
 //set in html
 resultsPlace.textContent = resultsMessage;
