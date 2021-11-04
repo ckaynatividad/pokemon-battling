@@ -151,7 +151,9 @@ let compStats = {
             //save new health
             //if isDead(player) === true || isDead(comp)) === true
 
-
+            
+const switchButton = document.getElementById('switch-button');
+switchButton.classList.add('hidden');
 // const pokeForm = document.getElementById('move-select-form');
 //let turn = 0;
 const maxHealth = playerStats.hp;
@@ -182,7 +184,9 @@ submit.addEventListener('click', (e) => {
         const pokeSwitchForm = document.getElementById('pokemon-switch-form');
         const moveSelectForm = document.getElementById('move-select-form');
         const switchButton = document.getElementById('switch-button');
-
+        const submit = document.getElementById('submit');
+        submit.classList.add('hidden');
+        switchButton.classList.remove('hidden');
         pokeSwitchRadio1.value = playerPokemon[0].num;
         pokeSwitchRadio2.value = playerPokemon[1].num;
         pokeSwitchRadio3.value = playerPokemon[2].num;
@@ -225,7 +229,8 @@ submit.addEventListener('click', (e) => {
             
             pokeSwitchForm.classList.add('hidden');
             moveSelectForm.classList.remove('hidden');
-            
+            submit.classList.remove('hidden');
+            switchButton.classList.add('hidden');
             move1Span.classList.remove('hidden');
             move2Span.classList.remove('hidden');
             move3Span.classList.remove('hidden');
