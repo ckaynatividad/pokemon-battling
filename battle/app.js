@@ -3,6 +3,7 @@ import { moves } from '../data/pokemon-moves.js';
 import { getActive } from '../functions/getActive.js';
 import { baseStat } from '../functions/baseStat.js';
 import { damage, heals } from '../functions/damage.js';
+import findById from '../functions/findById.js';
 
 const move1 = document.getElementById('move1');
 const move2 = document.getElementById('move2');
@@ -58,7 +59,7 @@ playerPokemon1[0].active = true;
 
 // NEED TO WORK ON ACTIVE POKEMON BASE STATS
 const activePokemon1 = getActive(playerPokemon1);
-const activePokemon = {
+let activePokemon = {
     num: activePokemon1.num,
     name: activePokemon1.name,
     types: activePokemon1.types,
@@ -146,27 +147,83 @@ const maxHealth = playerStats.hp;
 let currentHp = activePokemon.baseStats.hp;
 let computerHp = compStats.hp;
 submit.addEventListener('click', (e) => {
-    console.log("ONCLICK", currentHp);
+    console.log('ONCLICK', currentHp);
     e.preventDefault();
     const selectedMoveRadio = document.querySelector('input[type=radio]:checked');
     turn++;
     let randomNumber = Math.floor(Math.random() * 3); // make this 
     let compMove = computerPokemon.moves[randomNumber];
     let computerMove = moves[compMove];
-    console.log("COMP MOVE NAME", compMove);
+    console.log('COMP MOVE NAME', compMove);
     if (selectedMoveRadio.id === 'switch') {
         console.log('switch button pressed');
+
+        console.log(activePokemon);
+
+        const pokeSwitchRadio1 = document.getElementById('pokemon-1');
+        const pokeSwitchRadio2 = document.getElementById('pokemon-2');
+        const pokeSwitchRadio3 = document.getElementById('pokemon-3');
+        const pokeSwitchSpan1 = document.getElementById('pokemon-1-span');
+        const pokeSwitchSpan2 = document.getElementById('pokemon-2-span');
+        const pokeSwitchSpan3 = document.getElementById('pokemon-3-span');
+        const pokeSwitchForm = document.getElementById('pokemon-switch-form');
+        const moveSelectForm = document.getElementById('move-select-form');
+        const switchButton = document.getElementById('switch-button');
+
+        pokeSwitchRadio1.value = playerPokemon[0].num;
+        pokeSwitchRadio2.value = playerPokemon[1].num;
+        pokeSwitchRadio3.value = playerPokemon[2].num;
+        pokeSwitchSpan1.textContent = playerPokemon[0].name;
+        pokeSwitchSpan2.textContent = playerPokemon[1].name;
+        pokeSwitchSpan3.textContent = playerPokemon[2].name;
+        pokeSwitchForm.classList.remove('hidden');
+        moveSelectForm.classList.add('hidden');
+        // if (playerPokemon[0].active === true) {
+        //     pokeSwitchRadio1.classList.add('hidden');
+        //     pokeSwitchSpan1.classList.add('hidden');
+        // } else if (playerPokemon[1].active === true) {
+        //     pokeSwitchRadio2.classList.add('hidden');
+        //     pokeSwitchSpan2.classList.add('hidden');
+        // } else if (playerPokemon[2].active === true) {
+        //     pokeSwitchRadio3.classList.add('hidden');
+        //     pokeSwitchSpan3.classList.add('hidden');
+        // }
+
+        switchButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            const test = document.querySelector('input[name="pokemon-switch"]:checked');
+            
+            activePokemon.active = false;
+            const newActiveNum = test.value;
+            const newActive = findById(playerPokemon, +newActiveNum);
+            activePokemon = newActive;
+            activePokemon.active = true;
+
+            playerHP.textContent = activePokemon.baseStats.hp;
+            playerImage.src = `../${activePokemon.img}`;
+            move1Span.textContent = activePokemon.moves[0];
+            move1.value = activePokemon.moves[0];
+            move2Span.textContent = activePokemon.moves[1];
+            move2.value = activePokemon.moves[1];
+            move3Span.textContent = activePokemon.moves[2];
+            move3.value = activePokemon.moves[2];
+            move4Span.textContent = activePokemon.moves[3];
+            move4.value = activePokemon.moves[3];
+            
+            pokeSwitchForm.classList.add('hidden');
+            moveSelectForm.classList.remove('hidden');
+        });
     } else {
         const selectedMove = selectedMoveRadio.value;
         const moveData = moves[selectedMove];
-        console.log("SELECTED MOVES", selectedMove);
-        console.log("priority", moveData.priority);
-        console.log("comp prio", computerMove.priority);
+        console.log('SELECTED MOVES', selectedMove);
+        console.log('priority', moveData.priority);
+        console.log('comp prio', computerMove.priority);
         if (moveData.priority > computerMove.priority){
     
-            if (moveData.category === 'Physical') {console.log("asdfasdf");
+            if (moveData.category === 'Physical') {console.log('asdfasdf');
                 currentHp = damage(playerStats.atk, compStats.def, compStats.hp, moveData.basePower); 
-                console.log("if tree health", currentHp);
+                console.log('if tree health', currentHp);
                 playerHP.textContent = currentHp;
             } else if (moveData.category === 'Special') {
                 currentHp = damage(playerStats.spa, compStats.spd, compStats.hp, moveData.basePower);
@@ -175,52 +232,52 @@ submit.addEventListener('click', (e) => {
                 currentHp = heals(maxHealth, currentHp);
                 playerHP.textContent = currentHp;
             }
-            console.log("moveDataCategory", moveData.category);
+            console.log('moveDataCategory', moveData.category);
         } else if (computerMove.priority > moveData.priority) {
             if (computerMove.category === 'Physical') {
                 currentHp = damage(compStats.atk, playerStats.def, playerStats.hp, computerMove.basePower);
-                console.log("HEALTH AFTER BATTLE", currentHp);
+                console.log('HEALTH AFTER BATTLE', currentHp);
                 activePokemon.hp = currentHp;
             } else {
                 currentHp = damage(compStats.spa, playerStats.spd, playerStats.hp, computerMove.basePower);
                 activePokemon.hp = currentHp;
-                console.log("HEALTH AFTER BATTLE", currentHp);
+                console.log('HEALTH AFTER BATTLE', currentHp);
             }
         } else {
             if (playerStats.spe >= compStats.spe) {
                 if (moveData.category === 'Physical') {
                     let computerHp = damage(playerStats.atk, compStats.def, compStats.hp, moveData.basePower);
                     // activePokemon.hp = currentHp;
-                    console.log("HEALTH AFTER BATTLE", currentHp);
+                    console.log('HEALTH AFTER BATTLE', currentHp);
 
                     console.log(moveData.basePower);
                 } else if (moveData.category === 'Special') {
                     let computerHp = damage(playerStats.spa, compStats.spd, compStats.hp, moveData.basePower);
                     activePokemon.hp = currentHp;
-                    console.log("HEALTH AFTER BATTLE", currentHp);
+                    console.log('HEALTH AFTER BATTLE', currentHp);
 
                 } else {
                     currentHp = heals(maxHealth, currentHp);
                     playerHP.textContent = currentHp;
                     activePokemon.hp = currentHp;
-                    console.log("HEAL", currentHp);
+                    console.log('HEAL', currentHp);
 
                 }
             } else if (computerMove.category === 'Physical') {
                 currentHp = damage(compStats.atk, playerStats.def, playerStats.hp, computerMove.basePower);
                 activePokemon.baseStats.hp = currentHp;
-                console.log("HEALTH AFTER BATTLE", currentHp);
+                console.log('HEALTH AFTER BATTLE', currentHp);
 
             } else {
                 currentHp = damage(compStats.spa, playerStats.spd, playerStats.hp, computerMove.basePower);
                 playerHP.textContent = currentHp;
                 activePokemon.baseStats.hp = currentHp;
-                console.log("HEALTH AFTER BATTLE", currentHp);
+                console.log('HEALTH AFTER BATTLE', currentHp);
             }
         }
-        console.log("currentHP-end FUNCTION", currentHp);
+        console.log('currentHP-end FUNCTION', currentHp);
         activePokemon.baseStats.hp = currentHp;
-        console.log("active pokemon", activePokemon);
+        console.log('active pokemon', activePokemon);
         playerHP.textContent = currentHp;
         compHP.textContent = computerHp;
     }
