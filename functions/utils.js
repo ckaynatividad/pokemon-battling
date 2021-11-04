@@ -32,6 +32,12 @@ export function generateComPokemon(){
     // ^^ CALL POKE VIA ARRAY -- insert 'let userPokemon = generatePokemon()' in app.js => userPokemon[0] etc.
 }
 
+export function setHp(hp){
+    localStorage.setItem('POKEMON');
+}
+
+
+
 export function getPokemon(){
     const pokeString = localStorage.getItem('POKEMON') || '[]';
     const pokemon = JSON.parse(pokeString);

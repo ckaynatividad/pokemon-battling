@@ -138,66 +138,91 @@ let compStats = {
             //STAB (maybe)
             //save new health
             //if isDead(player) === true || isDead(comp)) === true
-            //if isCompKO() === true - switch pokemon
+
 
 // const pokeForm = document.getElementById('move-select-form');
 let turn = 0;
 const maxHealth = playerStats.hp;
-console.log(playerStats.spe);
+let currentHp = activePokemon.baseStats.hp;
+let computerHp = compStats.hp;
 submit.addEventListener('click', (e) => {
+    console.log("ONCLICK", currentHp);
     e.preventDefault();
     const selectedMoveRadio = document.querySelector('input[type=radio]:checked');
     turn++;
-    let currentHp = playerStats.hp;
-    let randomNumber = Math.floor(Math.random() * 3);
+    let randomNumber = Math.floor(Math.random() * 3); // make this 
     let compMove = computerPokemon.moves[randomNumber];
     let computerMove = moves[compMove];
-    console.log(compMove);
-    console.log(computerMove);
+    console.log("COMP MOVE NAME", compMove);
     if (selectedMoveRadio.id === 'switch') {
         console.log('switch button pressed');
     } else {
         const selectedMove = selectedMoveRadio.value;
         const moveData = moves[selectedMove];
-        console.log(moveData.priority);
+        console.log("SELECTED MOVES", selectedMove);
+        console.log("priority", moveData.priority);
+        console.log("comp prio", computerMove.priority);
         if (moveData.priority > computerMove.priority){
-            if (moveData.category === 'Physical') {
-                let currentHp = damage(playerStats.atk, compStats.def, compStats.hp);
+    
+            if (moveData.category === 'Physical') {console.log("asdfasdf");
+                currentHp = damage(playerStats.atk, compStats.def, compStats.hp, moveData.basePower); 
+                console.log("if tree health", currentHp);
                 playerHP.textContent = currentHp;
             } else if (moveData.category === 'Special') {
-                let currentHp = damage(playerStats.spa, compStats.spd, compStats.hp);
+                currentHp = damage(playerStats.spa, compStats.spd, compStats.hp, moveData.basePower);
                 playerHP.textContent = currentHp;
             } else {
-                heals(maxHealth, currentHp);
+                currentHp = heals(maxHealth, currentHp);
                 playerHP.textContent = currentHp;
             }
+            console.log("moveDataCategory", moveData.category);
         } else if (computerMove.priority > moveData.priority) {
             if (computerMove.category === 'Physical') {
-                let hello2 = damage(compStats.atk, playerStats.def, playerStats.hp);
-                console.log(hello2);
+                currentHp = damage(compStats.atk, playerStats.def, playerStats.hp, computerMove.basePower);
+                console.log("HEALTH AFTER BATTLE", currentHp);
+                activePokemon.hp = currentHp;
             } else {
-                let hello3 = damage(compStats.spa, playerStats.spd, playerStats.hp);
-                console.log(hello3);
+                currentHp = damage(compStats.spa, playerStats.spd, playerStats.hp, computerMove.basePower);
+                activePokemon.hp = currentHp;
+                console.log("HEALTH AFTER BATTLE", currentHp);
             }
         } else {
-            if (playerStats.spe > compStats.spe) {
+            if (playerStats.spe >= compStats.spe) {
                 if (moveData.category === 'Physical') {
-                    let hello = damage(playerStats.atk, compStats.def, compStats.hp);
-                    console.log(hello);
+                    let computerHp = damage(playerStats.atk, compStats.def, compStats.hp, moveData.basePower);
+                    // activePokemon.hp = currentHp;
+                    console.log("HEALTH AFTER BATTLE", currentHp);
+
+                    console.log(moveData.basePower);
+                } else if (moveData.category === 'Special') {
+                    let computerHp = damage(playerStats.spa, compStats.spd, compStats.hp, moveData.basePower);
+                    activePokemon.hp = currentHp;
+                    console.log("HEALTH AFTER BATTLE", currentHp);
+
                 } else {
-                    let hello1 = damage(playerStats.spa, compStats.spd, compStats.hp);
-                    console.log(hello1);
+                    currentHp = heals(maxHealth, currentHp);
+                    playerHP.textContent = currentHp;
+                    activePokemon.hp = currentHp;
+                    console.log("HEAL", currentHp);
+
                 }
             } else if (computerMove.category === 'Physical') {
-                let hello2 = damage(compStats.atk, playerStats.def, playerStats.hp);
-                console.log(hello2);
+                currentHp = damage(compStats.atk, playerStats.def, playerStats.hp, computerMove.basePower);
+                activePokemon.baseStats.hp = currentHp;
+                console.log("HEALTH AFTER BATTLE", currentHp);
+
             } else {
-                let currenthp = damage(compStats.spa, playerStats.spd, playerStats.hp);
+                currentHp = damage(compStats.spa, playerStats.spd, playerStats.hp, computerMove.basePower);
                 playerHP.textContent = currentHp;
-        
+                activePokemon.baseStats.hp = currentHp;
+                console.log("HEALTH AFTER BATTLE", currentHp);
             }
         }
-
+        console.log("currentHP-end FUNCTION", currentHp);
+        activePokemon.baseStats.hp = currentHp;
+        console.log("active pokemon", activePokemon);
+        playerHP.textContent = currentHp;
+        compHP.textContent = computerHp;
     }
 });
 

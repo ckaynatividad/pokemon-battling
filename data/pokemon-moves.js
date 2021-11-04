@@ -1202,7 +1202,7 @@ export let moves = {
         },
         target: 'normal',
         type: 'Steel',
-        contestType: 'Tough',
+        // contestType: 'Tough',
     },
 
     heatwave: {
@@ -1225,11 +1225,11 @@ export let moves = {
 
     steelwing: {
         num: 211,
-        accuracy: 90,
+        // accuracy: 90,
         basePower: 70,
         category: 'Physical',
         name: 'Steel Wing',
-        pp: 25,
+        // pp: 25,
         priority: 0,
         flags: { contact: 1, protect: 1, mirror: 1 },
         secondary: {
@@ -1847,4 +1847,4 @@ export let moves = {
         type: 'Grass',
         contestType: 'Tough',
     }
-}
+};
