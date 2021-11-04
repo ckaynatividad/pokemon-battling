@@ -688,7 +688,7 @@ export const pokeDex = [
         num: 78,
         name: 'Articuno',
         types: ['Ice', 'Flying'],
-        moves: ['roost', 'quickattack', 'freezedry', 'bravebird'],
+        moves: ['roost', 'quickattack', 'iciclecrash', 'bravebird'],
         baseStats: { hp: 90, atk: 85, def: 100, spa: 95, spd: 125, spe: 85 },
         img: './data/pokeimg/articuno.webp'
     },

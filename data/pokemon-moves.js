@@ -447,15 +447,15 @@ export let moves = {
         priority: 0,
     },
 
-    freezedry: {
-        num: 573,
-        accuracy: 100,
-        basePower: 70,
-        category: 'Special',
-        name: 'Freeze-Dry',
-        type: 'Ice',
-        priority: 0,
-    },
+    // freezedry: {
+    //     num: 573,
+    //     accuracy: 100,
+    //     basePower: 70,
+    //     category: 'Special',
+    //     name: 'Freeze-Dry',
+    //     type: 'Ice',
+    //     priority: 0,
+    // },
 
     uturn: {
         num: 369,
