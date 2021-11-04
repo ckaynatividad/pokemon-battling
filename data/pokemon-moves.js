@@ -31,6 +31,24 @@ export let moves = {
         contestType: 'Tough',
     },
 
+    psybeam: {
+        num: 60,
+        accuracy: 100,
+        basePower: 65,
+        category: 'Special',
+        name: 'Psybeam',
+        pp: 20,
+        priority: 0,
+        flags: { protect: 1, mirror: 1 },
+        secondary: {
+            chance: 10,
+            volatileStatus: 'confusion',
+        },
+        target: 'normal',
+        type: 'Psychic',
+        contestType: 'Beautiful',
+    },
+
     sludgewave: {
         num: 482,
         accuracy: 100,
