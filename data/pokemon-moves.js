@@ -1475,7 +1475,56 @@ export let moves = {
         },
     },
 
-    
+    morningsun: {
+        num: 234,
+        accuracy: true,
+        basePower: 0,
+        category: 'Status',
+        name: 'Morning Sun',
+        pp: 5,
+        priority: 0,
+        flags: { snatch: 1, heal: 1 },
+        // onHit(pokemon) {
+        //     let factor = 0.5;
+        //     switch (pokemon.effectiveWeather()) {
+        //         case 'sunnyday':
+        //         case 'desolateland':
+        //             factor = 0.667;
+        //             break;
+        //         case 'raindance':
+        //         case 'primordialsea':
+        //         case 'sandstorm':
+        //         case 'hail':
+        //             factor = 0.25;
+        //             break;
+        //     }
+        //     return !!this.heal(this.modify(pokemon.maxhp, factor));
+        // },
+        secondary: null,
+        target: 'self',
+        type: 'Normal',
+        zMove: { effect: 'clearnegativeboost' },
+        contestType: 'Beautiful',
+    },
+
+    discharge: {
+        num: 435,
+        accuracy: 100,
+        basePower: 80,
+        category: 'Special',
+        name: 'Discharge',
+        pp: 15,
+        priority: 0,
+        flags: { protect: 1, mirror: 1 },
+        secondary: {
+            chance: 30,
+            status: 'par',
+        },
+        target: 'allAdjacent',
+        type: 'Electric',
+        contestType: 'Beautiful',
+    },
+   
     icepunch: {
         num: 8,
         accuracy: 100,
