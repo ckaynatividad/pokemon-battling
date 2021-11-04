@@ -82,6 +82,7 @@ let playerStats = {
 };
 console.log(playerStats);
 
+
 //radio buttons
 move1Span.textContent = activePokemon.moves[0];
 move1.value = activePokemon.moves[0];
@@ -106,7 +107,14 @@ let computerPokemon = {
 };
 compHP.textContent = computerPokemon.baseStats.hp;
 compImage.src = `../${computerPokemon.img}`;
-
+let compStats = {
+    hp: computerPokemon.baseStats.hp,
+    atk: computerPokemon.baseStats.atk,
+    def: computerPokemon.baseStats.def,
+    spa: computerPokemon.baseStats.spa,
+    spd: computerPokemon.baseStats.spd,
+    spe: computerPokemon.baseStats.spe
+};
 
 //turn - start on click 'submit'
 //if isDead(player) === true || isDead(comp)) === true
@@ -222,7 +230,7 @@ submit.addEventListener('click', (e) => {
             if (moveData.category === 'Physical') {
                 let moveDamage = damage(playerStats.atk, compStats.def, compStats.hp, moveData.basePower); 
                 console.log(moveDamage);
-                compputerHp = computerHp - moveDamage;
+                computerHp = computerHp - moveDamage;
                 console.log(computerHp);
                 compHP.textContent = computerHp;
                 compStats.hp = computerHp;
