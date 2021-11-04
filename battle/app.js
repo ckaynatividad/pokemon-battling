@@ -263,7 +263,7 @@ submit.addEventListener('click', (e) => {
                 compStats.hp = computerHp;
                 //ABOVE IS IF WE USE PHYSICAL AND PRIORITY
                 //
-                if (isKO(compStats) === true) {
+                if (isKO(computerPokemon) === true) {
                     computerPokemon = computerPokemon1[1];
                     //ABOVE IS IF WE KNOCK OUT COM MID TURN
                     //
@@ -483,6 +483,7 @@ submit.addEventListener('click', (e) => {
                     //
                     if (isKO(computerPokemon) === true) {
                         computerPokemon = computerPokemon1[1];
+    
                          //ABOVE IS IF OUR SPECIAL ATTACK KO OPPONENT WHILE FASTY AND NO PRIORITY
                     //
                     //
