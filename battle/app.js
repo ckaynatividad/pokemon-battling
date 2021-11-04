@@ -1,4 +1,4 @@
-import { getPokemon, generateComPokemon } from '../functions/utils.js';
+import { getPokemon, generateComPokemon, isKO } from '../functions/utils.js';
 import { moves } from '../data/pokemon-moves.js';
 import { getActive } from '../functions/getActive.js';
 import { baseStat } from '../functions/baseStat.js';
@@ -96,7 +96,7 @@ computerPokemon1[0].active = true;
 //computer pokemon data
 const activeComp1 = getActive(computerPokemon1);
 console.log(activeComp1);
-const computerPokemon = {
+let computerPokemon = {
     num: activeComp1.num,
     name: activeComp1.name,
     types: activeComp1.types,
@@ -212,6 +212,11 @@ submit.addEventListener('click', (e) => {
             
             pokeSwitchForm.classList.add('hidden');
             moveSelectForm.classList.remove('hidden');
+            
+            move1Span.classList.remove('hidden');
+            move2Span.classList.remove('hidden');
+            move3Span.classList.remove('hidden');
+            move4Span.classList.remove('hidden');
         });
     } else {
         const selectedMove = selectedMoveRadio.value;
@@ -221,10 +226,33 @@ submit.addEventListener('click', (e) => {
         console.log('comp prio', computerMove.priority);
         if (moveData.priority > computerMove.priority){
     
-            if (moveData.category === 'Physical') {console.log('asdfasdf');
-                currentHp = damage(playerStats.atk, compStats.def, compStats.hp, moveData.basePower); 
-                console.log('if tree health', currentHp);
-                playerHP.textContent = currentHp;
+            if (moveData.category === 'Physical') {
+                let computerHP = damage(playerStats.atk, compStats.def, compStats.hp, moveData.basePower); 
+                console.log('if tree health', computerHP);
+                compHP.textContent = computerHP;
+                if (isKO(computerPokemon) === true) {
+                    computerPokemon = computerPokemon1[1];
+                } else if (compMove.category === 'Physical') {
+                    console.log('asdfasdf');
+                    currentHp = damage(compStats.atk, playerStats.def, playerStats.hp, compMove.basePower);
+                    playerHP.textContent = currentHp;
+
+                    playerStats.hp = currentHp;
+                    console.log(playerStats.hp);
+                } else if (compMove.category === 'Special') {
+                    console.log('asdfasdf');
+                    currentHp = damage(compStats.spa, playerStats.spd, playerStats.hp, compMove.basePower);
+                    playerHP.textContent = currentHp;
+                    
+                    playerStats.hp = currentHp;
+                    console.log(playerStats.hp);
+                } 
+                if (isKO(activePokemon) === true) {
+                    move1Span.classList.add('hidden');
+                    move2Span.classList.add('hidden');
+                    move3Span.classList.add('hidden');
+                    move4Span.classList.add('hidden');
+                }
             } else if (moveData.category === 'Special') {
                 currentHp = damage(playerStats.spa, compStats.spd, compStats.hp, moveData.basePower);
                 playerHP.textContent = currentHp;

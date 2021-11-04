@@ -56,7 +56,7 @@ export function getpokeDex(){
 }
 
 export function isKO(userPokemon) { //changed userpokemon to userPokemon
-    if (userPokemon.hp <= 0) {
+    if (userPokemon.baseStats.hp <= 0) {
         userPokemon.ko = true;
         return true;
     } else {
