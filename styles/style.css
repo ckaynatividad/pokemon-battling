@@ -83,3 +83,18 @@ h5 {
     font-size: 6pt;
     color: rgba(29, 28, 28, 0.877);
 }
+
+a:link, a:visited {
+    background-color: whitesmoke;
+    color: black;
+    border: 2px solid black;
+    padding: 1px 7px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  a:hover, a:active {
+    background-color: tomato;
+    color: white;
+  }
