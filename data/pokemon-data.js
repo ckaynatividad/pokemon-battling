@@ -541,14 +541,14 @@ export const pokeDex = [
         img: './data/pokeimg/jynx.webp'
     },
 
-    {
-        num: 62,
-        name: 'Electabuzz',
-        types: ['Electric'],
-        moves: ['discharge', 'psychic', 'icebeam', 'doubleedge'],
-        baseStats: { hp: 65, atk: 83, def: 57, spa: 95, spd: 85, spe: 105 },
-        img: './data/pokeimg/electabuzz.webp'
-    },
+    // {
+    //     num: 62,
+    //     name: 'Electabuzz',
+    //     types: ['Electric'],
+    //     moves: ['discharge', 'psychic', 'icebeam', 'doubleedge'],
+    //     baseStats: { hp: 65, atk: 83, def: 57, spa: 95, spd: 85, spe: 105 },
+    //     img: './data/pokeimg/electabuzz.webp'
+    // },
 
     {
         num: 63,
