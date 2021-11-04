@@ -12,6 +12,5 @@ const resultsPlace = document.getElementById('main-container');
 const results = resultsDisplay();
 //call text from js
 const resultsMessage = messages[results];
-console.log(typeof(resultsMessage));
 //set in html
 resultsPlace.textContent = resultsMessage;
