@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Electrolize&family=Monda:wght@400;700&family=Play:wght@400;700&family=Press+Start+2P&family=Work+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./battle.css">
+    <!-- <audio controls autoplay loop src="../assets/battle.wav"></audio> -->
+    <title>Battle</title>
+</head>
+<body>
+    <header>
+        <h1>Battle</h1>
+    </header>
+    <main id="main">
+        <div id="battle-box">
+            <span id="computer-pokemon">
+                HP:
+                <span id="comp-hp"></span>
+                <img src="" alt="" id="comp-image">
+            </span>
+            <span id="player-pokemon">
+                <img src="" alt="" id="player-image">
+                HP:
+                <span id="player-hp"></span>
+            </span>
+        </div>
+        <form action="submit" id="move-select-form">
+            <div id="form-div">
+                <label for="move1">
+                    <input type="radio" name="battle-select" id="move1">
+                    <span id="move-1-span"></span>
+                </label>
+                <label for="move2">
+                    <input type="radio" name="battle-select" id="move2">
+                    <span id="move-2-span"></span>
+                </label>
+                <label for="move3">
+                    <input type="radio" name="battle-select" id="move3">
+                    <span id="move-3-span"></span>
+                </label>
+                <label for="move4">
+                    <input type="radio" name="battle-select" id="move4">
+                    <span id="move-4-span"></span>
+                </label>
+                <label for="switch">
+                    <input type="radio" name="battle-select" id="switch">
+                    <span>Switch</span>
+                </label>
+            </div>
+        </form>
+        <form action="submit" id="pokemon-switch-form" class="hidden">
+            <div id="switch-form-div">
+                <label for="pokemon-1">
+                    <input type="radio" name="pokemon-switch" id="pokemon-1">
+                    <span id="pokemon-1-span">Pokemon 1</span>
+                </label>
+                <label for="pokemon-2">
+                    <input type="radio" name="pokemon-switch" id="pokemon-2">
+                    <span id="pokemon-2-span">Pokemon 2</span>
+                </label>
+                <label for="pokemon-3">
+                    <input type="radio" name="pokemon-switch" id="pokemon-3">
+                    <span id="pokemon-3-span">Pokemon 3</span>
+                </label>
+            </div>
+        </form>
+        <button id="submit">Submit</button>
+        <button id="switch-button">Switch</button>
+
+    </main>
+    <script type="module" src="./backup.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+body {
+    font-family: 'Play', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#form-div, #switch-form-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+}
+
+#battle-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid black;
+    margin-left: 33vw;
+    margin-right: 33vw;
+    box-shadow: 10px 10px 2px 1px rgba(78, 64, 64, 0.349);
+    margin-bottom: 7px;
+}
+
+#computer-pokemon {
+    margin-left: 20vw;
+    margin-bottom: 3vw;
+}
+
+#player-pokemon {
+    margin-top: 3vw;
+    margin-right: 20vw;
+    margin-bottom: 20px;
+}
+
+input + span {
+    border: 3px solid black;
+    margin-left: 3px;
+    margin-right: 3px;
+    padding: 3px;
+    text-transform: uppercase;
+    box-shadow: 3px 3px 1px 1px rgba(78, 64, 64, 0.349)
+}
+
+
+input[type = "radio"] {
+    display: none;
+}
+
+input:checked + span {
+    background-color: #b4d455;
+}
+
+.hidden {
+    display: none;
+}
