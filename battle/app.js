@@ -4,6 +4,7 @@ import { getActive } from '../functions/getActive.js';
 import { baseStat } from '../functions/baseStat.js';
 import { damage, heals } from '../functions/damage.js';
 import findById from '../functions/findById.js';
+import isCompKO from '../functions/isCompKO.js';
 
 const move1 = document.getElementById('move1');
 const move2 = document.getElementById('move2');
@@ -279,7 +280,9 @@ submit.addEventListener('click', (e) => {
                     console.log(playerStats.hp);
                     //ABOVE IS IF WE USER  PHYSICAL MOVE AND PRIORITY AND COM SURVIVES AND ATTACKS BACK WITH SPECIAL
                     //
-                } 
+                }
+
+                let isPlayerKO = isKO(activePokemon);
                 if (isKO(activePokemon) === true) {
                     move1Span.classList.add('hidden');
                     move2Span.classList.add('hidden');
