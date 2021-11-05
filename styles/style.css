@@ -92,6 +92,7 @@ a:link, a:visited {
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    margin-top: 2rem;
 }
   
 a:hover, a:active {
