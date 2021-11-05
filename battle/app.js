@@ -224,6 +224,7 @@ submit.addEventListener('click', (e) => {
                 spe: computerPokemon.baseStats.spe
             };
         } else {
+            localStorage.setItem('DIDWIN', JSON.stringify('true'));
             window.location.replace('../endGame/');
         }
     }
@@ -348,7 +349,7 @@ submit.addEventListener('click', (e) => {
                     //
                 }
 
-                let isPlayerKO = isKO(activePokemon);
+                // let isPlayerKO = isKO(activePokemon);
                 if (isKO(activePokemon) === true) {
                     move1Span.classList.add('hidden');
                     move2Span.classList.add('hidden');
@@ -356,7 +357,6 @@ submit.addEventListener('click', (e) => {
                     move4Span.classList.add('hidden');
                     //IF WE ARE KO'D AFTER ATTACKING WITH PHYSICAL PRIORITY
                 }
-                alert(`Your ${activePokemon} used ${moveData} and dealt ${moveDamage}. The opponent's ${computerPokemon} used ${computerMove} and dealt ${compDamage}`);
                 //ABOVE IS IF WE HAVE PRIORITY
                 //
                 //
@@ -853,6 +853,7 @@ setInterval(function(){
                 spe: computerPokemon.baseStats.spe
             };
         } else {
+            localStorage.setItem('DIDWIN', JSON.stringify('true'));
             window.location.replace('../endGame/');
         }
     }
