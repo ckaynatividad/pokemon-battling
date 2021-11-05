@@ -4,6 +4,9 @@ import { getPokemon } from '../functions/utils.js';
 // import { isDead } from '../functions/isDead.js';
 import { resultsDisplay, messages } from './endGameLogic.js';
 
+const audio = document.getElementById('audio');
+audio.volume = .2;
+
 //get pokemon and check if any are alive(isDead)
 const pokes = getPokemon();
 //pokes form local storage
