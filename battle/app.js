@@ -665,7 +665,7 @@ submit.addEventListener('click', (e) => {
         move3Span.classList.add('hidden');
         move4Span.classList.add('hidden');
         koNumber++;
-        if (koNumber >= 3) {
+        if (koNumber >= 5) {
             localStorage.setItem('DIDWIN', JSON.stringify('false'));
             window.location.replace('../endGame/');
         }
