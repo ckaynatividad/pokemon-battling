@@ -191,7 +191,7 @@ export const pokeDex = [
         num: 22,
         name: 'Dugtrio',
         types: ['Ground'],
-        moves: ['earthquake', 'stoneedge', 'stealthrock', 'shadowclaw'],
+        moves: ['earthquake', 'stoneedge', 'quickattack', 'shadowclaw'],
         baseStats: { hp: 35, atk: 100, def: 50, spa: 50, spd: 70, spe: 120 },
         img: './data/pokeimg/dugtrio.webp'
     },
