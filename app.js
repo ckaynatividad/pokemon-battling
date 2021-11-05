@@ -4,7 +4,6 @@ import { generatePokemon, setPokemon } from './functions/utils.js';
 
 generatePokemon();
 
-
 const submit = document.getElementById('submit');
 
 submit.addEventListener('click', ()=>{
