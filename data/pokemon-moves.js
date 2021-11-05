@@ -913,7 +913,7 @@ export let moves = {
     superfang: {
         num: 162,
         accuracy: 90,
-        basePower: 0,
+        basePower: 80,
 	// damageCallback(pokemon, target) {
 	// 	return this.clampIntRange(target.getUndynamaxedHP() / 2, 1);
 	// },
