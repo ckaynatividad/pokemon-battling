@@ -169,6 +169,9 @@ submit.addEventListener('click', (e) => {
     let randomNumber = Math.floor(Math.random() * 3); // make this 
     let compMove = computerPokemon.moves[randomNumber];
     let computerMove = moves[compMove];
+    
+    alert(computerPokemon.name + ' uses ' + compMove);
+    
     if (selectedMoveRadio.id === 'switch') {
 
         const pokeSwitchRadio1 = document.getElementById('pokemon-1');

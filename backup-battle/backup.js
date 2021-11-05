@@ -110,7 +110,7 @@ submit.addEventListener('click', (e) => {
     const selectedMoveRadio = document.querySelector('input[type=radio]:checked');
     turn++;
     let isComputerKO = isCompKO(computerPokemon, computerHp);
-    
+
     if (isComputerKO === true) {
         if (computerPokemon.num === computerPokemon1[0].num) {
             computerPokemon.active = false;
@@ -173,6 +173,8 @@ submit.addEventListener('click', (e) => {
     let randomNumber = Math.floor(Math.random() * 3);
     let compMove = computerPokemon.moves[randomNumber];
     let computerMove = moves[compMove];
+    
+    alert(computerPokemon.name + ' uses ' + compMove);
     
     if (isKO(activePokemon) === true) {
         move1Span.classList.add('hidden');
@@ -248,8 +250,6 @@ submit.addEventListener('click', (e) => {
             compHP.textContent = computerHp;
             compStats.hp = computerHp;
 
-            // if (isKO(computerPokemon) === true) {
-            //     computerPokemon = computerPokemon1[1];
             if (computerMove.category === 'Physical') {
                 let compMoveDamage = damage(compStats.atk, playerStats.def, playerStats.hp, computerMove.basePower);
                 currentHp = currentHp - compMoveDamage;
@@ -275,8 +275,6 @@ submit.addEventListener('click', (e) => {
             compHP.textContent = computerHp;
             compStats.hp = computerHp;
 
-            // if (isKO(computerPokemon) === true) {
-            //     computerPokemon = computerPokemon1[1];
             if (computerMove.category === 'Physical') {
                 let compMoveDamage = damage(compStats.atk, playerStats.def, playerStats.hp, computerMove.basePower);
                 currentHp = currentHp - compMoveDamage;
