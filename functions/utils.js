@@ -15,21 +15,16 @@ export function generateComPokemon(){
         rando2 = Math.floor(Math.random() * pokeDex.length);
         rando3 = Math.floor(Math.random() * pokeDex.length);
     }
+
     let pokemon1 = pokeDex[rando1];
-    // NEEDS POKEMON INPUTS AND VALUE ID'S FROM HTML HERE
-
     let pokemon2 = pokeDex[rando2];
-    // NEEDS POKEMON INPUTS AND VALUE ID'S FROM HTML HERE
-
     let pokemon3 = pokeDex[rando3];
-    // NEEDS POKEMON INPUTS AND VALUE ID'S FROM HTML HERE
 
     return [
         pokemon1,
         pokemon2,
         pokemon3
     ];
-    // ^^ CALL POKE VIA ARRAY -- insert 'let userPokemon = generatePokemon()' in app.js => userPokemon[0] etc.
 }
 
 export function getPokemon(){
@@ -49,7 +44,7 @@ export function getpokeDex(){
     return pokeArray;
 }
 
-export function isKO(userPokemon) { //changed userpokemon to userPokemon
+export function isKO(userPokemon) {
     if (userPokemon.baseStats.hp <= 0) {
         userPokemon.ko = true;
         return true;
@@ -57,9 +52,8 @@ export function isKO(userPokemon) { //changed userpokemon to userPokemon
         userPokemon.ko = false;
         return false;
     }
-    //return userPokemon.hp <= 0;
 }
-// ^^ TO ACCESS, MAY REQUIRE RENDER FOR LOOP AFTER USE IN APP.JS
+
 export function isDead(userPokemon){
     for (let pokemon of userPokemon) {
         let koPokemon = 0;
@@ -70,7 +64,6 @@ export function isDead(userPokemon){
             window.location.replace('../endGame');
         }
     } 
-    //return userPokemon === 0;
 }
 
 export function generatePokemon() {
@@ -155,14 +148,4 @@ export function generatePokemon() {
     poke4input.value = poke4.num;
     poke5input.value = poke5.num;
     poke6input.value = poke6.num;
-
-    // return [
-    //     poke1,
-    //     poke2,
-    //     poke3,
-    //     poke4,
-    //     poke5,
-    //     poke6
-    // ];
-
 }
