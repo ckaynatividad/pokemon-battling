@@ -317,7 +317,6 @@ submit.addEventListener('click', (e) => {
 
 let koNumber = 0;
 
-
 setInterval(function(){ 
     if (isKO(activePokemon) === true) {
         move1Span.classList.add('hidden');

@@ -766,6 +766,18 @@ submit.addEventListener('click', (e) => {
                 //
                 }
             }
+            
+            if (isKO(activePokemon) === true) {
+                move1Span.classList.add('hidden');
+                move2Span.classList.add('hidden');
+                move3Span.classList.add('hidden');
+                move4Span.classList.add('hidden');
+                koNumber++;
+                if (koNumber >= 3) {
+                    localStorage.setItem('DIDWIN', JSON.stringify('false'));
+                    window.location.replace('../endGame/');
+                }
+            }
 
             console.log('currentHP-end FUNCTION', currentHp);
             activePokemon.baseStats.hp = currentHp;
@@ -775,6 +787,8 @@ submit.addEventListener('click', (e) => {
     
         }}});
 
+let koNumber = 0;
+        
 setInterval(function(){ 
     if (isKO(activePokemon) === true) {
         move1Span.classList.add('hidden');
