@@ -15,6 +15,14 @@ export let moves = {
         priority: 0,
     },
 
+    return: {
+        num: 216,
+        accuracy: 100,
+        basePower: 0,
+		// basePowerCallback(pokemon) {
+		// 	return Math.floor((pokemon.happiness * 10) / 25) || 1;
+    },
+
     drillrun: {
         num: 529,
         accuracy: 95,
