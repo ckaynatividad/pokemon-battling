@@ -83,7 +83,6 @@ let playerStats = {
 };
 console.log(playerStats);
 
-
 //radio buttons
 move1Span.textContent = activePokemon.moves[0];
 move1.value = activePokemon.moves[0];
@@ -126,7 +125,7 @@ let compStats = {
     spd: computerPokemon.baseStats.spd,
     spe: computerPokemon.baseStats.spe
 };
-
+console.log(compStats);
 //turn - start on click 'submit'
 //if isDead(player) === true || isDead(comp)) === true
 //turn++

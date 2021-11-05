@@ -811,12 +811,12 @@ export let moves = {
         name: 'Flare Blitz',
         pp: 15,
         priority: 0,
-        flags: { contact: 1, protect: 1, mirror: 1, defrost: 1 },
-        recoil: [33, 100],
-        secondary: {
-            chance: 10,
-            status: 'brn',
-        },
+        // flags: { contact: 1, protect: 1, mirror: 1, defrost: 1 },
+        // recoil: [33, 100],
+        // secondary: {
+        //     chance: 10,
+        //     status: 'brn',
+        // },
         target: 'normal',
         type: 'Fire',
         contestType: 'Cool',
