@@ -245,15 +245,6 @@ export const pokeDex = [
     },
 
     {
-        num: 33,
-        name: 'Rapidash',
-        types: ['Fire'],
-        moves: ['fireblast', 'lavaplume', 'quickattack', 'bodyslam'],
-        baseStats: { hp: 65, atk: 100, def: 70, spa: 80, spd: 80, spe: 105 },
-        img: './data/pokeimg/rapidash.webp'
-    },
-
-    {
         num: 34,
         name: 'Slowbro',
         types: ['Water', 'Psychic'],
