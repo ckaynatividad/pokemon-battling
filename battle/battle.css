@@ -100,5 +100,6 @@ input:checked + span {
 }
 
 footer {
-    font-size: 10pt;
+    font-size: 9.5pt;
+    margin-right: 90%;
 }
