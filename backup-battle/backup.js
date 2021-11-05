@@ -192,6 +192,9 @@ submit.addEventListener('click', (e) => {
         const pokeSwitchForm = document.getElementById('pokemon-switch-form');
         const moveSelectForm = document.getElementById('move-select-form');
         const switchButton = document.getElementById('switch-button');
+        
+        submit.classList.add('hidden');
+        switchButton.classList.remove('hidden');
 
         pokeSwitchRadio1.value = playerPokemon[0].num;
         pokeSwitchRadio2.value = playerPokemon[1].num;
@@ -227,7 +230,8 @@ submit.addEventListener('click', (e) => {
             
             pokeSwitchForm.classList.add('hidden');
             moveSelectForm.classList.remove('hidden');
-            
+            submit.classList.remove('hidden');
+            switchButton.classList.add('hidden');
             move1Span.classList.remove('hidden');
             move2Span.classList.remove('hidden');
             move3Span.classList.remove('hidden');
@@ -314,7 +318,8 @@ submit.addEventListener('click', (e) => {
     playerHP.textContent = currentHp;
     compHP.textContent = computerHp;
 });
-
+const switchButton = document.getElementById('switch-button');
+switchButton.classList.add('hidden');
 let koNumber = 0;
 
 setInterval(function(){ 
