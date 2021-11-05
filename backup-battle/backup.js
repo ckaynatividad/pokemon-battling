@@ -173,7 +173,6 @@ submit.addEventListener('click', (e) => {
     let randomNumber = Math.floor(Math.random() * 3);
     let compMove = computerPokemon.moves[randomNumber];
     let computerMove = moves[compMove];
-    console.log(compMove);
     
     if (isKO(activePokemon) === true) {
         move1Span.classList.add('hidden');
@@ -314,7 +313,6 @@ submit.addEventListener('click', (e) => {
     activePokemon.baseStats.hp = currentHp;
     playerHP.textContent = currentHp;
     compHP.textContent = computerHp;
-    console.log(playerPokemon);
 });
 
 let koNumber = 0;
