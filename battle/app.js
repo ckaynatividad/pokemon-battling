@@ -680,7 +680,7 @@ submit.addEventListener('click', (e) => {
                         //
                         }
                     } 
-               
+
                 } else {
                     computerHp = heals(compHealth, computerHp);
                     compHP.textContent = computerHp;
