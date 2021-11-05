@@ -455,7 +455,7 @@ export const pokeDex = [
         num: 64,
         name: 'Pinsir',
         types: ['Bug'],
-        moves: ['quickattack', 'frustration', 'closecombat', 'quickattack'],
+        moves: ['quickattack', 'frustration', 'closecombat', 'xscissor'],
         baseStats: { hp: 65, atk: 125, def: 100, spa: 55, spd: 70, spe: 85 },
         img: './data/pokeimg/pinsir.webp'
     },
