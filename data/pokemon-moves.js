@@ -1953,7 +1953,7 @@ export let moves = {
     heavyslam: {
         num: 484,
         accuracy: 100,
-        basePower: 0,
+        basePower: 120,
 		// basePowerCallback(pokemon, target) {
 		// 	const targetWeight = target.getWeight();
 		// 	const pokemonWeight = pokemon.getWeight();
