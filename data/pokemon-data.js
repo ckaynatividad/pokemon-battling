@@ -161,14 +161,14 @@ export const pokeDex = [
         img: './data/pokeimg/golbat.webp'
     },
 
-    {
-        num: 19,
-        name: 'Vileplume',
-        types: ['Grass', 'Poison'],
-        moves: ['sludgewave', 'gigadrain', 'moonblast', 'pollenpuff'],
-        baseStats: { hp: 75, atk: 80, def: 85, spa: 110, spd: 90, spe: 50 },
-        img: './data/pokeimg/vileplume.webp'
-    },
+    // {
+    //     num: 19,
+    //     name: 'Vileplume',
+    //     types: ['Grass', 'Poison'],
+    //     moves: ['sludgewave', 'gigadrain', 'moonblast', 'pollenpuff'],
+    //     baseStats: { hp: 75, atk: 80, def: 85, spa: 110, spd: 90, spe: 50 },
+    //     img: './data/pokeimg/vileplume.webp'
+    // },
 
     {
         num: 20,
