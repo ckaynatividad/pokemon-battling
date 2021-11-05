@@ -304,14 +304,14 @@ export const pokeDex = [
         img: './data/pokeimg/slowbro.webp'
     },
 
-    {
-        num: 35,
-        name: 'Magneton',
-        types: ['Electric', 'Steel'],
-        moves: ['thunderbolt', 'voltswitch', 'flashcannon', 'triattack'],
-        baseStats: { hp: 50, atk: 60, def: 95, spa: 120, spd: 70, spe: 70 },
-        img: './data/pokeimg/magneton.webp'
-    },
+    // {
+    //     num: 35,
+    //     name: 'Magneton',
+    //     types: ['Electric', 'Steel'],
+    //     moves: ['thunderbolt', 'voltswitch', 'flashcannon', 'triattack'],
+    //     baseStats: { hp: 50, atk: 60, def: 95, spa: 120, spd: 70, spe: 70 },
+    //     img: './data/pokeimg/magneton.webp'
+    // },
 
     // {
     //     num: 36,
