@@ -39,21 +39,6 @@ playerPokemon1.forEach((Object)=>{
     });
 });
 
-
-
-// let computerPokemon = [];
-// computerPokemon1.forEach((Object)=>{
-//     computerPokemon.push({
-//         num: Object.num,
-//         name: Object.name,
-//         types: Object.types,
-//         moves: Object.moves, 
-//         baseStats: { hp: baseStat(Object.baseStats.hp), atk: baseStat(Object.baseStats.atk), def: baseStat(Object.baseStats.def), spa: baseStat(Object.baseStats.spa), spd: baseStat(Object.baseStats.spd), spe: baseStat(Object.baseStats.spe) },
-//         img: Object.img
-//     });
-// });
-
-
 playerPokemon1[0].active = true;
 
 
@@ -180,6 +165,7 @@ submit.addEventListener('click', (e) => {
                 spe: computerPokemon.baseStats.spe
             };
         } else {
+            localStorage.setItem('DIDWIN', JSON.stringify('true'));
             window.location.replace('../endGame/');
         }
     }
@@ -187,7 +173,6 @@ submit.addEventListener('click', (e) => {
     let randomNumber = Math.floor(Math.random() * 3);
     let compMove = computerPokemon.moves[randomNumber];
     let computerMove = moves[compMove];
-    console.log(compMove);
     
     if (isKO(activePokemon) === true) {
         move1Span.classList.add('hidden');
@@ -318,12 +303,20 @@ submit.addEventListener('click', (e) => {
         move2Span.classList.add('hidden');
         move3Span.classList.add('hidden');
         move4Span.classList.add('hidden');
+        koNumber++;
+        if (koNumber >= 3) {
+            localStorage.setItem('DIDWIN', JSON.stringify('false'));
+            window.location.replace('../endGame/');
+        }
     }
 
     activePokemon.baseStats.hp = currentHp;
     playerHP.textContent = currentHp;
     compHP.textContent = computerHp;
 });
+
+let koNumber = 0;
+
 
 setInterval(function(){ 
     if (isKO(activePokemon) === true) {
@@ -389,6 +382,7 @@ setInterval(function(){
                 spe: computerPokemon.baseStats.spe
             };
         } else {
+            localStorage.setItem('DIDWIN', JSON.stringify('true'));
             window.location.replace('../endGame/');
         }
     }
