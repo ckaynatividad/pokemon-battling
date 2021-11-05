@@ -1,11 +1,5 @@
 export let moves = {
 
-	// moves that are status moves and stat changing moves
-	// morning sun, teleport, roost, heal bell, toxic, icebeam
-	// substitute, knockoff, wish, yawn, throatchop, lovelykiss
-    // 
-
-
     growth: {
         num: 74,
         accuracy: 100,
