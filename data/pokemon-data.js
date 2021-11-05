@@ -137,15 +137,6 @@ export const pokeDex = [
     },
 
     {
-        num: 18,
-        name: 'Golbat',
-        types: ['Poison', 'Flying'],
-        moves: ['superfang', 'quickattack', 'return', 'bravebird'],
-        baseStats: { hp: 75, atk: 80, def: 70, spa: 65, spd: 75, spe: 90 },
-        img: './data/pokeimg/golbat.webp'
-    },
-
-    {
         num: 20,
         name: 'Parasect',
         types: ['Bug', 'Grass'],
