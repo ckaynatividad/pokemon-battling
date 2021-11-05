@@ -754,7 +754,7 @@ submit.addEventListener('click', (e) => {
                         //
                         }
                     } 
-               
+
                 } else {
                     computerHp = heals(compHealth, computerHp);
 
