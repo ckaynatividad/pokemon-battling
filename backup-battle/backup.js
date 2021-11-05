@@ -180,7 +180,7 @@ submit.addEventListener('click', (e) => {
                 spe: computerPokemon.baseStats.spe
             };
         } else {
-            localStorage.setItem('DIDWIN', JSON.parse(true));
+            localStorage.setItem('DIDWIN', JSON.stringify(true));
             window.location.replace('../endGame/');
         }
     }
@@ -321,7 +321,7 @@ submit.addEventListener('click', (e) => {
         move4Span.classList.add('hidden');
         koNumber++;
         if (koNumber >= 3) {
-            localStorage.setItem('DIDWIN', JSON.parse(false));
+            localStorage.setItem('DIDWIN', JSON.stringify(false));
             window.location.replace('../endGame/');
         }
     }
@@ -340,10 +340,6 @@ setInterval(function(){
         move2Span.classList.add('hidden');
         move3Span.classList.add('hidden');
         move4Span.classList.add('hidden');
-        if (koNumber >= 3) {
-            localStorage.setItem('DIDWIN', JSON.parse(false));
-            window.location.replace('../endGame/');
-        }
     }
 
     let isComputerKO = isCompKO(computerPokemon, computerHp);
