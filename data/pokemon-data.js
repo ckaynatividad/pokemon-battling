@@ -304,6 +304,7 @@ export const pokeDex = [
         img: './data/pokeimg/slowbro.webp'
     },
 
+    
     // {
     //     num: 35,
     //     name: 'Magneton',
