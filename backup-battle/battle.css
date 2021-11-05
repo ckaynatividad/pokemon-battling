@@ -3,6 +3,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: rgb(110, 110, 108);
 }
 
 h1 {
@@ -20,8 +21,8 @@ main {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 img {
@@ -36,20 +37,42 @@ img {
     border: 3px solid black;
     margin-left: 33vw;
     margin-right: 33vw;
-    box-shadow: 10px 10px 2px 1px rgba(78, 64, 64, 0.349);
-    margin-bottom: 7px;
+    box-shadow: 10px 10px 2px 1px rgba(16, 13, 13, 0.349);
+    background-image: url('https://cdn.wallpapersafari.com/85/89/6lOBvr.png');
 }
 
 #computer-pokemon {
     margin-left: 20vw;
-    margin-bottom: 3vw;
+    margin-top: 5vw;
+}
+
+#comp-image {
+    animation: bounce .5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes bounce {
+    80% { transform:translateY(-15%); }
+    90% { transform:translateY(0%); }
+    95% { transform:translateY(-7%); }
+    97% { transform:translateY(0%); }
+    99% { transform:translateY(-3%); }
+    100% { transform:translateY(0); }
+
+}
+
+#player-image {
+    animation: bounce .5s;
+    animation-iteration-count: 1;
 }
 
 #player-pokemon {
-    margin-top: 3vw;
-    margin-right: 20vw;
-    margin-bottom: 20px;
+    margin-top: 1vw;
+    margin-right: 15vw;
+    margin-bottom: 1vw;
+    
 }
+
 
 input + span {
     border: 3px solid black;
@@ -57,7 +80,8 @@ input + span {
     margin-right: 3px;
     padding: 3px;
     text-transform: uppercase;
-    box-shadow: 3px 3px 1px 1px rgba(78, 64, 64, 0.349)
+    box-shadow: 3px 3px 1px 1px rgba(48, 40, 40, 0.527);
+    background-color: rgb(248, 242, 218);
 }
 
 
@@ -66,9 +90,15 @@ input[type = "radio"] {
 }
 
 input:checked + span {
-    background-color: #b4d455;
+    background-color: #1a1919;
+    color: rgb(250, 247, 240);
+    font-weight: bold;
 }
 
 .hidden {
     display: none;
+}
+
+footer {
+    font-size: 10pt;
 }
