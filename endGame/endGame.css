@@ -41,6 +41,11 @@ h1 {
     height: auto;
 }
 
+a {
+    background-color: white;
+    
+}
+
 footer {
     position:fixed;
     left:0px;
