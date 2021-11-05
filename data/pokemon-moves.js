@@ -18,7 +18,7 @@ export let moves = {
     return: {
         num: 216,
         accuracy: 100,
-        basePower: 0,
+        basePower: 100,
 		// basePowerCallback(pokemon) {
 		// 	return Math.floor((pokemon.happiness * 10) / 25) || 1;
     },
