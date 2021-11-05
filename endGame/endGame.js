@@ -18,3 +18,6 @@ const results = resultsDisplay();
 const resultsMessage = messages[results];
 //set in html
 resultsPlace.textContent = resultsMessage;
+
+const audio = document.getElementById('audio');
+audio.volume = .2;
