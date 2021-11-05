@@ -12,11 +12,7 @@ body {
 }
 
 h1 {
-    box-shadow: 1px 2px 1px 1px rgba(78, 64, 64, 0.349);
-}
-
-h2 {
-    box-shadow: 1px 2px 1px 1px rgba(78, 64, 64, 0.349);
+    box-shadow: 1px 2px 1px 1px rgba(4, 24, 139, 0.349);
 }
 
 .button {
@@ -48,7 +44,7 @@ h2 {
 footer {
     position:fixed;
     left:0px;
-    bottom:30px;
+    bottom:60px;
     height:30px;
     width:100%;
 }

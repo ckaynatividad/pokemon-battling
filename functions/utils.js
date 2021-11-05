@@ -32,12 +32,6 @@ export function generateComPokemon(){
     // ^^ CALL POKE VIA ARRAY -- insert 'let userPokemon = generatePokemon()' in app.js => userPokemon[0] etc.
 }
 
-export function setHp(hp){
-    localStorage.setItem('POKEMON');
-}
-
-
-
 export function getPokemon(){
     const pokeString = localStorage.getItem('POKEMON') || '[]';
     const pokemon = JSON.parse(pokeString);
@@ -56,7 +50,7 @@ export function getpokeDex(){
 }
 
 export function isKO(userPokemon) { //changed userpokemon to userPokemon
-    if (userPokemon.hp <= 0) {
+    if (userPokemon.baseStats.hp <= 0) {
         userPokemon.ko = true;
         return true;
     } else {

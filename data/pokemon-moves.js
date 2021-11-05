@@ -49,6 +49,21 @@ export let moves = {
         contestType: 'Beautiful',
     },
 
+    shadowsneak: {
+        num: 425,
+        accuracy: 100,
+        basePower: 40,
+        category: 'Physical',
+        name: 'Shadow Sneak',
+        pp: 30,
+        priority: 1,
+        flags: { contact: 1, protect: 1, mirror: 1 },
+        secondary: null,
+        target: 'normal',
+        type: 'Ghost',
+        contestType: 'Clever',
+    },
+
     sludgewave: {
         num: 482,
         accuracy: 100,
@@ -65,6 +80,29 @@ export let moves = {
         target: 'allAdjacent',
         type: 'Poison',
         contestType: 'Tough',
+    },
+
+    icefang: {
+        num: 423,
+        accuracy: 95,
+        basePower: 65,
+        category: 'Physical',
+        name: 'Ice Fang',
+        pp: 15,
+        priority: 0,
+        flags: { bite: 1, contact: 1, protect: 1, mirror: 1 },
+        secondaries: [
+            {
+                chance: 10,
+                status: 'frz',
+            }, {
+                chance: 10,
+                volatileStatus: 'flinch',
+            },
+        ],
+        target: 'normal',
+        type: 'Ice',
+        contestType: 'Cool',
     },
 
     gigadrain: {
@@ -85,6 +123,42 @@ export let moves = {
         name: 'Weather Ball',
         type: 'Normal',
         priority: 0,
+    },
+
+    firepunch: {
+        num: 7,
+        accuracy: 100,
+        basePower: 75,
+        category: 'Physical',
+        name: 'Fire Punch',
+        pp: 15,
+        priority: 0,
+        flags: { contact: 1, protect: 1, mirror: 1, punch: 1 },
+        secondary: {
+            chance: 10,
+            status: 'brn',
+        },
+        target: 'normal',
+        type: 'Fire',
+        contestType: 'Tough',
+    },
+
+    thunderpunch: {
+        num: 9,
+        accuracy: 100,
+        basePower: 75,
+        category: 'Physical',
+        name: 'Thunder Punch',
+        pp: 15,
+        priority: 0,
+        flags: { contact: 1, protect: 1, mirror: 1, punch: 1 },
+        secondary: {
+            chance: 10,
+            status: 'par',
+        },
+        target: 'normal',
+        type: 'Electric',
+        contestType: 'Cool',
     },
 
     earthpower: {
@@ -373,15 +447,15 @@ export let moves = {
         priority: 0,
     },
 
-    freezedry: {
-        num: 573,
-        accuracy: 100,
-        basePower: 70,
-        category: 'Special',
-        name: 'Freeze-Dry',
-        type: 'Ice',
-        priority: 0,
-    },
+    // freezedry: {
+    //     num: 573,
+    //     accuracy: 100,
+    //     basePower: 70,
+    //     category: 'Special',
+    //     name: 'Freeze-Dry',
+    //     type: 'Ice',
+    //     priority: 0,
+    // },
 
     uturn: {
         num: 369,
@@ -737,12 +811,12 @@ export let moves = {
         name: 'Flare Blitz',
         pp: 15,
         priority: 0,
-        flags: { contact: 1, protect: 1, mirror: 1, defrost: 1 },
-        recoil: [33, 100],
-        secondary: {
-            chance: 10,
-            status: 'brn',
-        },
+        // flags: { contact: 1, protect: 1, mirror: 1, defrost: 1 },
+        // recoil: [33, 100],
+        // secondary: {
+        //     chance: 10,
+        //     status: 'brn',
+        // },
         target: 'normal',
         type: 'Fire',
         contestType: 'Cool',

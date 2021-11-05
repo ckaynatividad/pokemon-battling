@@ -227,7 +227,7 @@ export const pokeDex = [
         num: 26,
         name: 'Arcanine',
         types: ['Fire'],
-        moves: ['flamethrower', 'crunch', 'quickattack', 'flareblitz'],
+        moves: ['flamethrower', 'crunch', 'quickattack', 'bodyslam'],
         baseStats: { hp: 90, atk: 110, def: 80, spa: 100, spd: 80, spe: 95 },
         img: './data/pokeimg/arcanine.webp'
     },
@@ -290,7 +290,7 @@ export const pokeDex = [
         num: 33,
         name: 'Rapidash',
         types: ['Fire'],
-        moves: ['flareblitz', 'highhorsepower', 'quickattack', 'morningsun'],
+        moves: ['fireblast', 'lavaplume', 'quickattack', 'bodyslam'],
         baseStats: { hp: 65, atk: 100, def: 70, spa: 80, spd: 80, spe: 105 },
         img: './data/pokeimg/rapidash.webp'
     },
@@ -455,7 +455,7 @@ export const pokeDex = [
         num: 52,
         name: 'Rhydon',
         types: ['Ground', 'Rock'],
-        moves: ['stealthrock', 'earthquake', 'stoneedge', 'quickattack'],
+        moves: ['rockslide', 'earthquake', 'stoneedge', 'quickattack'],
         baseStats: { hp: 105, atk: 130, def: 120, spa: 45, spd: 45, spe: 40 },
         img: './data/pokeimg/rhydon.webp'
     },
@@ -541,14 +541,14 @@ export const pokeDex = [
         img: './data/pokeimg/jynx.webp'
     },
 
-    {
-        num: 62,
-        name: 'Electabuzz',
-        types: ['Electric'],
-        moves: ['discharge', 'psychic', 'icebeam', 'doubleedge'],
-        baseStats: { hp: 65, atk: 83, def: 57, spa: 95, spd: 85, spe: 105 },
-        img: './data/pokeimg/electabuzz.webp'
-    },
+    // {
+    //     num: 62,
+    //     name: 'Electabuzz',
+    //     types: ['Electric'],
+    //     moves: ['discharge', 'psychic', 'icebeam', 'doubleedge'],
+    //     baseStats: { hp: 65, atk: 83, def: 57, spa: 95, spd: 85, spe: 105 },
+    //     img: './data/pokeimg/electabuzz.webp'
+    // },
 
     {
         num: 63,
@@ -634,7 +634,7 @@ export const pokeDex = [
         num: 72,
         name: 'Flareon',
         types: ['Fire'],
-        moves: ['knockoff', 'quickattack', 'flareblitz', 'morningsun'],
+        moves: ['knockoff', 'quickattack', 'bodyslam', 'fireblast'],
         baseStats: { hp: 65, atk: 130, def: 60, spa: 95, spd: 110, spe: 65 },
         img: './data/pokeimg/flareon.webp'
     },
@@ -688,7 +688,7 @@ export const pokeDex = [
         num: 78,
         name: 'Articuno',
         types: ['Ice', 'Flying'],
-        moves: ['roost', 'quickattack', 'freezedry', 'bravebird'],
+        moves: ['roost', 'quickattack', 'iciclecrash', 'bravebird'],
         baseStats: { hp: 90, atk: 85, def: 100, spa: 95, spd: 125, spe: 85 },
         img: './data/pokeimg/articuno.webp'
     },
