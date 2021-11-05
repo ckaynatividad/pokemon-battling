@@ -278,6 +278,8 @@ submit.addEventListener('click', (e) => {
             activePokemon = newActive;
             activePokemon.active = true;
 
+            currentHp = activePokemon.baseStats.hp;
+            
             playerHP.textContent = activePokemon.baseStats.hp;
             playerImage.src = `../${activePokemon.img}`;
             move1Span.textContent = activePokemon.moves[0];
