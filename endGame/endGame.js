@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 import { getPokemon } from '../functions/utils.js';
 // import { isDead } from '../functions/isDead.js';
 import { resultsDisplay, messages } from './endGameLogic.js';
@@ -9,6 +7,7 @@ const pokes = getPokemon();
 //pokes form local storage
 
 //this log breaks the code if removed.
+//??? it shouldn't
 console.log(pokes);
 //linking to area in html
 const resultsPlace = document.getElementById('main-container');

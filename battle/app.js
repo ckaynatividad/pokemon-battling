@@ -108,7 +108,7 @@ submit.addEventListener('click', (e) => {
     const selectedMoveRadio = document.querySelector('input[type=radio]:checked');
     let isComputerKO = isCompKO(computerPokemon, computerHp);
     
-    if (isComputerKO === true) {
+    if (isComputerKO) {
         if (computerPokemon.num === computerPokemon1[0].num) {
             computerPokemon.active = false;
             computerPokemon = computerPokemon1[1];
@@ -684,7 +684,7 @@ setInterval(function(){
         
     let isComputerKO = isCompKO(computerPokemon, computerHp);
             
-    if (isComputerKO === true) {
+    if (isComputerKO) {
         if (computerPokemon.num === computerPokemon1[0].num) {
             computerPokemon.active = false;
             computerPokemon = computerPokemon1[1];
